@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind css CDN Link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+
+
+    </style>
+  </head>
+  <body class="w-[100%] min-h-full">
+    <div class="sideber h-[964px] w-[247px] bg-white fixed">
+      <div class="logo_details min-w-[60px] items-center">
+        <img class="ml-[8px] mt-[10px]" src="../images/logo2.png" alt="" />
+      </div>
+      <img class="mt-[20px]" src="../images/Vector 6.png" alt="" />
+      <div class="mt-[8px] bg-yellow-400 p-4 w-[218px] h-[ 964px] ml-3 mt-8 rounded-lg">
+        <p class="text-xs">Wallet</p>
+        <span class="text-xl font-bold">GHS 0.00</span>
+      </div>
+      <ul id="activeForm" class="nav_links ml-4 mt-4  space-y-1 ">
+        <li class="transform transition duration-100 hover:scale-100 hover:bg-yellow-100 p-[9px] ">
+          <a href="#" class="btn flex ">
+            <img class="w-6 fill-blue-500" src="../images/home.png" alt="" />
+            <span class=" active link_name ml-4 ">Dashboard</span>
+          </a>
+        </li>
+        <li class="transform transition duration-100 hover:scale-100 hover:bg-yellow-100 p-[9px]  ">
+          <a href="#" class="flex  ">
+            <img class="w-6" src="../images/to-do-list.png" alt="" />
+            <span class="btn link_name ml-4">Listing</span>
+          </a>
+        </li>
+        <li class=" transform transition duration-100 hover:scale-100 hover:bg-yellow-100 p-[9px]">
+          <a href="#" class="flex  ">
+            <img class="w-6" src="../images/test-drive.png" alt="" />
+            <span class="btn link_name ml-4">Test Drives</span>
+          </a>
+        </li>
+        <li class="transform transition duration-100 hover:scale-100 hover:bg-yellow-100 p-[9px]">
+          <a href="#" class="flex  ">
+            <img class="w-6" src="../images/handshake.png" alt="" />
+            <span class="btn link_name ml-4">Deals</span>
+          </a>
+        </li>
+        <li class="transform transition duration-100 hover:scale-100 hover:bg-yellow-100 p-[9px]">
+          <a href="#" class="flex  ">
+            <img class="w-6" src="../images/retailer.png" alt="" />
+            <span class="btn link_name ml-4">Marketplace</span>
+          </a>
+        </li>
+       <div class="space-y-1 ">
+        <span class="font-bold">ACCOUNT</span>
+        <li class="transform transition duration-100 hover:scale-100 hover:bg-yellow-100 p-[9px]">
+          <a href="#" class="flex  ">
+            <img class="w-6" src="../images/shop.png" alt="" />
+            <span class="btn link_name ml-4">Shop settings</span>
+          </a>
+        </li>
+        <li class="transform transition duration-100 hover:scale-100 hover:bg-yellow-100 p-[9px]">
+          <a href="#" class="flex  ">
+            <img class="w-6" src="../images/user.png" alt="" />
+            <span class="btn link_name ml-4">Account</span>
+          </a>
+        </li>
+        <li class="transform transition duration-100 hover:scale-100 hover:bg-yellow-100 p-[9px] ">
+          <a href="#" class="flex ">
+            <img class="w-6" src="../images/question.png" alt="" />
+            <span class="btn link_name ml-4">Help</span>
+          </a>
+        </li>
+        <li class=" transform transition duration-100 hover:scale-100 hover:bg-yellow-100 p-[9px] ">
+          <a href="#" class="flex ">
+            <img class="w-6" src="../images/logout.png" alt="" />
+            <span class="btn link_name ml-4">Log Out</span>
+          </a>
+        </li>
+       </div>
+      </ul>
+    </div>
+<!-- Dashboard content  starts -->
+<section class="bg-gray-400  min-h-[100vh] w-[calc(100%-240px)] relative left-[240px]">
+    
+    <nav class="">
+        <div class="sidebar-button flex space-x-3">
+          
+           <div class="mt-[8px] ml-3 mt-8 ">
+            <img class="sideberBtn   w-[25px]" src="../images/menu.png" alt="">
+            <span class="text-xl font-bold">Good afternoon Brian</span>
+            <p class="text-xs">Start smart car deals with Bargain Moto!</p>
+            
+          </div>
+        </div>
+    </nav>
+</section>
+
+<!-- Dashboard content  ends-->
+
+
+
+    <script>
+let sideber = document.querySelector(".sideber")
+let sideberBtn = document.querySelector(".sideberBtn")
+
+sideberBtn.onclick = function(){
+    sideber.classList.toggle('active')
+}
+
+    </script>
+  </body>
+</html>
