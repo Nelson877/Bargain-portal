@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://raw.githubusercontent.com/desandro/classie/master/classie.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
+
+    <title>dashboard</title>
+  </head>
+  <body class="text-gray-700">
+    <!-- start sidebar -->
+    <!-- id="menu" -->
+    <div
+      id="menu"
+      class="hidden lg:inline lg:fixed left-0 top-0 w-64 h-full bg-[#F7F7F7] p-4 dropdown_menu"
+    >
+      <div class="text-right">
+        <button
+          class="lg:hidden sm:inline text-2xl absolute"
+          onclick="functionMenu_Close()"
+        >
+          &times;
+        </button>
+      </div>
+      <!-- logo section  -->
+      <a href="#" class="flex items-center pb-2 border-b border-b-slate-200">
+        <img
+          src="../images/bargain-auto-logo 1.png"
+          alt=""
+          class="w-[60px] h-[50.98px]"
+        />
+      </a>
+      <!-- logo section end -->
+      <div
+        class="items-center py-6 px-4 mt-[10px] bg-yellow-400 w-[218px] h-[93px] rounded-lg"
+      >
+        <p class="text-xs text-white">Wallet</p>
+        <span class="font-bold text-[19px] text-white">GHS 0.00</span>
+      </div>
+      <ul class="mt-2">
+        <li class="mb-1 group active">
+          <a
+            data-active="Overview"
+            href=""
+            class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
+          >
+            <i class="fa-solid fa-house-chimney mr-4"></i>
+            <span class="text-sm">Overview</span>
+          </a>
+        </li>
+        <li class="mt-2 group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-clipboard-list mr-4"></i>
+            <span class="text-sm">Listing</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-car-burst mr-4"></i>
+            <span class="text-sm">Test Drives</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-handshake mr-4"></i>
+            <span class="text-sm">Deals</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-shop mr-4"></i>
+            <span class="text-sm">Marketplace</span>
+          </a>
+        </li>
+        <span class="text-xs font-bold">ACCOUNT</span>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-gears mr-4"></i>
+            <span class="text-sm">Shop settings</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-user mr-4"></i>
+            <span class="text-sm">Account</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-circle-question mr-4"></i>
+            <span class="text-sm">Help</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-right-from-bracket mr-4"></i>
+            <span class="text-sm">Log Out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- end sidebar  -->
+
+    <!-- main section start  -->
+    <main
+      class="w-full lg:w-[calc(100%-256px)] lg:ml-64 bg-white lg:min-h-screen"
+    >
+      <div class="py-2 px-6 items-center">
+        <button
+          id="clickButton"
+          onclick="functionMenu_Open()"
+          class="text-2xl text-yellow-500 cursor-pointer lg:hidden sm:inline mob_menu_button"
+        >
+          &#9776;
+        </button>
+        <span class="text-lg ml-4">
+          <span class="mr-2 mb-4">
+            <h1 class="text-[36px] font-bold mt-4">Good afternoon Brian</h1>
+            <p class="text-lg mt-3">Start smart car deals with Bargain Moto</p>
+          </span>
+        </span>
+      </div>
+      <div class="p-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          <!-- box section start  -->
+          <div
+            class="bg-[#FEFAF0] rounded-lg border p-3 flex flex-row justify-between items-center"
+          >
+            <div class="flex flex-col">
+              <div class="text-sm">Cars Listed</div>
+              <div class="text-2xl font-bold">0</div>
+            </div>
+            <div class="bg-[#FFF4D7] w-[45px] h-[45px] rounded-2xl">
+              <img
+                class="image__logo py-3 px-3"
+                src="../images/cars.png"
+                alt=""
+              />
+              <i class="fa-solid fa-cars"></i>
+            </div>
+          </div>
+          <!-- box section end  -->
+          <!-- box section start  -->
+          <div
+            class="bg-[#FFF6F8] rounded-lg border p-3 flex flex-row justify-between items-center"
+          >
+            <div class="flex flex-col">
+              <div class="text-sm">Cars Listed</div>
+              <div class="text-2xl font-bold">0</div>
+            </div>
+            <div class="bg-[#FFE5EB] w-[45px] h-[45px] rounded-2xl">
+              <img
+                class="image__logo py-3 px-3"
+                src="../images/text.svg"
+                alt=""
+              />
+              <i class="fa-solid fa-cars"></i>
+            </div>
+          </div>
+          <!-- box section end  -->
+          <!-- box section start  -->
+          <div
+            class="bg-[#F3FFF6] rounded-lg border p-3 flex flex-row justify-between items-center"
+          >
+            <div class="flex flex-col">
+              <div class="text-sm">Cars Listed</div>
+              <div class="text-2xl font-bold">0</div>
+            </div>
+            <div class="bg-[#CDFFDA] w-[45px] h-[45px] rounded-2xl">
+              <img
+                class="image__logo py-3 px-3"
+                src="../images/default.png"
+                alt=""
+              />
+              <i class="fa-solid fa-cars"></i>
+            </div>
+          </div>
+          <!-- box section end  -->
+        </div>
+        <div class="mt-10">
+          <span class="mb-10 font-bold text-2xl">Recent</span>
+
+          <div
+            class="flex flex-col mt-8 h-[515px] mb-4 rounded-xl border-2 border-gray-50 dark:bg-gray-800"
+          >
+            <ul>
+              <!-- infor box starts  -->
+              <li
+                class="flex justify-between items-center bg-white mt-2 p-2 hover:shadow-lg rounded cursor-pointer transition"
+              >
+                <div class="flex ml-2">
+                  <img
+                    src="../images/Ellipse 13.png"
+                    class="rounded-full w-[40px] h-[40px]"
+                  />
+                  <div class="flex flex-col ml-2">
+                    <span class="font-medium text-black"
+                      >John Addison scheduled a test drive</span
+                    >
+                    <span class="text-sm text-gray-400 truncate w-32"
+                      >5 mins ago</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col items-center text-gray-400">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </li>
+              <!-- infor box ends  -->
+              <!-- infor box starts  -->
+              <li
+                class="flex justify-between items-center bg-white mt-2 p-2 hover:shadow-lg rounded cursor-pointer transition"
+              >
+                <div class="flex ml-2">
+                  <img
+                    src="../images/Ellipse 13.png"
+                    class="rounded-full w-[40px] h-[40px]"
+                  />
+                  <div class="flex flex-col ml-2">
+                    <span class="font-medium text-black"
+                      >Car inspection booked for Thu 12 Oct</span
+                    >
+                    <span class="text-sm text-gray-400 truncate w-32"
+                      >1 week ago</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col items-center text-gray-400">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </li>
+              <!-- infor box ends  -->
+              <!-- infor box starts  -->
+              <li
+                class="flex justify-between items-center bg-white mt-2 p-2 hover:shadow-lg rounded cursor-pointer transition"
+              >
+                <div class="flex ml-2">
+                  <img
+                    src="../images/Ellipse 13.png"
+                    class="rounded-full w-[40px] h-[40px]"
+                  />
+                  <div class="flex flex-col ml-2">
+                    <span class="font-medium text-black"
+                      >John Addison scheduled a test drive</span
+                    >
+                    <span class="text-sm text-gray-400 truncate w-32"
+                      >5 mins ago</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col items-center text-gray-400">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </li>
+              <!-- infor box ends  -->
+              <!-- infor box starts  -->
+              <li
+                class="flex justify-between items-center bg-white mt-2 p-2 hover:shadow-lg rounded cursor-pointer transition"
+              >
+                <div class="flex ml-2">
+                  <img
+                    src="../images/Ellipse 13.png"
+                    class="rounded-full w-[40px] h-[40px]"
+                  />
+                  <div class="flex flex-col ml-2">
+                    <span class="font-medium text-black"
+                      >Car inspection booked for Thu 12 Oct</span
+                    >
+                    <span class="text-sm text-gray-400 truncate w-32"
+                      >5 mins ago</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col items-center text-gray-400">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </li>
+              <!-- infor box ends  -->
+              <!-- infor box starts  -->
+              <li
+                class="flex justify-between items-center bg-white mt-2 p-2 hover:shadow-lg rounded cursor-pointer transition"
+              >
+                <div class="flex ml-2">
+                  <img
+                    src="../images/Ellipse 13.png"
+                    class="rounded-full w-[40px] h-[40px]"
+                  />
+                  <div class="flex flex-col ml-2">
+                    <span class="font-medium text-black"
+                      >John Addison scheduled a test drive</span
+                    >
+                    <span class="text-sm text-gray-400 truncate w-32"
+                      >5 mins ago</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-col items-center text-gray-400">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </li>
+              <!-- infor box ends  -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- main section end  -->
+
+    <script>
+      function functionMenu_Open() {
+        // document.getElementById("menu").style.marginLeft = "20%";
+        document.getElementById("menu").style.width = "100%";
+        document.getElementById("menu").style.display = "block";
+        document.getElementById("clickButton").style.display = "none";
+      }
+
+      function functionMenu_Close() {
+        document.getElementById("menu").style.display = "none";
+        document.getElementById("clickButton").style.display = "inline-block";
+      }
+    </script>
+  </body>
+</html>
