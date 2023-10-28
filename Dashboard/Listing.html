@@ -23,6 +23,7 @@
       integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../main.css" />
 
     <title>dashboard</title>
   </head>
@@ -60,7 +61,7 @@
         <li class="mb-1 group">
           <a
             data-active="Overview"
-            href="#"
+            href="../Dashboard/Overview.html"
             class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
           >
             <i class="fa-solid fa-house-chimney mr-4"></i>
@@ -70,10 +71,10 @@
         <li class="mt-2 group active">
           <a
             data-active="listing"
-            href="../Dashboard/Listing.html"
+            href=""
             class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
           >
-            <i class="fa-solid fa-clipboard-list mr-4"></i>
+            <i class="fa-solid fa-magnifying-glass mr-4"></i>
             <span class="text-sm">Listing</span>
           </a>
         </li>
@@ -83,7 +84,7 @@
             href=""
             class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
           >
-            <i class="fa-solid fa-car-burst mr-4"></i>
+            <i class="fa-regular fa-calendar mr-4"></i>
             <span class="text-sm">Test Drives</span>
           </a>
         </li>
@@ -115,7 +116,7 @@
             class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
           >
             <i class="fa-solid fa-gears mr-4"></i>
-            <span class="text-sm">Shop settings</span>
+            <span class="text-sm">Store settings</span>
           </a>
         </li>
         <li class="group">
@@ -125,7 +126,7 @@
             class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
           >
             <i class="fa-solid fa-user mr-4"></i>
-            <span class="text-sm">Account</span>
+            <span class="text-sm">Account settings</span>
           </a>
         </li>
         <li class="group">
@@ -145,7 +146,7 @@
             class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
           >
             <i class="fa-solid fa-right-from-bracket mr-4"></i>
-            <span class="text-sm">Log Out</span>
+            <span class="text-sm">LogOut</span>
           </a>
         </li>
       </ul>
@@ -164,73 +165,95 @@
         >
           &#9776;
         </button>
-        <span class="text-lg ml-4">
+        <span class="text-lg ml-4 flex justify-between">
           <span class="mr-2 mb-4">
-            <h1 class="text-[36px] font-bold mt-4">Good afternoon Brian</h1>
-            <p class="text-lg mt-3">Start smart car deals with Bargain Moto</p>
+            <h1 class="text-[36px] font-bold mt-4">Vehicle Listing</h1>
           </span>
+
+          <div>
+            <div
+              class="items-center w-full max-w-md mb-3 seva-fields formkit-fields"
+            >
+              <span class="container justify-center items-center">
+                <!-- search bar starts  -->
+                <div
+                  class="hidden lg:inline-block relative items-center justify-center"
+                >
+                  <div class="absolute top-4 left-3">
+                    <i
+                      class="fa fa-search text-gray-400 z-20 hover:text-gray-500 z-10"
+                    ></i>
+                  </div>
+                  <input
+                    type="text"
+                    class="h-[52px] w-[209px] bg-[#F5F5F5] pr-5 pl-10 rounded z-0 focus:shadow focus:outline-none"
+                    placeholder="Search listing..."
+                  />
+                </div>
+                <!-- search bar ends  -->
+                <span>
+                  <a href="#" class="hidden lg:inline-block">
+                    <button
+                      href=""
+                      class="mt-4 bg-[#F3B757] w-[233px] h-[52px] text-center rounded-[10px] text-[19px] font-[600] hover:bg-yellow-600 hover:text-white"
+                    >
+                      Add New Vehicle
+                    </button>
+                  </a>
+                </span>
+              </span>
+              <!-- new search section  -->
+              <div
+                class="lg:hidden sm:inline-block flex fixed sm:justify-center sm:items-center rounded-lg bg-[#F5F5F5] relative"
+              >
+                <div class="search-icon px-4 py-4 rounded z-10 shadow-md">
+                  <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </div>
+                <input
+                  type="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  aria-live="polite"
+                  class="search-input rounded-lg text-[15px] text-[#6D6D6D] outline-none focus:outline-none:focus"
+                  placeholder="Search listing.."
+                />
+                <i class="fa-regular fa-circle-xmark close-icon"></i>
+              </div>
+
+              <!-- new section  -->
+            </div>
+          </div>
         </span>
       </div>
       <div class="p-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
-          <!-- box section start  -->
-          <div
-            class="bg-[#FEFAF0] rounded-lg border p-3 flex flex-row justify-between items-center"
-          >
-            <div class="flex flex-col">
-              <div class="text-sm">Cars Listed</div>
-              <div class="text-2xl font-bold">0</div>
-            </div>
-            <div class="bg-[#FFF4D7] w-[45px] h-[45px] rounded-2xl">
-              <img
-                class="image__logo py-3 px-3"
-                src="../images/cars.png"
-                alt=""
-              />
-              <i class="fa-solid fa-cars"></i>
-            </div>
+        <!-- nav select section starts  -->
+        <div class="">
+          <nav class="bg-white border-gray-200 dark:bg-gray-900"></nav>
+          <div class="navbar border-b-2 border-gray-300">
+            <a
+              class="nav-link nav-link-grow-up active border-b-[7px] py-4 px-2 border-h-[20px] border-b-[#ec970f] font-bold text-[16px] text-gray-[#767676] inline-block relative opacity-[0.75] m-[0px 20px] no-underline p-[20px]"
+              href="#"
+              >All</a
+            >
+            <a
+              class="nav-link nav-link-grow-up font-bold text-[16px] text-gray-[#767676] inline-block relative opacity-[0.75] m-[0px 20px] no-underline p-[20px]"
+              href="#"
+              >Listed</a
+            >
+            <a
+              class="nav-link nav-link-grow-up font-bold text-[16px] text-gray-[#767676] inline-block relative opacity-[0.75] m-[0px 20px] no-underline p-[20px]"
+              href="#"
+              >Unlisted</a
+            >
+            <a
+              class="nav-link nav-link-grow-up font-bold text-[16px] text-gray-[#767676] inline-block relative opacity-[0.75] m-[0px 20px] no-underline p-[20px]"
+              href="#"
+              >Sold</a
+            >
           </div>
-          <!-- box section end  -->
-          <!-- box section start  -->
-          <div
-            class="bg-[#FFF6F8] rounded-lg border p-3 flex flex-row justify-between items-center"
-          >
-            <div class="flex flex-col">
-              <div class="text-sm">Cars Listed</div>
-              <div class="text-2xl font-bold">0</div>
-            </div>
-            <div class="bg-[#FFE5EB] w-[45px] h-[45px] rounded-2xl">
-              <img
-                class="image__logo py-3 px-3"
-                src="../images/text.svg"
-                alt=""
-              />
-              <i class="fa-solid fa-cars"></i>
-            </div>
-          </div>
-          <!-- box section end  -->
-          <!-- box section start  -->
-          <div
-            class="bg-[#F3FFF6] rounded-lg border p-3 flex flex-row justify-between items-center"
-          >
-            <div class="flex flex-col">
-              <div class="text-sm">Cars Listed</div>
-              <div class="text-2xl font-bold">0</div>
-            </div>
-            <div class="bg-[#CDFFDA] w-[45px] h-[45px] rounded-2xl">
-              <img
-                class="image__logo py-3 px-3"
-                src="../images/default.png"
-                alt=""
-              />
-              <i class="fa-solid fa-cars"></i>
-            </div>
-          </div>
-          <!-- box section end  -->
         </div>
+        <!-- nav select section ends  -->
         <div class="mt-10">
-          <span class="mb-10 font-bold text-2xl">Recent</span>
-
           <div
             class="flex flex-col mt-8 items-center justify-center h-[515px] mb-4 rounded-xl border-2 border-gray-50 dark:bg-gray-800"
           >
@@ -239,23 +262,25 @@
             >
               <div class="flex justify-center items-center">
                 <img
-                  src="../images/chart-line-duotone 1.png"
-                  class="w-[48px] h-[48px]"
+                  src="../images/cars-duotone 1.png"
+                  class="w-[60px] h-[48px]"
                   alt=""
                 />
               </div>
               <div class="text-center">
-                <span class="text-[30px] font-[700]">No recent activity</span>
+                <span class="text-[30px] font-[700]"
+                  >No vehicle added yet !</span
+                >
                 <p class="text-[15px] font-[400] text-center">
-                  You don’t have any activities on the Bargain Moto yet. Start
-                  by <br />
-                  adding a vehicle to the marketplace.
+                  You haven’t added any new vehicle to our listing. We are happy
+                  <br />
+                  to start seeing you make a sale.
                 </p>
 
                 <a
                   href=""
                   class="mt-4 bg-[#F3B757] px-5 py-2 text-center rounded-[10px] text-[13px] font-[600] hover:bg-yellow-600 hover:text-white"
-                  >Start Selling</a
+                  >Add New Vehicle</a
                 >
               </div>
             </span>
@@ -278,6 +303,26 @@
         document.getElementById("menu").style.display = "none";
         document.getElementById("clickButton").style.display = "inline-block";
       }
+
+      // search section starts
+      const searchIcon = document.querySelector(`.search-icon`);
+      const searchInput = document.querySelector(`.search-input`);
+
+      const toggleSearch = (event) => {
+        event.stopPropagation();
+
+        if (!event.target.closest(".search-input")) {
+          searchInput.classList.toggle("active");
+
+          searchInput.classList.contains("active")
+            ? document.addEventListener("click", toggleSearch)
+            : document.removeEventListener("click", toggleSearch);
+        }
+      };
+
+      searchIcon.addEventListener("click", toggleSearch);
+
+      // search section ends
     </script>
   </body>
 </html>
