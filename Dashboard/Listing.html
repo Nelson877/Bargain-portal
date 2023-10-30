@@ -217,7 +217,7 @@
                   class="search-input rounded-lg text-[15px] text-[#6D6D6D] outline-none focus:outline-none:focus"
                   placeholder="Search listing.."
                 />
-                <i class="fa-solid fa-plus close-icon"></i>
+                <i class="fa-solid fa-plus close-Bicon"></i>
               </div>
 
               <!-- new section  -->
@@ -227,9 +227,10 @@
       </div>
       <div class="p-6">
         <!-- nav select section starts  -->
-        <div class="">
+
+        <div class="hidden lg:inline">
           <nav class="bg-white border-gray-200 dark:bg-gray-900"></nav>
-          <div class="navbar border-b-2 border-gray-300">
+          <div class="navbar border-b-2 border-gray-30">
             <!-- nav-link-grow-up -->
             <a
               class="nav-link active border-b-[7px] py-4 px-2 border-h-[20px] border-b-[#ec970f] text-[#ec970f] font-bold text-[16px] text-gray-[#767676] inline-block relative opacity-[0.75] m-[0px 20px] no-underline p-[20px]"
@@ -253,6 +254,59 @@
             >
           </div>
         </div>
+
+        <!-- Responsive page start  -->
+        <button
+          id="dropdownSkiddingButton"
+          data-dropdown-placement="right"
+          class="lg:hidden sm:inline text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          type="button"
+        >
+          All
+          <i class="fa-solid fa-caret-down w-2.5 h-2.5 ml-2.5"></i>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div
+          id="dropdownSkidding"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+        >
+          <ul
+            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownDefault"
+          >
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Settings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Earnings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Sign out</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Responsive page ends  -->
         <!-- nav select section ends  -->
         <div class="mt-10">
           <div
@@ -322,7 +376,6 @@
       };
 
       searchIcon.addEventListener("click", toggleSearch);
-
       // search section ends
     </script>
   </body>
