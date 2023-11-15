@@ -82,7 +82,7 @@
           <a
             data-active="listing"
             href=""
-            class="flex items-center py-2 px-4 text-white text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
           >
             <i class="fa-solid fa-magnifying-glass mr-4"></i>
             <span class="text-sm">Garage</span>
@@ -237,8 +237,6 @@
         <!-- <i class="fa-solid fa-plus close-Bicon"></i> -->
       </div>
       <!-- nav select section starts  -->
-
-      <!-- Tab and pill section start  -->
       <div class="max-w-5xl mx-auto">
         <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
           <ul
@@ -302,40 +300,169 @@
           </ul>
         </div>
         <div id="myTabContent">
-          <div class="mt-10" id="all" role="tabpanel" aria-labelledby="all-tab">
+          <!-- !-- card section start  -->
+          <div
+            id="all"
+            role="tabpanel"
+            aria-labelledby="all-tab"
+            class="container mx-auto text-center lg:py-24 md:py-24 sm:py-12 py-12 md:px-4 px-11"
+          >
             <div
-              class="flex flex-col mt-8 items-center justify-center h-[515px] mb-4 rounded-xl border-2 border-gray-50 dark:bg-gray-800"
+              class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-x-4 gap-y-12 text-left"
             >
-              <span
-                class="items-center justify-center text-2xl text-gray-900 dark:text-gray-500"
-              >
-                <div class="flex justify-center items-center">
-                  <img
-                    src="../images/cars-duotone 1.png"
-                    class="w-[60px] h-[48px]"
-                    alt=""
-                  />
-                </div>
-                <div class="text-center">
-                  <span class="text-[30px] font-[700]"
-                    >No vehicle added yet !</span
+              <!-- card 1 section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div
+                        class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] md:w-4/12 w-5/12 rounded-xl p-2 truncate text-center"
+                      >
+                        Fixed Price
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
                   >
-                  <p class="text-[15px] font-[400] text-center">
-                    You haven’t added any new vehicle to our listing. We are
-                    happy
-                    <br />
-                    to start seeing you make a sale.
-                  </p>
-
-                  <a
-                    href=""
-                    class="mt-4 bg-[#F3B757] px-5 py-2 text-center rounded-[10px] text-[13px] font-[600] hover:bg-yellow-600 hover:text-white"
-                    >Add New Vehicle</a
-                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <h5
+                          class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                        >
+                          2021 Honda HR-V
+                        </h5>
+                      </a>
+                      <div
+                        class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </span>
+              </div>
+              <!-- card 1 section end   -->
+              <!-- card 2 section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img2.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div
+                        class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] md:w-4/12 w-5/12 rounded-xl p-2 truncate text-center"
+                      >
+                        Fixed Price
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <h5
+                          class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                        >
+                          2021 Honda CR-V Black Edition
+                        </h5>
+                      </a>
+                      <div
+                        class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card 2 section end   -->
+              <!-- card 3 section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img3.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div
+                        class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] md:w-4/12 w-5/12 rounded-xl p-2 truncate text-center"
+                      >
+                        Fixed Price
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <h5
+                          class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                        >
+                          2021 Honda HR-V
+                        </h5>
+                      </a>
+                      <div
+                        class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card 3 section end   -->
             </div>
           </div>
+          <!-- card section end  -->
 
           <div
             class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800"
@@ -363,8 +490,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Tab and pill section end  -->
     </main>
 
     <!-- main section end  -->
