@@ -175,46 +175,43 @@
         >
           &#9776;
         </button>
-        <span class="text-lg ml-4 flex justify-between">
-          <span class="mr-2 mb-4">
-            <h1 class="text-[36px] font-bold mt-4">Vehicle Listing</h1>
+        <span class="flex justify-between">
+          <span class="lg:mr-2 lg:mb-4">
+            <h1 class="lg:text-[36px] font-bold mt-4">Vehicle Listing</h1>
           </span>
 
-          <div>
-            <div
-              class="items-center w-full max-w-md mb-3 seva-fields formkit-fields"
-            >
-              <span class="container justify-center items-center">
-                <!-- search bar starts  -->
-                <div
-                  class="hidden lg:inline-block relative items-center justify-center"
-                >
-                  <div class="absolute top-4 left-3">
-                    <i
-                      class="fa fa-search text-gray-400 z-20 hover:text-gray-500 z-10"
-                    ></i>
-                  </div>
-                  <input
-                    type="text"
-                    class="h-[52px] w-[209px] bg-[#F5F5F5] pr-5 pl-10 rounded z-0 focus:shadow focus:outline-none"
-                    placeholder="Search listing..."
-                  />
+          <div class="items-center w-full max-w-md mb-3 seva-fields">
+            <span class="container justify-center items-center gap-10">
+              <!-- search bar starts -->
+              <div
+                class="hidden lg:inline-block relative items-center justify-center py-1"
+              >
+                <div class="absolute top-4 left-3">
+                  <i
+                    class="fa fa-search text-gray-400 z-20 hover:text-gray-500 z-10"
+                  ></i>
                 </div>
-                <!-- search bar ends  -->
-                <span>
-                  <a href="#" class="hidden lg:inline-block">
-                    <button
-                      href=""
-                      class="mt-4 bg-[#F3B757] w-[233px] h-[52px] text-center rounded-[10px] text-[19px] font-[600] hover:bg-yellow-600 hover:text-white"
-                    >
-                      Add New Vehicle
-                    </button>
-                  </a>
-                </span>
+                <input
+                  type="text"
+                  class="h-[52px] w-[209px] bg-[#F5F5F5] pr-5 pl-10 rounded z-0 focus:shadow focus:outline-none"
+                  placeholder="Search listing..."
+                />
+              </div>
+              <!-- search bar ends -->
+              <span class="mt-4 lg:mt-0">
+                <!-- Adjust the top margin as needed -->
+                <a href="#" class="hidden lg:inline-block mt-4">
+                  <button
+                    href=""
+                    class="bg-[#F3B757] w-[233px] h-[52px] text-center rounded-[10px] text-[19px] font-[600] hover:bg-yellow-600 hover:text-white"
+                  >
+                    Add New Vehicle
+                  </button>
+                </a>
               </span>
+            </span>
 
-              <!-- new section  -->
-            </div>
+            <!-- new section -->
           </div>
         </span>
       </div>
@@ -327,40 +324,109 @@
                     to start seeing you make a sale.
                   </p>
 
-                  <a
-                    href=""
-                    class="mt-4 bg-[#F3B757] px-5 py-2 text-center rounded-[10px] text-[13px] font-[600] hover:bg-yellow-600 hover:text-white"
-                    >Add New Vehicle</a
+                  <button
+                    id="modal-button"
+                    class="mt-4 bg-[#F3B757] px-4 w-40 h-10 text-center rounded-[10px] text-[13px] font-[600] hover:bg-yellow-600 hover:text-white"
                   >
+                    Add New Vehicle
+                  </button>
                 </div>
               </span>
-            </div>
-          </div>
 
-          <div
-            class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800"
-            id="listed"
-            role="tabpanel"
-            aria-labelledby="listed-tab"
-          >
-            <p class="text-gray-500 dark:text-gray-400 text-sm">listed</p>
+              <!-- Modal section start  -->
+              <div
+                id="modal"
+                class="hidden items-center justify-center h-screen w-screen fixed top-0 left-0 bg-black bg-opacity-80"
+              >
+                <!--Modal Dialog -->
+
+                <div class="bg-white lg:p-10 p-16 text-center justify-center">
+                  <!-- Close Modal start -->
+
+                  <!-- Close Modal end -->
+                  <!--Modal Content -->
+                  <div class="items-center justify-between">
+                    <h3 class="font-bold lg:text-[36px] text-[20px]">
+                      Vehicle Listing
+                    </h3>
+                    <span
+                      class="absolute top-0 right-0 text-white p-[10px] modal-close cursor-pointer"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <p class="mb-5 lg:text-[19px] text-[10px]">
+                      It’s easy to add a vehicle on BargainMoto!
+                    </p>
+                    <div>
+                      <i
+                        class="fa-solid fa-users-viewfinder text-[8px] text-[#F3B757] border-[2px] border-[#F0AE434D] p-2 rounded-[50px] bg-[#F0AE434D]"
+                      ></i>
+                      <h3 class="font-semibold text-[15px]">
+                        Tell us about your car
+                      </h3>
+                      <p class="mb-5 lg:text-[19px] text-[10px]">
+                        Share the vehicle model, engine, fuel type and more.
+                      </p>
+                    </div>
+                    <div>
+                      <i
+                        class="fa-solid fa-users-viewfinder text-[8px] text-[#F3B757] border-[2px] border-[#F0AE434D] p-2 rounded-[50px] bg-[#F0AE434D]"
+                      ></i>
+                      <h3 class="font-semibold text-[15px]">
+                        Upload your documents
+                      </h3>
+                      <p class="mb-5 lg:text-[19px] text-[10px]">
+                        Share the vehicle model, engine, fuel type and more.
+                      </p>
+                    </div>
+                    <div>
+                      <i
+                        class="fa-solid fa-users-viewfinder text-[8px] text-[#F3B757] border-[2px] border-[#F0AE434D] p-2 rounded-[50px] bg-[#F0AE434D]"
+                      ></i>
+                      <h3 class="font-semibold text-[15px]">
+                        Complete and publish
+                      </h3>
+                      <p class="mb-5 lg:text-[19px] text-[10px]">
+                        Share the vehicle model, engine, fuel type and more.
+                      </p>
+                    </div>
+                    <button
+                      class="mt-4 bg-[#F3B757] px-4 w-40 h-10 text-center rounded-[8px] text-[13px] font-[600] hover:bg-yellow-600 hover:text-white"
+                    >
+                      Start Listing
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal section end  -->
           </div>
-          <div
-            class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
-            id="unlisted"
-            role="tabpanel"
-            aria-labelledby="unlisted-tab"
-          >
-            <p class="text-gray-500 dark:text-gray-400 text-sm">Unlisted</p>
-          </div>
-          <div
-            class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
-            id="sold"
-            role="tabpanel"
-            aria-labelledby="sold-tab"
-          >
-            <p class="text-gray-500 dark:text-gray-400 text-sm">Sold</p>
-          </div>
+        </div>
+
+        <div
+          class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800"
+          id="listed"
+          role="tabpanel"
+          aria-labelledby="listed-tab"
+        >
+          <p class="text-gray-500 dark:text-gray-400 text-sm">listed</p>
+        </div>
+        <div
+          class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
+          id="unlisted"
+          role="tabpanel"
+          aria-labelledby="unlisted-tab"
+        >
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Unlisted</p>
+        </div>
+        <div
+          class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
+          id="sold"
+          role="tabpanel"
+          aria-labelledby="sold-tab"
+        >
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Sold</p>
         </div>
       </div>
 
@@ -400,6 +466,36 @@
 
       searchIcon.addEventListener("click", toggleSearch);
       // search section ends
+
+      // Modal section start
+      const x = document.getElementsByTagName("BODY")[0]; // Select body tag because of disable scroll when modal is active
+      const modal = document.getElementById("modal"); // modal
+      const modalBtn = document.getElementById("modal-button"); // launch modal button
+      const modalClose = document.getElementsByClassName("modal-close"); // close modal button
+
+      // Open modal
+      modalBtn.onclick = function () {
+        modal.style.display = "flex"; // Show modal
+        x.style.overflow = "hidden"; //Disable scroll on body
+      };
+
+      // Select and trigger all close buttons
+      for (var i = 0; i < modalClose.length; i++) {
+        modalClose[i].addEventListener("click", function () {
+          modal.style.display = "none"; // Hide modal
+          x.style.overflow = "auto"; // Active scroll on body
+        });
+      }
+
+      // Close modal when click away from modal
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none"; // Hide modal
+          x.style.overflow = "auto"; // Active scroll on body
+        }
+      };
+
+      // Modal  scetion end
     </script>
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
   </body>
