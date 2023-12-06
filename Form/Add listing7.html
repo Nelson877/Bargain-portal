@@ -163,9 +163,11 @@
       class="w-full lg:w-[calc(100%-256px)] lg:ml-64 bg-white lg:min-h-screen"
     >
       <div class="py-2 px-6 items-center">
-        <div class="flex items-center lg:gap-5 gap-2 mt-10 lg:ml-10">
-          <i class="fa-solid fa-arrow-left"></i>
-          <h3>Back to Dashboard</h3>
+        <div class="mt-10 ml-10">
+          <a href="#" class="flex items-center gap-5">
+            <i class="fa-solid fa-arrow-left"></i>
+            <h3>Back to Dashboard</h3>
+          </a>
           <a href="">
             <button
               class="absolute top-10 right-10 border-[1px] leading-8 border-[#AAAAAA] rounded-xl w-[145px] h-[50px]"
@@ -175,128 +177,98 @@
           </a>
         </div>
         <!-- Progress Bar start  -->
-        <div
-          class="lg:h-3 h-2 relative max-w-full overflow-hidden lg:mt-20 mt-12"
-        >
+        <div class="h-3 relative max-w-full overflow-hidden mt-20">
           <div class="w-full h-full bg-gray-200 absolute"></div>
-          <div id="bar" class="h-full bg-green-500 relative w-0"></div>
+          <div id="bar" class="h-full bg-[#EC970F] relative w-0"></div>
         </div>
         <!-- Progress Bar end  -->
         <!-- Form section start  -->
-        <form class="w-full max-w-lg lg:ml-20">
-          <h3 class="text-[36px] mt-5 font-bold">
-            Fill out the details of your car
-          </h3>
-          <div class="flex flex-wrap -mx-3 mb-6 mt-10">
-            <!-- Brand section start  -->
-            <div class="w-full w-[20%] md:w-1/2 px-3 mb-6 md:mb-0">
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-first-name"
-              >
-                Vehicle Brand Name
-              </label>
-              <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-first-name"
-                type="text"
-                placeholder="e.g  Toyota "
-              />
-            </div>
-            <!-- Brand section end  -->
-            <!-- Model section start -->
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-model"
-              >
-                Vehicle Model
-              </label>
-              <div class="relative">
-                <select
-                  class="block text-[12px] appearance-none lg:w-full w-[200px] bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-state"
-                >
-                  <option>Select your car model1</option>
-                  <option>Select your car model2</option>
-                  <option>Select your car model</option>
-                </select>
+        <div class="w-full max-w-lg ml-[280px]">
+          <div class="text-center">
+            <p class="mt-10">
+              Upload a cover photo and at least 7 images of your vehicle. <br />
+              Images should visibly display full interior and exterior of the
+              <br />
+              vehicle. See our
+              <span class="text-[#F3B757] font-bold">listing guide</span> for
+              more information.
+            </p>
+          </div>
+
+          <!-- upload start  -->
+          <section class="container flex w-full mx-auto items-center">
+            <!-- start  -->
+            <div
+              class="max-w-sm mx-auto rounded-lg overflow-hidden items-center"
+            >
+              <div class="px-4 py-6">
                 <div
-                  class="pointer-events-none absolute inset-y-0 lg:right-0 left-[170px] flex items-center px-2 text-gray-700"
+                  id="image-preview"
+                  class="max-w-sm p-20 mb-4 bg-gray-100 border-dashed border-2 border-gray-400 rounded-lg items-center mx-auto text-center cursor-pointer"
                 >
-                  <i class="fa-solid fa-chevron-down"></i>
+                  <input
+                    id="upload"
+                    type="file"
+                    class="hidden"
+                    accept="image/*"
+                  />
+                  <label for="upload" class="cursor-pointer">
+                    <p class="font-normal text-sm text-gray-400 md:px-6">
+                      + Upload Cover Image
+                    </p>
+                    <span
+                      id="filename"
+                      class="text-gray-500 bg-gray-200 z-50"
+                    ></span>
+                  </label>
                 </div>
               </div>
             </div>
-            <!-- Model section end -->
-            <!-- color section start  -->
-            <div class="w-full mt-5 md:w-1/2 px-3 mb-6 md:mb-0">
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-first-name"
-              >
-                Vehicle Color
-              </label>
-              <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-first-name"
-                type="text"
-                placeholder="e.g  Toyota "
-              />
+            <!-- end  -->
+            <!-- start  -->
+            <div
+              class="max-w-sm mx-auto rounded-lg overflow-hidden items-center"
+            >
+              <div class="px-4 py-6">
+                <div
+                  id="image-preview"
+                  class="max-w-sm p-20 mb-4 bg-gray-100 border-dashed border-2 border-gray-400 rounded-lg items-center mx-auto text-center cursor-pointer"
+                >
+                  <input
+                    id="upload"
+                    type="file"
+                    class="hidden"
+                    accept="image/*"
+                  />
+                  <label for="upload" class="cursor-pointer">
+                    <p class="font-normal text-sm text-gray-400 md:px-6">
+                      + Upload Cover Image
+                    </p>
+                    <span
+                      id="filename"
+                      class="text-gray-500 bg-gray-200 z-50"
+                    ></span>
+                  </label>
+                </div>
+              </div>
             </div>
-            <!-- color section end  -->
-            <!-- year section start  -->
-            <div class="w-full mt-5 md:w-1/2 px-3 mb-6 md:mb-0">
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-first-name"
-              >
-                Vehicle Year
-              </label>
-              <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-first-name"
-                type="text"
-                placeholder="e.g  2013 "
-              />
-            </div>
-            <!-- year section end  -->
-            <!-- Registration section start  -->
-            <div class="w-full mt-5 md:w-1/2 px-3 mb-6 md:mb-0">
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-first-name"
-              >
-                Vehicle Registration Number
-              </label>
-              <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-first-name"
-                type="text"
-                placeholder="e.g  GS-1234-23  "
-              />
-            </div>
-            <!-- Registration section end  -->
-            <!-- Chassis section start  -->
-            <div class="w-full mt-5 md:w-1/2 px-3 mb-6 md:mb-0">
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-first-name"
-              >
-                Chassis Number
-              </label>
-              <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-first-name"
-                type="text"
-                placeholder="Input the 17-digit chassis number "
-              />
-            </div>
-            <!-- Chassis section end  -->
-          </div>
+            <!-- end  -->
+          </section>
+
+          <!-- upload end  -->
+
+          <div class="flex flex-wrap -mx-3 mb-6 mt-10"></div>
           <!-- button start  -->
-          <div class="lg:fixed lg:right-20 mb-5 ml-64">
-            <a href="./Form2.html">
+          <div class="fixed right-20 top-[88%]">
+            <a href="./Form3.html">
+              <button
+                class="shadow mr-5 border-[#AAAAAA] border text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
+                type="button"
+              >
+                Back
+              </button>
+            </a>
+            <a href="./Add listing7.html">
               <button
                 class="shadow bg-[#F3B757] hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
                 type="button"
@@ -306,7 +278,7 @@
             </a>
           </div>
           <!-- button end  -->
-        </form>
+        </div>
 
         <!-- Form section end  -->
       </div>
@@ -319,18 +291,73 @@
 
       let progress = 0;
       let invervalSpeed = 10;
-      let incrementSpeed = 0;
+      let incrementSpeed = 1;
       document.addEventListener("DOMContentLoaded", function () {
         let bar = document.getElementById("bar");
         progressInterval = setInterval(function () {
           progress += incrementSpeed;
           bar.style.width = progress + "%";
-          if (progress >= 0) {
+          if (progress >= 65) {
             clearInterval(progressInterval);
           }
         }, invervalSpeed);
       });
       // Progress Bar end
+
+      //   Upload section start
+
+      const uploadInput = document.getElementById("upload");
+      const filenameLabel = document.getElementById("filename");
+      const imagePreview = document.getElementById("image-preview");
+
+      let isEventListenerAdded = false;
+
+      uploadInput.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+
+        if (file) {
+          filenameLabel.textContent = file.name;
+
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            imagePreview.innerHTML = `<img src="${e.target.result}" class="rounded-lg mx-auto" alt="Image preview" />`;
+            imagePreview.classList.remove(
+              "border-dashed",
+              "border-2",
+              "border-gray-400"
+            );
+
+            if (!isEventListenerAdded) {
+              imagePreview.addEventListener("click", () => {
+                uploadInput.click();
+              });
+
+              isEventListenerAdded = true;
+            }
+          };
+          reader.readAsDataURL(file);
+        } else {
+          filenameLabel.textContent = "";
+          imagePreview.innerHTML = `<div class="bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">No image preview</div>`;
+          imagePreview.classList.add(
+            "border-dashed",
+            "border-2",
+            "border-gray-400"
+          );
+
+          imagePreview.removeEventListener("click", () => {
+            uploadInput.click();
+          });
+
+          isEventListenerAdded = false;
+        }
+      });
+
+      uploadInput.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
+
+      //   Upload section end
     </script>
   </body>
 </html>
