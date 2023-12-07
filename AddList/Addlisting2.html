@@ -163,104 +163,99 @@
       class="w-full lg:w-[calc(100%-256px)] lg:ml-64 bg-white lg:min-h-screen"
     >
       <div class="py-2 px-6 items-center">
-        <div class="mt-10 ml-10">
-          <a href="#" class="flex items-center gap-5">
+        <div class="mt-10 lg:ml-10">
+          <a href="#" class="flex items-center lg:gap-5 gap-2">
             <i class="fa-solid fa-arrow-left"></i>
             <h3>Back to Dashboard</h3>
           </a>
           <a href="">
             <button
-              class="absolute top-10 right-10 border-[1px] leading-8 border-[#AAAAAA] rounded-xl w-[145px] h-[50px]"
+              class="absolute top-10 lg:right-10 right-5 border-[1px] leading-8 border-[#AAAAAA] rounded-xl w-[145px] h-[50px]"
             >
               Save & Exit
             </button>
           </a>
         </div>
         <!-- Progress Bar start  -->
-        <div class="h-3 relative max-w-full overflow-hidden mt-20">
+        <div
+          class="lg:h-3 h-2 relative max-w-full overflow-hidden lg:mt-20 mt-10"
+        >
           <div class="w-full h-full bg-gray-200 absolute"></div>
           <div id="bar" class="h-full bg-[#EC970F] relative w-0"></div>
         </div>
         <!-- Progress Bar end  -->
         <!-- Form section start  -->
-        <div class="w-full max-w-lg ml-[280px]">
-          <div class="text-center">
-            <p class="mt-10">
-              Upload a cover photo and at least 7 images of your vehicle. <br />
-              Images should visibly display full interior and exterior of the
-              <br />
-              vehicle. See our
-              <span class="text-[#F3B757] font-bold">listing guide</span> for
-              more information.
-            </p>
+        <form class="w-full max-w-lg lg:ml-20">
+          <h3 class="text-[36px] lg:mt-5 mt-10 font-bold">
+            Complete and Publish
+          </h3>
+          <div class="flex flex-wrap -mx-3 mb-6 mt-10">
+            <!-- Mileage section start  -->
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-first-name"
+              >
+                Selling Price
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name"
+                type="text"
+                placeholder="e.g  Accra "
+              />
+            </div>
+            <!-- Mileage section end  -->
+
+            <!-- vehicle registered section start  -->
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-first-name"
+              >
+                Is your price negotiable?
+              </label>
+              <div class="flex lg:mt-5">
+                <a href="./AddlistYes.html">
+                  <div class="flex items-center me-4 gap-1">
+                    <input
+                      id="link-radio"
+                      type="checkbox"
+                      value=""
+                      class="w-5 h-5 accent-orange-300"
+                    />
+
+                    <label
+                      for="inline-radio"
+                      class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >Yes</label
+                    >
+                  </div>
+                </a>
+
+                <div class="flex items-center me-4 gap-1">
+                  <a href="./AddlistNo.html">
+                    <input
+                      id="link-radio"
+                      type="checkbox"
+                      value=""
+                      class="w-5 h-5 accent-orange-300"
+                    />
+                  </a>
+
+                  <label
+                    for="inline-radio"
+                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >No</label
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- vehicle registered section end  -->
           </div>
-
-          <!-- upload start  -->
-          <section class="container flex w-full mx-auto items-center">
-            <!-- start  -->
-            <div
-              class="max-w-sm mx-auto rounded-lg overflow-hidden items-center"
-            >
-              <div class="px-4 py-6">
-                <div
-                  id="image-preview"
-                  class="max-w-sm p-20 mb-4 bg-gray-100 border-dashed border-2 border-gray-400 rounded-lg items-center mx-auto text-center cursor-pointer"
-                >
-                  <input
-                    id="upload"
-                    type="file"
-                    class="hidden"
-                    accept="image/*"
-                  />
-                  <label for="upload" class="cursor-pointer">
-                    <p class="font-normal text-sm text-gray-400 md:px-6">
-                      + Upload Cover Image
-                    </p>
-                    <span
-                      id="filename"
-                      class="text-gray-500 bg-gray-200 z-50"
-                    ></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <!-- end  -->
-            <!-- start  -->
-            <div
-              class="max-w-sm mx-auto rounded-lg overflow-hidden items-center"
-            >
-              <div class="px-4 py-6">
-                <div
-                  id="image-preview"
-                  class="max-w-sm p-20 mb-4 bg-gray-100 border-dashed border-2 border-gray-400 rounded-lg items-center mx-auto text-center cursor-pointer"
-                >
-                  <input
-                    id="upload"
-                    type="file"
-                    class="hidden"
-                    accept="image/*"
-                  />
-                  <label for="upload" class="cursor-pointer">
-                    <p class="font-normal text-sm text-gray-400 md:px-6">
-                      + Upload Cover Image
-                    </p>
-                    <span
-                      id="filename"
-                      class="text-gray-500 bg-gray-200 z-50"
-                    ></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <!-- end  -->
-          </section>
-
-          <!-- upload end  -->
-
-          <div class="flex flex-wrap -mx-3 mb-6 mt-10"></div>
           <!-- button start  -->
-          <div class="fixed right-20 top-[88%]">
-            <a href="./Form3.html">
+          <div class="fixed lg:right-20 right-5 lg:top-[88%] top-[90%]">
+            <a href="./Form2.html">
               <button
                 class="shadow mr-5 border-[#AAAAAA] border text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
                 type="button"
@@ -268,7 +263,7 @@
                 Back
               </button>
             </a>
-            <a href="./Add listing7.html">
+            <a href="../AddList/Addlisting3.html">
               <button
                 class="shadow bg-[#F3B757] hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
                 type="button"
@@ -278,7 +273,7 @@
             </a>
           </div>
           <!-- button end  -->
-        </div>
+        </form>
 
         <!-- Form section end  -->
       </div>
@@ -297,67 +292,12 @@
         progressInterval = setInterval(function () {
           progress += incrementSpeed;
           bar.style.width = progress + "%";
-          if (progress >= 65) {
+          if (progress >= 79) {
             clearInterval(progressInterval);
           }
         }, invervalSpeed);
       });
       // Progress Bar end
-
-      //   Upload section start
-
-      const uploadInput = document.getElementById("upload");
-      const filenameLabel = document.getElementById("filename");
-      const imagePreview = document.getElementById("image-preview");
-
-      let isEventListenerAdded = false;
-
-      uploadInput.addEventListener("change", (event) => {
-        const file = event.target.files[0];
-
-        if (file) {
-          filenameLabel.textContent = file.name;
-
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            imagePreview.innerHTML = `<img src="${e.target.result}" class="rounded-lg mx-auto" alt="Image preview" />`;
-            imagePreview.classList.remove(
-              "border-dashed",
-              "border-2",
-              "border-gray-400"
-            );
-
-            if (!isEventListenerAdded) {
-              imagePreview.addEventListener("click", () => {
-                uploadInput.click();
-              });
-
-              isEventListenerAdded = true;
-            }
-          };
-          reader.readAsDataURL(file);
-        } else {
-          filenameLabel.textContent = "";
-          imagePreview.innerHTML = `<div class="bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">No image preview</div>`;
-          imagePreview.classList.add(
-            "border-dashed",
-            "border-2",
-            "border-gray-400"
-          );
-
-          imagePreview.removeEventListener("click", () => {
-            uploadInput.click();
-          });
-
-          isEventListenerAdded = false;
-        }
-      });
-
-      uploadInput.addEventListener("click", (event) => {
-        event.stopPropagation();
-      });
-
-      //   Upload section end
     </script>
   </body>
 </html>
