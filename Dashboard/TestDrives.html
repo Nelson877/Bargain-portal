@@ -176,7 +176,7 @@
           </span>
 
           <div class="items-center lg:mt-10">
-            <a id="modal-buttonConfirm" class="gap-10 cursor-pointer">
+            <a class="gap-10 cursor-pointer">
               <i class="fa-regular fa-calendar-plus mr-2"></i>
               <span>My Availability</span>
             </a>
@@ -283,7 +283,7 @@
                   </p>
 
                   <button
-                    id="modal-buttonNew"
+                    id="modal-button"
                     class="mt-5 bg-[#F3B757] text-center rounded-[10px] px-5 py-2 text-[16px] text-[#5C2E14] font-bold hover:bg-yellow-600"
                   >
                     Select your Available Times
@@ -336,6 +336,7 @@
                             class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
                           ></div>
                           <p class="ms-5 font-[900]">Mondays</p>
+
                           <span class="ms-3">8:00 am to 5:00 pm</span>
                           <i
                             class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
@@ -358,7 +359,7 @@
                           <div
                             class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
                           ></div>
-                          <p class="ms-5 font-[900]">Mondays</p>
+                          <p class="ms-5 font-[900]">Tuesdays</p>
                           <span class="ms-3">8:00 am to 5:00 pm</span>
                           <i
                             class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
@@ -461,7 +462,6 @@
                     </div>
 
                     <button
-                      id="modal-buttonConfirm"
                       class="bg-[#F3B757] mt-3 text-center rounded-[10px] lg:px-5 px-2 lg:py-3 py-1 text-[16px] text-[#5C2E14] font-bold hover:bg-yellow-600"
                     >
                       Confirm Times Selected
@@ -470,45 +470,56 @@
                 </div>
               </div>
               <!-- Modal section end  -->
+            </div>
 
-              <!-- Modal Confirm section start  -->
+            <!-- Modal Confirm section start  -->
+            <!-- hidden -->
+            <div
+              id="modal"
+              class="items-center justify-center h-screen w-screen fixed top-0 left-0 bg-black bg-opacity-80"
+            >
+              <!--Modal Dialog -->
+
               <div
-                id="modalCon"
-                class="hidden items-center justify-center h-screen w-screen fixed top-0 left-0 bg-black bg-opacity-80"
+                class="bg-white lg:ml-[24%] lg:mt-20 w-full max-w-3xl text-center justify-center"
               >
-                <!--Modal Dialog -->
+                <!-- Close Modal start -->
+                <div
+                  class="absolute lg:right-[21%] lg:top-[13%] right-2 top-[25%]"
+                >
+                  <span class="modal-close cursor-pointer lg:text-3xl text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                  </span>
+                </div>
+                <!-- Close Modal end -->
+                <!--Modal Content -->
 
                 <div
-                  class="bg-white w-full max-w-7xl text-center justify-center"
+                  class="flex mt-10 lg:mt-5 py-6 flex-col items-center justify-between"
                 >
-                  <!-- Close Modal start -->
-                  <div class="absolute lg:right-20 lg:top-2 right-2 top-[25%]">
-                    <span
-                      class="modal-close cursor-pointer lg:text-3xl text-lg"
-                    >
-                      <i class="fa-solid fa-xmark"></i>
-                    </span>
-                  </div>
-                  <!-- Close Modal end -->
-                  <!--Modal Content -->
+                  <h3 class="font-[900] lg:text-[20px] lg:w-[400px] w-[300px]">
+                    Confirm your available times for test drives
+                  </h3>
 
-                  <div
-                    class="flex lg:mt-5 py-6 flex-col items-center justify-between"
+                  <ul class="mt-5">
+                    <li class="text-[19px] mb-6">Mondays: 8am to 5pm</li>
+                    <li class="text-[19px] mb-6">Tuesdays: 8am to 5pm</li>
+                    <li class="text-[19px] mb-6">Wednesdays: 8am to 5pm</li>
+                    <li class="text-[19px] mb-6">Thursdays: 8am to 5pm</li>
+                    <li class="text-[19px] mb-6">Fridays: 8am to 5pm</li>
+                    <li class="text-[19px] mb-6">Saturdays: 8am to 5pm</li>
+                  </ul>
+
+                  <button
+                    class="bg-[#F3B757] mt-3 text-center rounded-[10px] lg:px-5 px-2 lg:py-3 py-1 text-[16px] text-[#5C2E14] font-[900] hover:bg-yellow-600"
                   >
-                    <h3 class="font-bold lg:text-[20px] lg:w-[400px] w-[300px]">
-                      Confirm your available times for test drives
-                    </h3>
-
-                    <button
-                      class="bg-[#F3B757] mt-3 text-center rounded-[10px] lg:px-5 px-2 lg:py-3 py-1 text-[16px] text-[#5C2E14] font-bold hover:bg-yellow-600"
-                    >
-                      Apply Changes
-                    </button>
-                  </div>
+                    Apply Changes
+                  </button>
+                  <a href=""> Edit </a>
                 </div>
               </div>
-              <!-- Modal Confirm section end  -->
             </div>
+            <!-- Modal Confirm section end  -->
           </div>
         </div>
 
@@ -570,13 +581,12 @@
       // Modal section start
       const x = document.getElementsByTagName("BODY")[0];
       const modal = document.getElementById("modal");
-      const modalCon = document.getElementById("modalCon");
       const modalBtn = document.getElementById("modal-button");
       const modalBtnNew = document.getElementById("modal-buttonNew");
       const modalBtnConfirm = document.getElementById("modal-buttonConfirm");
-
       const modalClose = document.getElementsByClassName("modal-close");
 
+      // Open modal
       // Open modal
       modalBtn.onclick = function () {
         modal.style.display = "flex"; // Show modal
@@ -588,39 +598,23 @@
         x.style.overflow = "hidden";
       };
       modalBtnConfirm.onclick = function () {
-        modalCon.style.display = "flex";
+        modal.style.display = "flex";
         x.style.overflow = "hidden";
       };
 
       // Select and trigger all close buttons
       for (var i = 0; i < modalClose.length; i++) {
         modalClose[i].addEventListener("click", function () {
-          modal.style.display = "none";
-          x.style.overflow = "auto";
+          modal.style.display = "none"; // Hide modal
+          x.style.overflow = "auto"; // Active scroll on body
         });
       }
 
       // Close modal when click away from modal
       window.onclick = function (event) {
         if (event.target == modal) {
-          modalCon.style.display = "none";
-          x.style.overflow = "auto";
-        }
-      };
-
-      // Select and trigger all close buttons
-      for (var i = 0; i < modalClose.length; i++) {
-        modalClose[i].addEventListener("click", function () {
-          modalCon.style.display = "none";
-          x.style.overflow = "auto";
-        });
-      }
-
-      // Close modal when click away from modal
-      window.onclick = function (event) {
-        if (event.target == modalCon) {
-          modalCon.style.display = "none";
-          x.style.overflow = "auto";
+          modal.style.display = "none"; // Hide modal
+          x.style.overflow = "auto"; // Active scroll on body
         }
       };
 
