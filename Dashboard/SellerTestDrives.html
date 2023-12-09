@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../main.css" />
+
+    <title>dashboard</title>
+  </head>
+  <body class="text-gray-700">
+    <!-- start sidebar -->
+    <div
+      id="menu"
+      class="hidden lg:inline lg:fixed left-0 top-0 w-64 h-full bg-[#230B11] p-4 dropdown_menu overflow-x-hidden overlow-y-scroll"
+    >
+      <div class="text-right text-yellow-400">
+        <button
+          class="lg:hidden sm:inline text-2xl absolute"
+          onclick="functionMenu_Close()"
+        >
+          &times;
+        </button>
+      </div>
+      <!-- logo section  -->
+      <a href="#" class="flex items-center">
+        <img
+          src="../images/bargain-auto-logo 1.png"
+          alt=""
+          class="w-[88.73px] h-[80.49px]"
+        />
+
+        <!-- pb-2 border-b border-b-slate-200 -->
+      </a>
+      <div class="pt-3">
+        <img src="../images/Vector 6.png" alt="" />
+      </div>
+      <!-- logo section end -->
+      <div
+        class="items-center py-6 px-4 mt-[10px] bg-yellow-400 w-[218px] h-[93px] rounded-lg"
+      >
+        <p class="text-xs text-white">Wallet</p>
+        <span class="font-bold text-[19px] text-white">GHS 0.00</span>
+      </div>
+      <ul class="mt-2">
+        <li class="mb-1 group mt-2">
+          <a
+            data-active="Overview"
+            href="../Dashboard/Overview.html"
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-house-chimney mr-4"></i>
+            <span class="text-sm">Overview</span>
+          </a>
+        </li>
+        <li class="mt-2 group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-magnifying-glass mr-4"></i>
+            <span class="text-sm">Garage</span>
+          </a>
+        </li>
+        <li class="group mt-2 active">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
+          >
+            <i class="fa-regular fa-calendar mr-4"></i>
+            <span class="text-sm">Test Drives</span>
+          </a>
+        </li>
+        <li class="group mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-handshake mr-4"></i>
+            <span class="text-sm">Deals</span>
+          </a>
+        </li>
+        <li class="group mb-2 mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-shop mr-4"></i>
+            <span class="text-sm">Marketplace</span>
+          </a>
+        </li>
+        <span class="text-xs font-bold text-[#F3B757]">ACCOUNT</span>
+        <li class="group mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-gears mr-4"></i>
+            <span class="text-sm">Store settings</span>
+          </a>
+        </li>
+        <li class="group mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-user mr-4"></i>
+            <span class="text-sm">Account settings</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-circle-question mr-4"></i>
+            <span class="text-sm">Help</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-right-from-bracket mr-4"></i>
+            <span class="text-sm">LogOut</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- end sidebar  -->
+
+    <!-- main section start  -->
+    <main
+      class="w-full lg:w-[calc(100%-256px)] lg:ml-64 bg-white lg:min-h-screen"
+    >
+      <div class="py-2 px-6 items-center">
+        <button
+          id="clickButton"
+          onclick="functionMenu_Open()"
+          class="text-2xl text-yellow-500 cursor-pointer lg:hidden sm:inline mob_menu_button"
+        >
+          &#9776;
+        </button>
+        <span class="flex justify-between">
+          <span class="lg:mr-2 lg:mb-4">
+            <h1 class="lg:text-[36px] font-bold mt-4">Test Drives</h1>
+          </span>
+
+          <div class="items-center lg:mt-10">
+            <a class="gap-10 cursor-pointer">
+              <i class="fa-regular fa-calendar-plus mr-2"></i>
+              <span>Set available time</span>
+            </a>
+            <!-- new section -->
+          </div>
+        </span>
+      </div>
+      <!-- new search section  -->
+      <div
+        class="lg:hidden sm:inline-block flex fixed sm:justify-center sm:items-center rounded-lg relative"
+      >
+        <div class="search-icon px-2 py-2 ml-10 rounded z-10 shadow-md">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+        <input
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          aria-live="polite"
+          size="{20}"
+          class="search-input rounded-lg text-[12px] text-[#6D6D6D] outline-none focus:outline:focus"
+          placeholder="Search listing.."
+        />
+        <!-- <i class="fa-solid fa-plus close-Bicon"></i> -->
+      </div>
+      <!-- nav select section starts  -->
+
+      <!-- Tab and pill section start  -->
+      <div class="max-w-5xl mx-auto">
+        <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
+          <ul
+            class="flex flex-wrap -mb-px font-bold"
+            id="myTab"
+            data-tabs-toggle="#myTabContent"
+            role="tablist"
+          >
+            <li class="mr-2 active" role="presentation">
+              <button
+                class="inline-block text-[#eab308] hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-lg font-bold text-center border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308] border-[#eab308] focus:ring-yellow-400"
+                id="scheduled-tab"
+                data-tabs-target="#scheduled"
+                type="button"
+                role="tab"
+                aria-controls="scheduled"
+                aria-selected="true"
+              >
+                Scheduled
+              </button>
+            </li>
+            <li class="mr-2" role="presentation">
+              <button
+                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-lg font-bold text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+                id="awaiting-tab"
+                data-tabs-target="#awaiting"
+                type="button"
+                role="tab"
+                aria-controls="awaiting"
+                aria-selected="false"
+              >
+                Awaiting Approval
+              </button>
+            </li>
+            <li class="mr-2" role="presentation">
+              <button
+                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-lg font-bold text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+                id="past-tab"
+                data-tabs-target="#past"
+                type="button"
+                role="tab"
+                aria-controls="past"
+                aria-selected="false"
+              >
+                Past
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="myTabContent">
+          <div
+            class=""
+            id="scheduled"
+            role="tabpanel"
+            aria-labelledby="scheduled-tab"
+          >
+            <div>
+              <!-- Customer section start  -->
+              <div class="flex flex-col mt-8 mb-4 rounded-xl dark:bg-gray-800">
+                <div class="flex gap-[15%]">
+                  <p>Customer</p>
+                  <p>Schedule Date</p>
+                  <p>Scheduled Time</p>
+                  <p>Status</p>
+                </div>
+                <!-- start  -->
+                <div>
+                  <ul>
+                    <!-- infor box starts  -->
+                    <li
+                      class="flex justify-between items-center bg-white mt-2 p-2 hover:shadow-lg rounded cursor-pointer transition border-2 border-gray-100"
+                    >
+                      <div class="flex items-center">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../images/Aliceimage.png"
+                            class="rounded-full w-[40px] h-[40px]"
+                          />
+                          <h3>Alice Doe</h3>
+                        </div>
+                        <p class="ml-[100px]">5 Nov 2023</p>
+                        <span class="ml-[180px]">12:30pm</span>
+                        <button
+                          class="ml-[190px] bg-[#FFD5BF] px-3 py-1 rounded-full"
+                        >
+                          Past
+                        </button>
+                        <i class="fa-solid fa-ellipsis ml-[200px]"></i>
+                      </div>
+                    </li>
+                    <!-- infor box ends  -->
+                  </ul>
+                </div>
+                <!-- end  -->
+                <!-- start  -->
+                <div>
+                  <ul>
+                    <!-- infor box starts  -->
+                    <li
+                      class="flex justify-between items-center bg-white mt-2 p-2 hover:shadow-lg rounded cursor-pointer transition border-2 border-gray-100"
+                    >
+                      <div class="flex items-center">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../images/Aliceimage.png"
+                            class="rounded-full w-[40px] h-[40px]"
+                          />
+                          <h3>Alice Doe</h3>
+                        </div>
+                        <p class="ml-[100px]">5 Nov 2023</p>
+                        <span class="ml-[180px]">12:30pm</span>
+                        <button class="ml-[190px] bg-[#FFD5BF] rounded-full">
+                          Waiting approval
+                        </button>
+                        <i class="fa-solid fa-ellipsis ml-[200px]"></i>
+                      </div>
+                    </li>
+                    <!-- infor box ends  -->
+                  </ul>
+                </div>
+                <!-- end  -->
+              </div>
+              <!-- Customer section end  -->
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800"
+          id="awaiting"
+          role="tabpanel"
+          aria-labelledby="awaiting-tab"
+        >
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Awaiting</p>
+        </div>
+        <div
+          class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
+          id="past"
+          role="tabpanel"
+          aria-labelledby="past-tab"
+        >
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Past</p>
+        </div>
+      </div>
+
+      <!-- Tab and pill section end  -->
+    </main>
+
+    <!-- main section end  -->
+
+    <script>
+      function functionMenu_Open() {
+        // document.getElementById("menu").style.marginLeft = "20%";
+        document.getElementById("menu").style.width = "100%";
+        document.getElementById("menu").style.display = "block";
+        document.getElementById("clickButton").style.display = "none";
+      }
+
+      function functionMenu_Close() {
+        document.getElementById("menu").style.display = "none";
+        document.getElementById("clickButton").style.display = "inline-block";
+      }
+
+      // search section starts
+      const searchIcon = document.querySelector(`.search-icon`);
+      const searchInput = document.querySelector(`.search-input`);
+
+      const toggleSearch = (event) => {
+        event.stopPropagation();
+
+        if (!event.target.closest(".search-input")) {
+          searchInput.classList.toggle("active");
+
+          searchInput.classList.contains("active")
+            ? document.addEventListener("click", toggleSearch)
+            : document.removeEventListener("click", toggleSearch);
+        }
+      };
+
+      searchIcon.addEventListener("click", toggleSearch);
+      // search section ends
+
+      // Modal section start
+      const x = document.getElementsByTagName("BODY")[0];
+      const modal = document.getElementById("modal");
+      const modalBtn = document.getElementById("modal-button");
+      const modalBtnNew = document.getElementById("modal-buttonNew");
+      const modalBtnConfirm = document.getElementById("modal-buttonConfirm");
+      const modalClose = document.getElementsByClassName("modal-close");
+
+      // Open modal
+      // Open modal
+      modalBtn.onclick = function () {
+        modal.style.display = "flex"; // Show modal
+        x.style.overflow = "hidden"; //Disable scroll on body
+      };
+
+      modalBtnNew.onclick = function () {
+        modal.style.display = "flex";
+        x.style.overflow = "hidden";
+      };
+      modalBtnConfirm.onclick = function () {
+        modal.style.display = "flex";
+        x.style.overflow = "hidden";
+      };
+
+      // Select and trigger all close buttons
+      for (var i = 0; i < modalClose.length; i++) {
+        modalClose[i].addEventListener("click", function () {
+          modal.style.display = "none"; // Hide modal
+          x.style.overflow = "auto"; // Active scroll on body
+        });
+      }
+
+      // Close modal when click away from modal
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none"; // Hide modal
+          x.style.overflow = "auto"; // Active scroll on body
+        }
+      };
+
+      // Modal  scetion end
+    </script>
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+  </body>
+</html>
