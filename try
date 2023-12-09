@@ -1,0 +1,44 @@
+<div id="myTabContent">
+  <!-- !-- card section start  -->
+  <div
+    id="scheduled"
+    role="tabpanel"
+    aria-labelledby="scheduled-tab"
+    class="md:px-4 px-11"
+  >
+    <div>
+      <div
+        class="flex flex-col items-center justify-center h-[515px] mb-4 rounded-xl border-2 border-gray-50 dark:bg-gray-800"
+      >
+        <span
+          class="items-center justify-center text-2xl text-gray-900 dark:text-gray-500"
+        >
+          <div class="flex justify-center items-center">
+            <img
+              src="../images/cars-duotone 1.png"
+              class="w-[60px] h-[48px]"
+              alt=""
+            />
+          </div>
+          <div class="text-center">
+            <span class="text-[30px] font-[700]">No Schedules yet!</span>
+            <p
+              class="text-[15px] font-[400] text-center whitespace-normal max-w-[100%]"
+            >
+              You don’t have any scheduled test drives at the moment. Start by
+              <br />
+              setting up your available time
+            </p>
+
+            <button
+              id="modal-button"
+              class="mt-4 bg-[#F3B757] px-10 py-2 text-center rounded-[10px] text-[16px] font-bold hover:bg-yellow-600 text-[#5C2E14]"
+            >
+              Select your Available Times
+            </button>
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

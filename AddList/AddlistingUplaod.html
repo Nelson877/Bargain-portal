@@ -30,161 +30,21 @@
   <body class="text-gray-700">
     <!-- start sidebar -->
     <!-- id="menu" -->
-    <div
-      id="menu"
-      class="hidden lg:inline lg:fixed left-0 top-0 w-64 h-full bg-[#230B11] p-4 dropdown_menu overflow-x-hidden overlow-y-scroll"
-    >
-      <div class="text-right text-yellow-400">
-        <button
-          class="lg:hidden sm:inline text-2xl absolute"
-          onclick="functionMenu_Close()"
-        >
-          &times;
-        </button>
-      </div>
-      <!-- logo section  -->
-      <a href="#" class="flex items-center">
-        <img
-          src="../images/bargain-auto-logo 1.png"
-          alt=""
-          class="w-[88.73px] h-[80.49px]"
-        />
-
-        <!-- pb-2 border-b border-b-slate-200 -->
-      </a>
-      <div class="pt-3">
-        <img src="../images/Vector 6.png" alt="" />
-      </div>
-      <!-- logo section end -->
-      <div
-        class="items-center py-6 px-4 mt-[10px] bg-yellow-400 w-[218px] h-[93px] rounded-lg"
-      >
-        <p class="text-xs text-white">Wallet</p>
-        <span class="font-bold text-[19px] text-white">GHS 0.00</span>
-      </div>
-      <ul class="mt-2">
-        <li class="mb-1 group mt-2">
-          <a
-            data-active="Overview"
-            href="../Dashboard/Overview.html"
-            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
-          >
-            <i class="fa-solid fa-house-chimney mr-4"></i>
-            <span class="text-sm">Overview</span>
-          </a>
-        </li>
-        <li class="mt-2 group active">
-          <a
-            data-active="listing"
-            href=""
-            class="flex items-center py-2 px-4 text-white text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
-          >
-            <i class="fa-solid fa-magnifying-glass mr-4"></i>
-            <span class="text-sm">Garage</span>
-          </a>
-        </li>
-        <li class="group mt-2">
-          <a
-            data-active="listing"
-            href=""
-            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
-          >
-            <i class="fa-regular fa-calendar mr-4"></i>
-            <span class="text-sm">Test Drives</span>
-          </a>
-        </li>
-        <li class="group mt-2">
-          <a
-            data-active="listing"
-            href=""
-            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
-          >
-            <i class="fa-solid fa-handshake mr-4"></i>
-            <span class="text-sm">Deals</span>
-          </a>
-        </li>
-        <li class="group mb-2 mt-2">
-          <a
-            data-active="listing"
-            href=""
-            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
-          >
-            <i class="fa-solid fa-shop mr-4"></i>
-            <span class="text-sm">Marketplace</span>
-          </a>
-        </li>
-        <span class="text-xs font-bold text-[#F3B757]">ACCOUNT</span>
-        <li class="group mt-2">
-          <a
-            data-active="listing"
-            href=""
-            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
-          >
-            <i class="fa-solid fa-gears mr-4"></i>
-            <span class="text-sm">Store settings</span>
-          </a>
-        </li>
-        <li class="group mt-2">
-          <a
-            data-active="listing"
-            href=""
-            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
-          >
-            <i class="fa-solid fa-user mr-4"></i>
-            <span class="text-sm">Account settings</span>
-          </a>
-        </li>
-        <li class="group">
-          <a
-            data-active="listing"
-            href=""
-            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
-          >
-            <i class="fa-solid fa-circle-question mr-4"></i>
-            <span class="text-sm">Help</span>
-          </a>
-        </li>
-        <li class="group">
-          <a
-            data-active="listing"
-            href=""
-            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
-          >
-            <i class="fa-solid fa-right-from-bracket mr-4"></i>
-            <span class="text-sm">LogOut</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- end sidebar  -->
 
     <!-- main section start  -->
-    <main
-      class="w-full lg:w-[calc(100%-256px)] lg:ml-64 bg-white lg:min-h-screen"
-    >
+    <main class="w-full bg-white lg:min-h-screen">
       <div class="py-2 px-6 items-center">
-        <div class="mt-10 lg:ml-10">
-          <a href="#" class="flex items-center lg:gap-5 gap-2">
-            <i class="fa-solid fa-arrow-left"></i>
-            <h3>Back to Dashboard</h3>
-          </a>
-          <a href="">
-            <button
-              class="absolute top-10 right-10 border-[1px] leading-8 border-[#AAAAAA] rounded-xl w-[145px] h-[50px]"
-            >
-              Save & Exit
-            </button>
-          </a>
-        </div>
         <!-- Progress Bar start  -->
-        <div class="lg:h-3 h-2 relative max-w-full overflow-hidden mt-20">
+        <div
+          class="mt-20 lg:mt-0 lg:h-3 h-2 relative max-w-full overflow-hidden lg:mt-20 mt-10"
+        >
           <div class="w-full h-full bg-gray-200 absolute"></div>
           <div id="bar" class="h-full bg-[#EC970F] relative w-0"></div>
         </div>
         <!-- Progress Bar end  -->
-        <!-- Form section start  -->
-        <div class="lg:w-full max-w-lg lg:ml-[280px]">
-          <div class="text-center">
+        <!-- text start  -->
+        <div class="flex items-center justify-center">
+          <div class="lg:w-[700px] w-[420px] text-center">
             <p class="mt-10">
               Upload a cover photo and at least 7 images of your vehicle. Images
               should visibly display full interior and exterior of the vehicle.
@@ -193,93 +53,41 @@
               more information.
             </p>
           </div>
-
-          <!-- upload start  -->
-          <section class="container flex w-full mx-auto items-center">
-            <!-- start  -->
-            <div
-              class="max-w-sm mx-auto rounded-lg overflow-hidden items-center"
-            >
-              <div class="px-4 py-6">
-                <div
-                  id="image-preview"
-                  class="max-w-sm p-20 mb-4 bg-gray-100 border-dashed border-2 border-gray-400 rounded-lg items-center mx-auto text-center cursor-pointer"
-                >
-                  <input
-                    id="upload"
-                    type="file"
-                    class="hidden"
-                    accept="image/*"
-                  />
-                  <label for="upload" class="cursor-pointer">
-                    <p class="font-normal text-sm text-gray-400 md:px-6">
-                      + Upload Cover Image
-                    </p>
-                    <span
-                      id="filename"
-                      class="text-gray-500 bg-gray-200 z-50"
-                    ></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <!-- end  -->
-            <!-- start  -->
-            <div
-              class="max-w-sm mx-auto rounded-lg overflow-hidden items-center"
-            >
-              <div class="px-4 py-6">
-                <div
-                  id="image-preview"
-                  class="max-w-sm p-20 mb-4 bg-gray-100 border-dashed border-2 border-gray-400 rounded-lg items-center mx-auto text-center cursor-pointer"
-                >
-                  <input
-                    id="upload"
-                    type="file"
-                    class="hidden"
-                    accept="image/*"
-                  />
-                  <label for="upload" class="cursor-pointer">
-                    <p class="font-normal text-sm text-gray-400 md:px-6">
-                      + Upload Cover Image
-                    </p>
-                    <span
-                      id="filename"
-                      class="text-gray-500 bg-gray-200 z-50"
-                    ></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <!-- end  -->
-          </section>
-
-          <!-- upload end  -->
-
-          <div class="flex flex-wrap -mx-3 mb-6 mt-10"></div>
-          <!-- button start  -->
-          <div class="fixed right-20 top-[88%]">
-            <a href="./Form3.html">
-              <button
-                class="shadow mr-5 border-[#AAAAAA] border text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
-                type="button"
-              >
-                Back
-              </button>
-            </a>
-            <a href="./Addlisting2.html">
-              <button
-                class="shadow bg-[#F3B757] hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
-                type="button"
-              >
-                Next
-              </button>
-            </a>
-          </div>
-          <!-- button end  -->
         </div>
+        <!-- text end  -->
 
-        <!-- Form section end  -->
+        <!-- upload start  -->
+        <section class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+          <!-- start  -->
+          <div class="rounded-lg overflow-hidden items-center">
+            <div class="px-4 py-6">
+              <div
+                id="image-preview"
+                class="flex justify-center text-center mb-4 bg-gray-100 h-60 w-70 border-dashed border-2 border-gray-400 rounded-lg cursor-pointer"
+              >
+                <input
+                  id="upload"
+                  type="file"
+                  class="hidden"
+                  accept="image/*"
+                />
+                <label for="upload" class="cursor-pointer">
+                  <p
+                    class="font-normal text-sm text-gray-400 md:px-6 lg:py-[59%]"
+                  >
+                    + Upload Cover Image
+                  </p>
+                  <span
+                    id="filename"
+                    class="text-gray-500 bg-gray-200 z-50"
+                  ></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- end  -->
+        </section>
+        <!-- upload end  -->
       </div>
     </main>
 
@@ -319,7 +127,7 @@
 
           const reader = new FileReader();
           reader.onload = (e) => {
-            imagePreview.innerHTML = `<img src="${e.target.result}" class="rounded-lg mx-auto" alt="Image preview" />`;
+            imagePreview.innerHTML = `<img src="${e.target.result}" class="brightness-50 duration-500 rounded-lg mb-4 h-60 w-70  p-2" alt="Image preview" /> `;
             imagePreview.classList.remove(
               "border-dashed",
               "border-2",
@@ -337,7 +145,7 @@
           reader.readAsDataURL(file);
         } else {
           filenameLabel.textContent = "";
-          imagePreview.innerHTML = `<div class="bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">No image preview</div>`;
+          imagePreview.innerHTML = `<div class="rounded-lg flex items-center justify-center text-gray-500">No image preview</div>`;
           imagePreview.classList.add(
             "border-dashed",
             "border-2",
