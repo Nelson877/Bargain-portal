@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://raw.githubusercontent.com/desandro/classie/master/classie.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
+    <!-- Tab and pill link  -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
+    /> -->
+    <link rel="stylesheet" href="../main.css" />
+
+    <title>dashboard</title>
+  </head>
+  <body class="text-gray-700">
+    <!-- start sidebar -->
+    <!-- id="menu" -->
+    <div
+      id="menu"
+      class="hidden lg:inline lg:fixed left-0 top-0 w-64 h-full bg-[#230B11] p-4 dropdown_menu overflow-x-hidden overlow-y-scroll"
+    >
+      <div class="text-right text-yellow-400">
+        <button
+          class="lg:hidden sm:inline text-2xl absolute"
+          onclick="functionMenu_Close()"
+        >
+          &times;
+        </button>
+      </div>
+      <!-- logo section  -->
+      <a href="#" class="flex items-center">
+        <img
+          src="../images/bargain-auto-logo 1.png"
+          alt=""
+          class="w-[88.73px] h-[80.49px]"
+        />
+
+        <!-- pb-2 border-b border-b-slate-200 -->
+      </a>
+      <div class="pt-3">
+        <img src="../images/Vector 6.png" alt="" />
+      </div>
+      <!-- logo section end -->
+      <div
+        class="items-center py-6 px-4 mt-[10px] bg-yellow-400 w-[218px] h-[93px] rounded-lg"
+      >
+        <p class="text-xs text-white">Wallet</p>
+        <span class="font-bold text-[19px] text-white">GHS 0.00</span>
+      </div>
+      <ul class="mt-2">
+        <li class="mb-1 group mt-2">
+          <a
+            data-active="Overview"
+            href="../Dashboard/Overview.html"
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-house-chimney mr-4"></i>
+            <span class="text-sm">Overview</span>
+          </a>
+        </li>
+        <li class="mt-2 group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-magnifying-glass mr-4"></i>
+            <span class="text-sm">Garage</span>
+          </a>
+        </li>
+        <li class="group mt-2">
+          <a
+            data-active="listing"
+            href="../Dashboard/TestDrives.html"
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-regular fa-calendar mr-4"></i>
+            <span class="text-sm">Test Drives</span>
+          </a>
+        </li>
+        <li class="group mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-handshake mr-4"></i>
+            <span class="text-sm">Deals</span>
+          </a>
+        </li>
+        <li class="group mb-2 mt-2 active">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
+          >
+            <i class="fa-solid fa-shop mr-4"></i>
+            <span class="text-sm">Marketplace</span>
+          </a>
+        </li>
+        <span class="text-xs font-bold text-[#F3B757]">ACCOUNT</span>
+        <li class="group mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-gears mr-4"></i>
+            <span class="text-sm">Store settings</span>
+          </a>
+        </li>
+        <li class="group mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-user mr-4"></i>
+            <span class="text-sm">Account settings</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-circle-question mr-4"></i>
+            <span class="text-sm">Help</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-right-from-bracket mr-4"></i>
+            <span class="text-sm">LogOut</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- end sidebar  -->
+
+    <!-- main section start  -->
+    <main
+      class="w-full lg:w-[calc(100%-256px)] lg:ml-64 bg-white lg:min-h-screen"
+    >
+      <div class="py-2 px-6 items-center">
+        <button
+          id="clickButton"
+          onclick="functionMenu_Open()"
+          class="text-2xl text-yellow-500 cursor-pointer lg:hidden sm:inline mob_menu_button"
+        >
+          &#9776;
+        </button>
+        <span class="text-lg ml-4 flex justify-between">
+          <span class="mr-2 mb-4">
+            <h1 class="text-[36px] font-bold mt-4">Marketplace</h1>
+          </span>
+        </span>
+      </div>
+      <!-- Search bar start  -->
+      <form>
+        <label
+          for="default-search"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+          >Search</label
+        >
+        <div class="relative ml-9">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <input
+            type="search"
+            id="default-search"
+            class="block p-4 lg:w-[444px] ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg"
+            placeholder="Search by brand, model, colour, etc"
+            required
+          />
+          <button
+            type="submit"
+            class="text-[#5C2E14] font-bold absolute top-2 right-[61%] bg-[#F3B757] rounded-lg text-sm px-6 py-2"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+      <!-- Search bar end  -->
+      <div class="flex">
+        <div class="mt-5 ml-10">
+          <span class="text-[#EC970F] underline">
+            <a href="">
+              <i class="fa-solid fa-location-dot mr-2"></i>
+              Current location
+            </a>
+          </span>
+          <button
+            class="border-[#D9D9D9] border-[1px] rounded-full lg:w-[138px] py-2 ml-10"
+          >
+            Make & Model
+          </button>
+          <button
+            class="border-[#D9D9D9] border-[1px] rounded-full ml-10 lg:w-[188px] py-2"
+          >
+            Sort by: Lowest Price
+          </button>
+
+          <button
+            class="ml-10 gap-2 border-[#D9D9D9] border-[1px] lg:w-[98px] py-2 rounded-full"
+          >
+            <i class="fa-solid fa-sliders"></i>
+            Filters
+          </button>
+        </div>
+      </div>
+
+      <div class="max-w-5xl mx-auto mt-10">
+        <div id="myTabContent">
+          <!-- !-- card section start  -->
+
+          <div
+            class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-x-4 gap-y-12 text-left"
+          >
+            <!-- card 1 section start   -->
+            <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+              <div class="w-full" style="height: 400px">
+                <a href="#">
+                  <div
+                    class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                    style="
+                      background-image: url(../images/img.png);
+                      border-top-right-radius: 15px;
+                      border-top-left-radius: 15px;
+                      background-repeat: no-repeat;
+                      background-size: cover;
+                      background-position: 50% center;
+                    "
+                  >
+                    <div
+                      class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] md:w-4/12 w-5/12 rounded-xl p-2 truncate text-center"
+                    >
+                      Fixed Price
+                    </div>
+                  </div>
+                </a>
+                <div
+                  class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
+                >
+                  <div class="p-5 bg-white">
+                    <a href="#">
+                      <h5
+                        class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                      >
+                        2021 Honda HR-V
+                      </h5>
+                    </a>
+                    <div
+                      class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                    >
+                      Westland, Accra
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                        >GHS 255,500</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card 1 section end   -->
+            <!-- card 2 section start   -->
+            <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+              <div class="w-full" style="height: 400px">
+                <a href="#">
+                  <div
+                    class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                    style="
+                      background-image: url(../images/img2.png);
+                      border-top-right-radius: 15px;
+                      border-top-left-radius: 15px;
+                      background-repeat: no-repeat;
+                      background-size: cover;
+                      background-position: 50% center;
+                    "
+                  >
+                    <div
+                      class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] md:w-4/12 w-5/12 rounded-xl p-2 truncate text-center"
+                    >
+                      Fixed Price
+                    </div>
+                  </div>
+                </a>
+                <div
+                  class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
+                >
+                  <div class="p-5 bg-white">
+                    <a href="#">
+                      <h5
+                        class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                      >
+                        2021 Honda CR-V Black Edition
+                      </h5>
+                    </a>
+                    <div
+                      class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                    >
+                      Westland, Accra
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                        >GHS 255,500</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card 2 section end   -->
+            <!-- card 3 section start   -->
+            <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+              <div class="w-full" style="height: 400px">
+                <a href="#">
+                  <div
+                    class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                    style="
+                      background-image: url(../images/img3.png);
+                      border-top-right-radius: 15px;
+                      border-top-left-radius: 15px;
+                      background-repeat: no-repeat;
+                      background-size: cover;
+                      background-position: 50% center;
+                    "
+                  >
+                    <div
+                      class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] md:w-4/12 w-5/12 rounded-xl p-2 truncate text-center"
+                    >
+                      Fixed Price
+                    </div>
+                  </div>
+                </a>
+                <div
+                  class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
+                >
+                  <div class="p-5 bg-white">
+                    <a href="#">
+                      <h5
+                        class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                      >
+                        2021 Honda HR-V
+                      </h5>
+                    </a>
+                    <div
+                      class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                    >
+                      Westland, Accra
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                        >GHS 255,500</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 section end   -->
+          </div>
+
+          <!-- card section end  -->
+        </div>
+      </div>
+    </main>
+
+    <!-- main section end  -->
+
+    <script>
+      function functionMenu_Open() {
+        // document.getElementById("menu").style.marginLeft = "20%";
+        document.getElementById("menu").style.width = "100%";
+        document.getElementById("menu").style.display = "block";
+        document.getElementById("clickButton").style.display = "none";
+      }
+
+      function functionMenu_Close() {
+        document.getElementById("menu").style.display = "none";
+        document.getElementById("clickButton").style.display = "inline-block";
+      }
+    </script>
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+  </body>
+</html>
