@@ -6,215 +6,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            background: whitesmoke;
-            font-family: 'Open Sans', sans-serif;
-        }
+     .profile-pic {
+        object-fit: contain;
+    }
 
-        .container {
-            max-width: 960px;
-            margin: 30px auto;
-            padding: 20px;
-        }
+     .profile-pic {
+        object-fit: contain;
+    }
 
-        h1 {
-            font-size: 20px;
-            text-align: center;
-            margin: 20px 0 20px;
+    .img-overlay {
+        position: relative;
+        width: 200px;
+    }
 
-            small {
-                display: block;
-                font-size: 15px;
-                padding-top: 8px;
-                color: gray;
-            }
-        }
+    .img-overlay-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
-        .content {
-            position: relative;
-            width: 90%;
-            max-width: 400px;
-            margin: auto;
-            overflow: hidden;
-        }
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        cursor: pointer;
+        /* width: 192px;
+        height: 192px; */
+        opacity: 0;
+        transition: .5s ease;
+        background-color: rgba(0, 0, 0, .8);
+        /* border-radius: 50%; */
+    }
 
-        .content .content-overlay {
-            background: rgba(0, 0, 0, 0.7);
-            position: absolute;
-            height: 99%;
-            width: 100%;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            opacity: 0;
-            -webkit-transition: all 0.4s ease-in-out 0s;
-            -moz-transition: all 0.4s ease-in-out 0s;
-            transition: all 0.4s ease-in-out 0s;
-        }
+    .img-overlay:hover .overlay {
+        opacity: 1;
+    }
 
-        .content:hover .content-overlay {
-            opacity: 1;
-        }
+    .text {
+        color: white;
+        font-size: 13px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
 
-        .avatar-upload {
-            position: relative;
-            max-width: 205px;
-            margin: 50px auto;
+    .img-round {
+        object-fit: cover;
+        width: 200px;
+        height: 165px;
+        box-shadow: 0 0 10px 0 rgba(190, 190, 190, 0.35);
+        /* border-radius: 50%; */
+        z-index: 0;
+        /* border: 1px solid #666666; */
+    }
 
-            .avatar-edit {
-                position: absolute;
-                right: 12px;
-                z-index: 1;
-                /* top: 10px; */
+     .file-upload {
+        display: none;
+    }
 
-                input {
-                    display: none;
+    .p-image {
+        position: absolute;
+        top: 65%;
+        left: 57%;
+        color: #666666;
+        transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+    }
 
-                    +label {
-                        display: inline-block;
-                        width: 34px;
-                        height: 34px;
-                        margin-bottom: 0;
-                        border-radius: 5%;
-                        background: #FFFFFF;
-                        border: 1px solid transparent;
-                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-                        cursor: pointer !important;
-                        font-weight: normal;
-                        transition: all .2s ease-in-out;
+    .p-image:hover {
+        transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+    }
 
-                        &:hover {
-                            background: #f1f1f1;
-                            border-color: #d6d6d6;
-                        }
+    .upload-button {
+        font-size: 1.2em;
+        background-color: #dddcdcc0;
+        padding: 5px;
+        border-radius: 5px;
+    }
 
-                        &:after {
-                            content: "\f040";
-                            font-family: 'FontAwesome';
-                            color: #757575;
-                            position: absolute;
-                            top: 10px;
-                            cursor: pointer !important;
-                            left: 0;
-                            right: 0;
-                            text-align: center;
-                            margin: auto;
-                        }
-                    }
-                }
-            }
-
-            .avatar-preview {
-                width: 192px;
-                height: 192px;
-                position: relative;
-                border-radius: 5%;
-                border: 6px solid #F8F8F8;
-                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-
-                >div {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 5%;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-            }
-        }
-
-        .content-details {
-            position: absolute;
-            text-align: center;
-            padding-left: 1em;
-            padding-right: 1em;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            opacity: 0;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            -webkit-transition: all 0.3s ease-in-out 0s;
-            -moz-transition: all 0.3s ease-in-out 0s;
-            transition: all 0.3s ease-in-out 0s;
-        }
-
-        .content:hover .content-details {
-            top: 90%;
-            left: 50%;
-            opacity: 1;
-        }
-
-        .content-details {
-            color: #fff;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            margin-bottom: 0.5em;
-            text-transform: uppercase;
-        }
-
-
-        .fadeIn-bottom {
-            top: 80%;
-        }
-
-        .fadeIn-top {
-            top: 20%;
-        }
-
-        .fadeIn-left {
-            left: 20%;
-        }
-
-        .fadeIn-right {
-            left: 80%;
-        }
-        label{
-            cursor:pointer;
-        }
+    .upload-button:hover {
+        transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+        color: #999;
+    }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="avatar-upload">
-            <div class="avatar-edit">
-                <input type='file' id="imageUpload" style="display: none;" accept=".png, .jpg, .jpeg" />
+<div class="container">
+
+
+    <div class="profile-picture my-5">
+        <div class="img-overlay">
+            <img src="../../../public/asset/images/4.png"
+                class="img-round w-30 mr-3 @error('profile-pic') is-invalid @enderror" id="output" alt="">
+            <div class="overlay w-30">
+                <div class="text">Upload Photo</div>
+            </div>
+
+            <div class="p-image">
+                <input class="file-upload" type="file" name="profile_pic" id="profile" accept=".jpg,.jpeg,.png" />
 
             </div>
-            <div class="avatar-preview content">
-                <div class="content-overlay"></div>
-                <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
-                </div>
-                <div class="content-details fadeIn-bottom">
-                    <label for="imageUpload"> Edit</label>
-                </div>
-            </div>
+            <div id="img_error"></div>
+
+
+
         </div>
+
     </div>
+</div>
+
+
 
 
 
     <script>
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
+        document.addEventListener("DOMContentLoaded", () => {
+                $(document).ready(function () {
 
-                reader.onload = function (e) {
-                    $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
-                    $('#imagePreview').hide();
-                    $('#imagePreview').fadeIn(650);
-                }
 
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+                    var readURL = function (input) {
+                        if (input.files && input.files[0]) {
+                            var reader = new FileReader();
 
-        $("#imageUpload").change(function () {
-            readURL(this);
-        });
+                            reader.onload = function (e) {
+                                $('.profile-pic').attr('src', e.target.result);
+                            }
+
+                            reader.readAsDataURL(input.files[0]);
+                        }
+                    }
+
+
+                    $(".file-upload").on('change', function () {
+                        readURL(this);
+                    });
+
+                    $(".overlay").on('click', function () {
+                        $(".file-upload").click();
+                    });
+                });
+
+
+            });
     </script>
-    <script src="https: //cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </body>
 </html>
