@@ -5,35 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
- 
-  </head>
-  <body>
-    <div class="container">
-      <div class="avatar-upload">
-        <div class="avatar-edit">
-          <input
-            type="file"
-            id="imageUpload"
-            style="display: none"
-            accept=".png, .jpg, .jpeg"
-          />
-        </div>
-        <div class="avatar-preview content">
-          <div class="content-overlay"></div>
-          <div
-            id="imagePreview"
-            style="background-image: url(http://i.pravatar.cc/500?img=7)"
-          ></div>
-          <div class="content-details fadeIn-bottom">
-            <label for="imageUpload"> Edit</label>
-          </div>
-        </div>
-      </div>
-     .profile-pic {
+<style>
+    .profile-pic {
         object-fit: contain;
     }
 
-     .profile-pic {
+    .profile-pic {
         object-fit: contain;
     }
 
@@ -88,7 +65,7 @@
         /* border: 1px solid #666666; */
     }
 
-     .file-upload {
+    .file-upload {
         display: none;
     }
 
@@ -115,15 +92,16 @@
         transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
         color: #999;
     }
-    </style>
-</head>
-<body>
+</style>
+  </head>
+  <body>
+   
 <div class="container">
 
 
     <div class="profile-picture my-5">
         <div class="img-overlay">
-            <img src="../../../public/asset/images/4.png"
+            <img src="http://i.pravatar.cc/500?img=7"
                 class="img-round w-30 mr-3 @error('profile-pic') is-invalid @enderror" id="output" alt="">
             <div class="overlay w-30">
                 <div class="text">Upload Photo</div>
@@ -141,32 +119,59 @@
 
 
     </div>
+    <div class="profile-picture my-5">
+        <div class="img-overlay">
+            <img src="http://i.pravatar.cc/500?img=7"
+                class="img-round w-30 mr-3 @error('profile-pic') is-invalid @enderror" id="output" alt="">
+            <div class="overlay w-30">
+                <div class="text">Upload Photo</div>
+            </div>
+    
+            <div class="p-image">
+                <input class="file-upload" type="file" name="profile_pic" id="profile" accept=".jpg,.jpeg,.png" />
+    
+            </div>
+            <div id="img_error"></div>
+    
+    
+    
+        </div>
+    
+    </div>
 </div>
 
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-      function readURL(input) {
-        if (input.files && input.files[0]) {
-          var reader = new FileReader();
+      document.addEventListener("DOMContentLoaded", () => {
+            $(document).ready(function () {
 
-          reader.onload = function (e) {
-            $("#imagePreview").css(
-              "background-image",
-              "url(" + e.target.result + ")"
-            );
-            $("#imagePreview").hide();
-            $("#imagePreview").fadeIn(650);
-          };
 
-          reader.readAsDataURL(input.files[0]);
-        }
-      }
+                var readURL = function (input) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
 
-      $("#imageUpload").change(function () {
-        readURL(this);
-      });
-    </script>
+                        reader.onload = function (e) {
+                            $('.profile-pic').attr('src', e.target.result);
+                        }
+
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+
+
+                $(".file-upload").on('change', function () {
+                    readURL(this);
+                });
+
+                $(".overlay").on('click', function () {
+                    $(".file-upload").click();
+                });
+            });
+
+
+        });
+        </script>
     
     </body>
 </html>
