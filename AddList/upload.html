@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
+ 
+  </head>
+  <body>
+    <div class="container">
+      <div class="avatar-upload">
+        <div class="avatar-edit">
+          <input
+            type="file"
+            id="imageUpload"
+            style="display: none"
+            accept=".png, .jpg, .jpeg"
+          />
+        </div>
+        <div class="avatar-preview content">
+          <div class="content-overlay"></div>
+          <div
+            id="imagePreview"
+            style="background-image: url(http://i.pravatar.cc/500?img=7)"
+          ></div>
+          <div class="content-details fadeIn-bottom">
+            <label for="imageUpload"> Edit</label>
+          </div>
+        </div>
+      </div>
      .profile-pic {
         object-fit: contain;
     }
@@ -116,43 +139,34 @@
 
         </div>
 
+
     </div>
 </div>
 
 
 
-
-
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-                $(document).ready(function () {
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
 
+          reader.onload = function (e) {
+            $("#imagePreview").css(
+              "background-image",
+              "url(" + e.target.result + ")"
+            );
+            $("#imagePreview").hide();
+            $("#imagePreview").fadeIn(650);
+          };
 
-                    var readURL = function (input) {
-                        if (input.files && input.files[0]) {
-                            var reader = new FileReader();
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
 
-                            reader.onload = function (e) {
-                                $('.profile-pic').attr('src', e.target.result);
-                            }
-
-                            reader.readAsDataURL(input.files[0]);
-                        }
-                    }
-
-
-                    $(".file-upload").on('change', function () {
-                        readURL(this);
-                    });
-
-                    $(".overlay").on('click', function () {
-                        $(".file-upload").click();
-                    });
-                });
-
-
-            });
+      $("#imageUpload").change(function () {
+        readURL(this);
+      });
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     </body>
 </html>
