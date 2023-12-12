@@ -6,17 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 <style>
-    .profile-pic {
-        object-fit: contain;
-    }
+    .avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 50px auto;
+}
+.avatar-upload .avatar-edit {
+  position: absolute;
+  right: 5px;
+  z-index: 1;
+  top: 5px;
+}
+.avatar-upload .avatar-edit input {
+  display: none;
+}
+.avatar-upload .avatar-edit input + .label {
+  display: inline-block;
+  width: 192px;
+  height: 192px;
+  margin-bottom: 0;
+  border-radius: 5%;
+  background-color: rgba(0, 0, 0, .1);
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  text-align: center;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+.avatar-upload .avatar-edit input + .label:hover {
+  background-color: rgba(0, 0, 0, .8);
+  border-color: #d6d6d6;
+   color: white;
+   >p{
+    display: block;
+   }
+}
 
-    .profile-pic {
-        object-fit: contain;
-    }
+p{
+    display: none;
+    margin-top:40%;
+}
 
-    .img-overlay {
+.avatar-upload .avatar-preview {
+  width: 192px;
+  height: 192px;
+  position: relative;
+  border-radius: 5%;
+  border: 6px solid #F8F8F8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.avatar-upload .avatar-preview > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-overlay {
         position: relative;
-        width: 200px;
+        width: 192px;
     }
 
     .img-overlay-image {
@@ -31,147 +81,56 @@
         bottom: 0;
         left: 0;
         right: 0;
-        cursor: pointer;
         /* width: 192px;
         height: 192px; */
         opacity: 0;
         transition: .5s ease;
         background-color: rgba(0, 0, 0, .8);
-        /* border-radius: 50%; */
+        border-radius: 50%;
     }
 
     .img-overlay:hover .overlay {
         opacity: 1;
     }
-
-    .text {
-        color: white;
-        font-size: 13px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        text-align: center;
-    }
-
-    .img-round {
-        object-fit: cover;
-        width: 200px;
-        height: 165px;
-        box-shadow: 0 0 10px 0 rgba(190, 190, 190, 0.35);
-        /* border-radius: 50%; */
-        z-index: 0;
-        /* border: 1px solid #666666; */
-    }
-
-    .file-upload {
-        display: none;
-    }
-
-    .p-image {
-        position: absolute;
-        top: 65%;
-        left: 57%;
-        color: #666666;
-        transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-    }
-
-    .p-image:hover {
-        transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-    }
-
-    .upload-button {
-        font-size: 1.2em;
-        background-color: #dddcdcc0;
-        padding: 5px;
-        border-radius: 5px;
-    }
-
-    .upload-button:hover {
-        transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-        color: #999;
-    }
 </style>
   </head>
   <body>
    
-<div class="container">
-
-
-    <div class="profile-picture my-5">
-        <div class="img-overlay">
-            <img src="http://i.pravatar.cc/500?img=7"
-                class="img-round w-30 mr-3 @error('profile-pic') is-invalid @enderror" id="output" alt="">
-            <div class="overlay w-30">
-                <div class="text">Upload Photo</div>
-            </div>
-
-            <div class="p-image">
-                <input class="file-upload" type="file" name="profile_pic" id="profile" accept=".jpg,.jpeg,.png" />
-
-            </div>
-            <div id="img_error"></div>
-
-
-
+<div class="avatar-upload">
+    <div class="avatar-edit">
+        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" onchange="previewFile()" />
+        <!-- <label for="imageUpload" id="label"></label> -->
+        <div class="label">
+            <p id="edit" onclick="$('#imageUpload').trigger('click');"> Edit</p>
         </div>
-
-
     </div>
-    <div class="profile-picture my-5">
-        <div class="img-overlay">
-            <img src="http://i.pravatar.cc/500?img=7"
-                class="img-round w-30 mr-3 @error('profile-pic') is-invalid @enderror" id="output" alt="">
-            <div class="overlay w-30">
-                <div class="text">Upload Photo</div>
-            </div>
-    
-            <div class="p-image">
-                <input class="file-upload" type="file" name="profile_pic" id="profile" accept=".jpg,.jpeg,.png" />
-    
-            </div>
-            <div id="img_error"></div>
-    
-    
-    
+    <div class="avatar-preview">
+        <img id="imagePreview"
+            src="https://www.loginradius.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png">
+        <div class="overlay w-30">
+            <div class="text">Upload Photo</div>
         </div>
-    
     </div>
 </div>
 
 
+<script>
+    // $('#edit').click(function () { $('#imageUpload').trigger('click'); });
+    function previewFile() {
+        var preview = document.querySelector('img');
+        var file    = document.querySelector('input[type=file]').files[0];
+        var reader  = new FileReader();
+        
+        reader.addEventListener("load", function () {
+        preview.src = reader.result;
+        }, false);
+        
+        if (file) {
+        reader.readAsDataURL(file);
+        }
+    }
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-            $(document).ready(function () {
-
-
-                var readURL = function (input) {
-                    if (input.files && input.files[0]) {
-                        var reader = new FileReader();
-
-                        reader.onload = function (e) {
-                            $('.profile-pic').attr('src', e.target.result);
-                        }
-
-                        reader.readAsDataURL(input.files[0]);
-                    }
-                }
-
-
-                $(".file-upload").on('change', function () {
-                    readURL(this);
-                });
-
-                $(".overlay").on('click', function () {
-                    $(".file-upload").click();
-                });
-            });
-
-
-        });
-        </script>
     
     </body>
 </html>
