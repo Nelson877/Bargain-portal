@@ -48,64 +48,44 @@
             </h3>
           </div>
         </div>
-        <div class="mt-10 flex gap-5">
+        <div class="mt-6 flex gap-5 justify-center items-center">
           <!-- start  -->
           <div
-            class="bg-[#FFF8EB] w-[306px] h-[256px] flex flex-col items-center"
+            class="bg-[#FFF8EB] w-[206px] h-[156px] flex flex-col items-center"
           >
-            <label
-              class="block mb-2 mt-20 text-sm text-gray-900 dark:text-white"
-              for="file_input"
+            <div class="mt-8 text-3xl text-[#F3B757]">
+              <i id="fileIcon" class="fa-solid fa-file hidden"></i>
+            </div>
+            <span class="text-center text-sm"
+              >Vehicle <br />
+              Registration</span
             >
-              <h6 class="text-[20px] text-center">
-                Vehicle <br />
-                Registration
-              </h6>
-            </label>
-
-            <input
-              class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-              aria-describedby="file_input_help"
-              id="file_input"
-              type="file"
-            />
-
-            <button
-              class="mt-4 shadow bg-[#F3B757] hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
-            >
-              Click to Upload
-            </button>
+            <div>
+              <input
+                class="absolute inset-0 w-full h-ful opacity-0 cursor-pointer"
+                aria-describedby="file_input_help"
+                id="uploadButton"
+                type="file"
+                onchange="handleFileUpload()"
+              />
+              <button
+                id="uploadButtonVisible"
+                class="mt-4 shadow bg-[#F3B757] px-5 py-2 hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none text-[10px] font-bold rounded"
+                onclick="showIcon()"
+              >
+                Click to Upload
+              </button>
+              <div
+                id="EditDelete"
+                class="text-[10px] text-center hidden mt-2 cursor-pointer"
+              >
+                <span class="">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                  Edit
+                </span>
+              </div>
+            </div>
           </div>
-
-          <!-- end  -->
-          <!-- start  -->
-          <div
-            class="bg-[#FFF8EB] w-[306px] h-[256px] flex flex-col items-center"
-          >
-            <label
-              class="block mb-2 mt-20 text-sm text-gray-900 dark:text-white"
-              for="file_input"
-            >
-              <h6 class="text-[20px] text-center">
-                Proof of Ownership <br />
-                (Optional for dealers)
-              </h6>
-            </label>
-
-            <input
-              class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-              aria-describedby="file_input_help"
-              id="file_input"
-              type="file"
-            />
-
-            <button
-              class="mt-4 shadow bg-[#F3B757] hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
-            >
-              Click to Upload
-            </button>
-          </div>
-
           <!-- end  -->
         </div>
         <!-- Uplaod doc end  -->
@@ -113,5 +93,30 @@
     </main>
 
     <!-- main section end  -->
+
+    <script>
+      function handleFileUpload() {
+        var fileInput = document.getElementById("uploadButton");
+        var fileIcon = document.getElementById("fileIcon");
+        var uploadButton = document.getElementById("uploadButtonVisible");
+        var EditDelete = document.getElementById("EditDelete");
+
+        if (fileInput.files.length > 0) {
+          fileIcon.classList.remove("hidden");
+
+          uploadButton.style.display = "none";
+          EditDelete.style.display = "block";
+        } else {
+          fileIcon.classList.add("hidden");
+
+          uploadButton.style.display = "block";
+          EditDelete.style.display = "none";
+        }
+      }
+
+      function showIcon() {
+        document.getElementById("uploadButton").click();
+      }
+    </script>
   </body>
 </html>
