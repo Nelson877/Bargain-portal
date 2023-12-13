@@ -40,7 +40,7 @@
       <div>
         <a href="../Dashboard/Marketplace.html" class="flex items-center gap-4">
           <i class="fa-solid fa-chevron-left"></i>
-          <p>Back to search</p>
+          <span>Back to search</span>
         </a>
       </div>
       <!-- back end  -->
@@ -93,8 +93,12 @@
                   >
                 </p>
               </div>
-              <div>
-                <button>Schedule Test Drive</button>
+              <div class="mt-10 ml-auto mr-5">
+                <button
+                  class="mt-5 bg-[#F3B757] text-center rounded-[10px] px-5 py-2 text-[16px] text-[#5C2E14] font-bold hover:bg-yellow-600"
+                >
+                  Schedule Test Drive
+                </button>
               </div>
             </div>
           </div>
@@ -108,10 +112,269 @@
       </div>
       <!-- Image card main end  -->
     </main>
+    <!-- Tab and pill section start  -->
+    <div class="max-w-5xl mx-auto">
+      <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
+        <ul
+          class="flex flex-wrap -mb-px font-bold"
+          id="myTab"
+          data-tabs-toggle="#myTabContent"
+          role="tablist"
+        >
+          <li class="mr-2 active" role="presentation">
+            <button
+              class="inline-block text-[#eab308] hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-lg font-bold text-center border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308] border-[#eab308] focus:ring-yellow-400"
+              id="scheduled-tab"
+              data-tabs-target="#scheduled"
+              type="button"
+              role="tab"
+              aria-controls="scheduled"
+              aria-selected="true"
+            >
+              Scheduled
+            </button>
+          </li>
+          <li class="mr-2" role="presentation">
+            <button
+              class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-lg font-bold text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+              id="awaiting-tab"
+              data-tabs-target="#awaiting"
+              type="button"
+              role="tab"
+              aria-controls="awaiting"
+              aria-selected="false"
+            >
+              Awaiting Approval
+            </button>
+          </li>
+          <li class="mr-2" role="presentation">
+            <button
+              class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-lg font-bold text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+              id="past-tab"
+              data-tabs-target="#past"
+              type="button"
+              role="tab"
+              aria-controls="past"
+              aria-selected="false"
+            >
+              Past
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div id="myTabContent">
+        <div
+          class="mt-10"
+          id="scheduled"
+          role="tabpanel"
+          aria-labelledby="scheduled-tab"
+        >
+          <div
+            class="flex flex-col mt-8 items-center justify-center h-[515px] mb-4 rounded-xl border-2 border-gray-50 dark:bg-gray-800"
+          >
+            <span
+              class="items-center justify-center text-2xl text-gray-900 dark:text-gray-500"
+            >
+              <div class="flex justify-center items-center">
+                <img
+                  src="../images/cars-duotone 1.png"
+                  class="w-[60px] h-[48px]"
+                  alt=""
+                />
+              </div>
+              <div class="text-center">
+                <span class="text-[30px] font-[700]">No Schedules yet!</span>
+                <p class="text-[15px] font-[400] text-center">
+                  You don’t have any scheduled test drives at the moment. Start
+                  by <br />
+                  setting up your available time
+                </p>
 
+                <button
+                  id="modal-button"
+                  class="mt-5 bg-[#F3B757] text-center rounded-[10px] px-5 py-2 text-[16px] text-[#5C2E14] font-bold hover:bg-yellow-600"
+                >
+                  Select your Available Times
+                </button>
+              </div>
+            </span>
+
+            <!-- Modal section start  -->
+            <div
+              id="modal"
+              class="hidden items-center justify-center h-screen w-screen fixed top-0 left-0 bg-black bg-opacity-80"
+            >
+              <!--Modal Dialog -->
+
+              <div class="bg-white w-full max-w-7xl text-center justify-center">
+                <!-- Close Modal start -->
+                <div class="absolute lg:right-20 lg:top-2 right-2 top-[25%]">
+                  <span class="modal-close cursor-pointer lg:text-3xl text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                  </span>
+                </div>
+                <!-- Close Modal end -->
+                <!--Modal Content -->
+
+                <div
+                  class="flex lg:mt-5 py-6 flex-col items-center justify-between"
+                >
+                  <h3 class="font-bold lg:text-[20px] lg:w-[400px] w-[300px]">
+                    Select the times you will be available to offer test drives
+                    to clients
+                  </h3>
+                  <div>
+                    <!-- start -->
+                    <div
+                      class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
+                    >
+                      <label
+                        class="relative inline-flex items-center cursor-pointer"
+                      >
+                        <input type="checkbox" value="" class="sr-only peer" />
+                        <div
+                          class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
+                        ></div>
+                        <p class="ms-5 font-[900]">Mondays</p>
+
+                        <span class="ms-3">8:00 am to 5:00 pm</span>
+                        <i
+                          class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
+                        ></i>
+                      </label>
+                    </div>
+                    <!-- end  -->
+                    <!-- start -->
+                    <div
+                      class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
+                    >
+                      <label
+                        class="relative inline-flex items-center cursor-pointer"
+                      >
+                        <input type="checkbox" value="" class="sr-only peer" />
+                        <div
+                          class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
+                        ></div>
+                        <p class="ms-5 font-[900]">Tuesdays</p>
+                        <span class="ms-3">8:00 am to 5:00 pm</span>
+                        <i
+                          class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
+                        ></i>
+                      </label>
+                    </div>
+                    <!-- end  -->
+                    <!-- start -->
+                    <div
+                      class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
+                    >
+                      <label
+                        class="relative inline-flex items-center cursor-pointer"
+                      >
+                        <input type="checkbox" value="" class="sr-only peer" />
+                        <div
+                          class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
+                        ></div>
+                        <p class="ms-5 font-[900]">Mondays</p>
+                        <span class="ms-3">8:00 am to 5:00 pm</span>
+                        <i
+                          class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
+                        ></i>
+                      </label>
+                    </div>
+                    <!-- end  -->
+                    <!-- start -->
+                    <div
+                      class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
+                    >
+                      <label
+                        class="relative inline-flex items-center cursor-pointer"
+                      >
+                        <input type="checkbox" value="" class="sr-only peer" />
+                        <div
+                          class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
+                        ></div>
+                        <p class="ms-5 font-[900]">Mondays</p>
+                        <span class="ms-3">8:00 am to 5:00 pm</span>
+                        <i
+                          class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
+                        ></i>
+                      </label>
+                    </div>
+                    <!-- end  -->
+                    <!-- start -->
+                    <div
+                      class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
+                    >
+                      <label
+                        class="relative inline-flex items-center cursor-pointer"
+                      >
+                        <input type="checkbox" value="" class="sr-only peer" />
+                        <div
+                          class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
+                        ></div>
+                        <p class="ms-5 font-[900]">Mondays</p>
+                        <span class="ms-3">8:00 am to 5:00 pm</span>
+                        <i
+                          class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
+                        ></i>
+                      </label>
+                    </div>
+                    <!-- end  -->
+                    <!-- start -->
+                    <div
+                      class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
+                    >
+                      <label
+                        class="relative inline-flex items-center cursor-pointer"
+                      >
+                        <input type="checkbox" value="" class="sr-only peer" />
+                        <div
+                          class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
+                        ></div>
+                        <p class="ms-5 font-[900]">Mondays</p>
+                        <span class="ms-3">8:00 am to 5:00 pm</span>
+                        <i
+                          class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
+                        ></i>
+                      </label>
+                    </div>
+                    <!-- end  -->
+                  </div>
+
+                  <button
+                    class="bg-[#F3B757] mt-3 text-center rounded-[10px] lg:px-5 px-2 lg:py-3 py-1 text-[16px] text-[#5C2E14] font-bold hover:bg-yellow-600"
+                  >
+                    Confirm Times Selected
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Modal section end  -->
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800"
+        id="awaiting"
+        role="tabpanel"
+        aria-labelledby="awaiting-tab"
+      >
+        <p class="text-gray-500 dark:text-gray-400 text-sm">Awaiting</p>
+      </div>
+      <div
+        class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
+        id="past"
+        role="tabpanel"
+        aria-labelledby="past-tab"
+      >
+        <p class="text-gray-500 dark:text-gray-400 text-sm">Past</p>
+      </div>
+    </div>
+
+    <!-- Tab and pill section end  -->
     <!-- main section end  -->
 
-    <script></script>
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
   </body>
 </html>

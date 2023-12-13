@@ -36,29 +36,38 @@
       <div class="py-2 px-6 items-center">
         <!-- Progress Bar start  -->
         <div class="w-full mt-20 bg-gray-200 h-2.5 dark:bg-gray-700">
-          <div class="bg-[#F3B757] h-2.5" style="width: 100%"></div>
+          <div class="bg-[#F3B757] h-2.5" style="width: 87%"></div>
         </div>
         <!-- Progress Bar end  -->
-        <div class="text-center mt-20">
-          <i
-            class="fa-solid fa-circle-check text-[#08875D] lg:text-9xl text-6xl mb-5"
-          ></i>
-          <p class="lg:text-[40px] text-[30px] font-bold">Congratulations!</p>
-          <span class="text-[15px]">You successfully listed a sale</span>
-          <div class="mt-5">
-            <a href="../Dashboard/VehicleListing.html">
-              <button
-                class="shadow bg-[#F3B757] hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
-                type="button"
+
+        <!-- Uplaod doc start  -->
+        <div>
+          <h2>Upload your car documents</h2>
+          <div>
+            <!-- start  -->
+            <div class="bg-[#FFF8EB] w-[306px] h-[256px] items-center">
+              <label
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                for="file_input"
+                >Vehicle Registration</label
               >
-                View your Listings
+
+              <input
+                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                aria-describedby="file_input_help"
+                id="file_input"
+                type="file"
+              />
+              <button
+                class="block w-full text-sm text-white bg-indigo-500 border border-indigo-500 rounded-lg cursor-pointer focus:outline-none"
+              >
+                Upload File
               </button>
-            </a>
+            </div>
+            <!-- end  -->
           </div>
-          <a href="" class="text-[#F3B757] text-sm underline underline-offset-4"
-            >Edit this listing</a
-          >
         </div>
+        <!-- Uplaod doc end  -->
       </div>
     </main>
 
