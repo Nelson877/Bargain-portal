@@ -24,147 +24,370 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../main.css" />
-
-    <title>Form</title>
   </head>
-  <body class="text-gray-700">
-    <!-- start sidebar -->
-    <!-- id="menu" -->
-
-    <!-- main section start  -->
-    <main class="w-full bg-white lg:min-h-screen">
-      <div class="py-2 px-6 items-center">
-        <!-- Progress Bar start  -->
+  <body>
+    <!-- Progress Bar start  -->
+    <div class="w-full mt-20 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+      <div class="bg-[#F3B757] h-2.5" style="width: 80%"></div>
+    </div>
+    <!-- Progress Bar end  -->
+    <!-- text start  -->
+    <div class="flex items-center justify-center">
+      <div class="lg:w-[700px] w-[420px] text-center">
+        <h3 class="mt-10">
+          Upload a cover photo and at least 7 images of your vehicle. Images
+          should visibly display full interior and exterior of the vehicle. See
+          our
+          <span class="text-[#F3B757] font-bold">listing guide</span> for more
+          information.
+        </h3>
+      </div>
+    </div>
+    <!-- text end  -->
+    <!-- upload start  -->
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols- gap-2">
+      <!-- start  -->
+      <div class="avatar-upload">
         <div
-          class="mt-20 lg:mt-0 lg:h-3 h-2 relative max-w-full overflow-hidden lg:mt-20 mt-10"
+          class="avatar-edit border-[2px] border-[#808080] rounded-2xl border-dotted"
         >
-          <div class="w-full h-full bg-gray-200 absolute"></div>
-          <div id="bar" class="h-full bg-[#EC970F] relative w-0"></div>
-        </div>
-        <!-- Progress Bar end  -->
-        <!-- text start  -->
-        <div class="flex items-center justify-center">
-          <div class="lg:w-[700px] w-[420px] text-center">
-            <p class="mt-10">
-              Upload a cover photo and at least 7 images of your vehicle. Images
-              should visibly display full interior and exterior of the vehicle.
-              See our
-              <span class="text-[#F3B757] font-bold">listing guide</span> for
-              more information.
+          <!-- <span class="text-center"> + Upload Cover Image </span> -->
+          <input
+            type="file"
+            id="imageUpload"
+            accept=".png, .jpg, .jpeg"
+            onchange="previewFile()"
+          />
+
+          <!-- <label for="imageUpload" id="label"></label> -->
+          <div class="label">
+            <p
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+              class="mt-[39%] text-[#808080]"
+            >
+              + Upload Cover Image
+            </p>
+            <p
+              class="hover:underline-offset hover:underline"
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+            >
+              Edit
             </p>
           </div>
         </div>
-        <!-- text end  -->
-
-        <!-- upload start  -->
-        <section class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
-          <!-- start  -->
-          <div class="rounded-lg overflow-hidden items-center">
-            <div class="px-4 py-6">
-              <div
-                id="image-preview"
-                class="flex justify-center text-center mb-4 bg-gray-100 h-60 w-70 border-dashed border-2 border-gray-400 rounded-lg cursor-pointer"
-              >
-                <input
-                  id="upload"
-                  type="file"
-                  class="hidden"
-                  accept="image/*"
-                />
-                <label for="upload" class="cursor-pointer">
-                  <p
-                    class="font-normal text-sm text-gray-400 md:px-6 lg:py-[59%]"
-                  >
-                    + Upload Cover Image
-                  </p>
-                  <span
-                    id="filename"
-                    class="text-gray-500 bg-gray-200 z-50"
-                  ></span>
-                </label>
-              </div>
-            </div>
+        <div class="avatar-preview">
+          <img
+            id="imagePreview"
+            src="https://www.loginradius.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png"
+          />
+          <div class="overlay w-30">
+            <div class="text">Upload Photo</div>
           </div>
-          <!-- end  -->
-        </section>
-        <!-- upload end  -->
+        </div>
       </div>
-    </main>
+      <!-- end  -->
+      <!-- start  -->
+      <div class="avatar-upload">
+        <div
+          class="avatar-edit border-[2px] border-[#808080] rounded-2xl border-dotted"
+        >
+          <!-- <span class="text-center"> + Upload Cover Image </span> -->
+          <input
+            type="file"
+            id="imageUpload"
+            accept=".png, .jpg, .jpeg"
+            onchange="previewFile()"
+          />
 
-    <!-- main section end  -->
+          <!-- <label for="imageUpload" id="label"></label> -->
+          <div class="label">
+            <p
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+              class="mt-[39%] text-[#808080]"
+            >
+              + Upload Image of Car <br />
+              Front
+            </p>
+            <p
+              class="hover:underline-offset hover:underline"
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+            >
+              Edit
+            </p>
+          </div>
+        </div>
+        <div class="avatar-preview">
+          <img
+            id="imagePreview"
+            src="https://www.loginradius.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png"
+          />
+          <div class="overlay w-30">
+            <div class="text">Upload Photo</div>
+          </div>
+        </div>
+      </div>
+      <!-- end  -->
+      <!-- start  -->
+      <div class="avatar-upload">
+        <div
+          class="avatar-edit border-[2px] border-[#808080] rounded-2xl border-dotted"
+        >
+          <!-- <span class="text-center"> + Upload Cover Image </span> -->
+          <input
+            type="file"
+            id="imageUpload"
+            accept=".png, .jpg, .jpeg"
+            onchange="previewFile()"
+          />
+
+          <!-- <label for="imageUpload" id="label"></label> -->
+          <div class="label">
+            <p
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+              class="mt-[39%] text-[#808080]"
+            >
+              + Upload Image of <br />
+              Rear of Car
+            </p>
+            <p
+              class="hover:underline-offset hover:underline"
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+            >
+              Edit
+            </p>
+          </div>
+        </div>
+        <div class="avatar-preview">
+          <img
+            id="imagePreview"
+            src="https://www.loginradius.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png"
+          />
+          <div class="overlay w-30">
+            <div class="text">Upload Photo</div>
+          </div>
+        </div>
+      </div>
+      <!-- end  -->
+      <!-- start  -->
+      <div class="avatar-upload">
+        <div
+          class="avatar-edit border-[2px] border-[#808080] rounded-2xl border-dotted"
+        >
+          <!-- <span class="text-center"> + Upload Cover Image </span> -->
+          <input
+            type="file"
+            id="imageUpload"
+            accept=".png, .jpg, .jpeg"
+            onchange="previewFile()"
+          />
+
+          <!-- <label for="imageUpload" id="label"></label> -->
+          <div class="label">
+            <p
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+              class="mt-[39%] text-[#808080]"
+            >
+              + Upload Image of <br />
+              Rear of Car
+            </p>
+            <p
+              class="hover:underline-offset hover:underline"
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+            >
+              Edit
+            </p>
+          </div>
+        </div>
+        <div class="avatar-preview">
+          <img
+            id="imagePreview"
+            src="https://www.loginradius.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png"
+          />
+          <div class="overlay w-30">
+            <div class="text">Upload Photo</div>
+          </div>
+        </div>
+      </div>
+      <!-- end  -->
+      <!-- start  -->
+      <div class="avatar-upload">
+        <div
+          class="avatar-edit border-[2px] border-[#808080] rounded-2xl border-dotted"
+        >
+          <!-- <span class="text-center"> + Upload Cover Image </span> -->
+          <input
+            type="file"
+            id="imageUpload"
+            accept=".png, .jpg, .jpeg"
+            onchange="previewFile()"
+          />
+
+          <!-- <label for="imageUpload" id="label"></label> -->
+          <div class="label">
+            <p
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+              class="mt-[39%] text-[#808080]"
+            >
+              + Upload Image of <br />
+              Rear of Car
+            </p>
+            <p
+              class="hover:underline-offset hover:underline"
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+            >
+              Edit
+            </p>
+          </div>
+        </div>
+        <div class="avatar-preview">
+          <img
+            id="imagePreview"
+            src="https://www.loginradius.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png"
+          />
+          <div class="overlay w-30">
+            <div class="text">Upload Photo</div>
+          </div>
+        </div>
+      </div>
+      <!-- end  -->
+      <!-- start  -->
+      <div class="avatar-upload">
+        <div
+          class="avatar-edit border-[2px] border-[#808080] rounded-2xl border-dotted"
+        >
+          <!-- <span class="text-center"> + Upload Cover Image </span> -->
+          <input
+            type="file"
+            id="imageUpload"
+            accept=".png, .jpg, .jpeg"
+            onchange="previewFile()"
+          />
+
+          <!-- <label for="imageUpload" id="label"></label> -->
+          <div class="label">
+            <p
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+              class="mt-[39%] text-[#808080]"
+            >
+              + Upload Image of Car Dashboard
+            </p>
+            <p
+              class="hover:underline-offset hover:underline"
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+            >
+              Edit
+            </p>
+          </div>
+        </div>
+        <div class="avatar-preview">
+          <img
+            id="imagePreview"
+            src="https://www.loginradius.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png"
+          />
+          <div class="overlay w-30">
+            <div class="text">Upload Photo</div>
+          </div>
+        </div>
+      </div>
+      <!-- end  -->
+      <!-- start  -->
+      <div class="avatar-upload">
+        <div
+          class="avatar-edit border-[2px] border-[#808080] rounded-2xl border-dotted"
+        >
+          <!-- <span class="text-center"> + Upload Cover Image </span> -->
+          <input
+            type="file"
+            id="imageUpload"
+            accept=".png, .jpg, .jpeg"
+            onchange="previewFile()"
+          />
+
+          <!-- <label for="imageUpload" id="label"></label> -->
+          <div class="label">
+            <p
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+              class="mt-[39%] text-[#808080]"
+            >
+              + Upload Any Additional Image
+            </p>
+            <p
+              class="hover:underline-offset hover:underline"
+              id="edit"
+              onclick="$('#imageUpload').trigger('click');"
+            >
+              Edit
+            </p>
+          </div>
+        </div>
+        <div class="avatar-preview">
+          <img
+            id="imagePreview"
+            src="https://www.loginradius.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png"
+          />
+          <div class="overlay w-30">
+            <div class="text">Upload Photo</div>
+          </div>
+        </div>
+      </div>
+      <!-- end  -->
+
+      <!-- button start  -->
+      <div class="fixed lg:right-20 right-5 lg:top-[88%]">
+        <a href="./Form2.html">
+          <button
+            class="shadow mr-5 border-[#AAAAAA] border text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
+            type="button"
+          >
+            Back
+          </button>
+        </a>
+        <a href="../AddList/Addlisting.html">
+          <button
+            class="shadow bg-[#F3B757] hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
+            type="button"
+          >
+            Next
+          </button>
+        </a>
+      </div>
+      <!-- button end  -->
+    </div>
+    <!-- upload end  -->
 
     <script>
-      // Progress Bar start
+      // $('#edit').click(function () { $('#imageUpload').trigger('click'); });
+      function previewFile() {
+        var preview = document.querySelector("img");
+        var file = document.querySelector("input[type=file]").files[0];
+        var reader = new FileReader();
 
-      let progress = 0;
-      let invervalSpeed = 10;
-      let incrementSpeed = 1;
-      document.addEventListener("DOMContentLoaded", function () {
-        let bar = document.getElementById("bar");
-        progressInterval = setInterval(function () {
-          progress += incrementSpeed;
-          bar.style.width = progress + "%";
-          if (progress >= 65) {
-            clearInterval(progressInterval);
-          }
-        }, invervalSpeed);
-      });
-      // Progress Bar end
-
-      //   Upload section start
-
-      const uploadInput = document.getElementById("upload");
-      const filenameLabel = document.getElementById("filename");
-      const imagePreview = document.getElementById("image-preview");
-
-      let isEventListenerAdded = false;
-
-      uploadInput.addEventListener("change", (event) => {
-        const file = event.target.files[0];
+        reader.addEventListener(
+          "load",
+          function () {
+            preview.src = reader.result;
+          },
+          false
+        );
 
         if (file) {
-          filenameLabel.textContent = file.name;
-
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            imagePreview.innerHTML = `<img src="${e.target.result}" class="brightness-50 duration-500 rounded-lg mb-4 h-60 w-70  p-2" alt="Image preview" /> `;
-            imagePreview.classList.remove(
-              "border-dashed",
-              "border-2",
-              "border-gray-400"
-            );
-
-            if (!isEventListenerAdded) {
-              imagePreview.addEventListener("click", () => {
-                uploadInput.click();
-              });
-
-              isEventListenerAdded = true;
-            }
-          };
           reader.readAsDataURL(file);
-        } else {
-          filenameLabel.textContent = "";
-          imagePreview.innerHTML = `<div class="rounded-lg flex items-center justify-center text-gray-500">No image preview</div>`;
-          imagePreview.classList.add(
-            "border-dashed",
-            "border-2",
-            "border-gray-400"
-          );
-
-          imagePreview.removeEventListener("click", () => {
-            uploadInput.click();
-          });
-
-          isEventListenerAdded = false;
         }
-      });
-
-      uploadInput.addEventListener("click", (event) => {
-        event.stopPropagation();
-      });
-
-      //   Upload section end
+      }
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>

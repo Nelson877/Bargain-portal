@@ -177,9 +177,8 @@
           </a>
         </div>
         <!-- Progress Bar start  -->
-        <div class="lg:h-3 h-2 relative max-w-full overflow-hidden mt-20">
-          <div class="w-full h-full bg-gray-200 absolute"></div>
-          <div id="bar" class="h-full bg-[#EC970F] relative w-0"></div>
+        <div class="w-full mt-20 bg-gray-200 h-2.5 dark:bg-gray-700">
+          <div class="bg-[#F3B757] h-2.5" style="width: 30%"></div>
         </div>
         <!-- Progress Bar end  -->
         <!-- Form section start  -->
@@ -324,24 +323,5 @@
     </main>
 
     <!-- main section end  -->
-
-    <script>
-      // Progress Bar start
-
-      let progress = 0;
-      let invervalSpeed = 10;
-      let incrementSpeed = 1;
-      document.addEventListener("DOMContentLoaded", function () {
-        let bar = document.getElementById("bar");
-        progressInterval = setInterval(function () {
-          progress += incrementSpeed;
-          bar.style.width = progress + "%";
-          if (progress >= 30) {
-            clearInterval(progressInterval);
-          }
-        }, invervalSpeed);
-      });
-      // Progress Bar end
-    </script>
   </body>
 </html>

@@ -177,12 +177,11 @@
           </a>
         </div>
         <!-- Progress Bar start  -->
-        <div
-          class="lg:h-3 h-2 relative max-w-full overflow-hidden lg:mt-20 mt-10"
-        >
-          <div class="w-full h-full bg-gray-200 absolute"></div>
-          <div id="bar" class="h-full bg-[#EC970F] relative w-0"></div>
+
+        <div class="w-full mt-20 bg-gray-200 h-2.5 dark:bg-gray-700">
+          <div class="bg-[#F3B757] h-2.5" style="width: 45%"></div>
         </div>
+
         <!-- Progress Bar end  -->
         <!-- Form section start  -->
         <form class="w-full max-w-lg lg:ml-20">
@@ -303,7 +302,7 @@
                 Back
               </button>
             </a>
-            <a href="../AddList/Addlisting.html">
+            <a href="../AddList/AddlistingUplaod.html">
               <button
                 class="shadow bg-[#F3B757] hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
                 type="button"
@@ -320,24 +319,5 @@
     </main>
 
     <!-- main section end  -->
-
-    <script>
-      // Progress Bar start
-
-      let progress = 0;
-      let invervalSpeed = 10;
-      let incrementSpeed = 1;
-      document.addEventListener("DOMContentLoaded", function () {
-        let bar = document.getElementById("bar");
-        progressInterval = setInterval(function () {
-          progress += incrementSpeed;
-          bar.style.width = progress + "%";
-          if (progress >= 45) {
-            clearInterval(progressInterval);
-          }
-        }, invervalSpeed);
-      });
-      // Progress Bar end
-    </script>
   </body>
 </html>
