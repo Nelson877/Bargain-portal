@@ -249,32 +249,65 @@
               </div>
             </div>
             <!-- vehicle registered section end  -->
-            <!-- Closing Date section start -->
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+
+            <!-- Mileage section start  -->
+            <div class="w-full mt-5 md:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-model"
+                for="grid-first-name"
               >
-                Closing Date of Sale
+                Test Drive Hours
               </label>
-              <div class="relative">
-                <select
-                  class="block text-[12px] appearance-none lg:w-full w-[200px] bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-state"
-                >
-                  <option>Select your car model1</option>
-                  <option>Select your car model2</option>
-                  <option>Select your car model</option>
-                </select>
-                <div
-                  class="pointer-events-none absolute inset-y-0 lg:right-0 lg:top-2 right-[42%] top-2 items-center px-2 text-gray-700"
-                >
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name"
+                type="text"
+                placeholder="e.g  Accra "
+              />
+            </div>
+            <!-- Mileage section end  -->
+          </div>
+          <!-- start  -->
+          <div class="flex items-center text-center me-4">
+            <input
+              id="link-radio"
+              type="checkbox"
+              value=""
+              class="w-4 h-4 accent-orange-300"
+            />
+
+            <label
+              for="inline-radio"
+              class="ms-2 text-lg font-medium text-gray-900 dark:text-gray-300"
+              >Maintain this time for subsequent test drives</label
+            >
+          </div>
+          <!-- end  -->
+          <!-- Closing Date section start -->
+          <div class="w-full mt-5 md:w-1/2 px-3 mb-6 md:mb-0">
+            <label
+              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              for="grid-model"
+            >
+              Closing Date of Sale
+            </label>
+            <div class="relative">
+              <select
+                class="block text-[12px] appearance-none lg:w-full w-[200px] bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-state"
+              >
+                <option>Select your car model1</option>
+                <option>Select your car model2</option>
+                <option>Select your car model</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 lg:right-0 lg:top-2 right-[42%] top-2 items-center px-2 text-gray-700"
+              >
+                <i class="fa-solid fa-chevron-down"></i>
               </div>
             </div>
-            <!-- Closing Date section end -->
           </div>
+          <!-- Closing Date section end -->
           <!-- button start  -->
           <div class="fixed lg:right-20 right-5 lg:top-[88%] top-[90%]">
             <a href="./Form2.html">

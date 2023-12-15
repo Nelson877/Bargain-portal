@@ -177,12 +177,11 @@
           </a>
         </div>
         <!-- Progress Bar start  -->
-        <div
-          class="lg:h-3 h-2 relative max-w-full overflow-hidden lg:mt-20 mt-10"
-        >
-          <div class="w-full h-full bg-gray-200 absolute"></div>
-          <div id="bar" class="h-full bg-[#EC970F] relative w-0"></div>
+
+        <div class="w-full mt-20 bg-gray-200 h-2.5 dark:bg-gray-700">
+          <div class="bg-[#F3B757] h-2.5" style="width: 79%"></div>
         </div>
+
         <!-- Progress Bar end  -->
         <!-- Form section start  -->
         <form class="w-full max-w-lg lg:ml-20">
@@ -216,35 +215,33 @@
                 Is your price negotiable?
               </label>
               <div class="flex lg:mt-5">
-                <a href="./AddlistYes.html">
-                  <div class="flex items-center me-4 gap-1">
-                    <input
-                      id="link-radio"
-                      type="checkbox"
-                      value=""
-                      class="w-5 h-5 accent-orange-300"
-                    />
-
-                    <label
-                      for="inline-radio"
-                      class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                      >Yes</label
-                    >
-                  </div>
-                </a>
-
                 <div class="flex items-center me-4 gap-1">
-                  <a href="./AddlistNo.html">
-                    <input
-                      id="link-radio"
-                      type="checkbox"
-                      value=""
-                      class="w-5 h-5 accent-orange-300"
-                    />
-                  </a>
+                  <input
+                    id="yes-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-5 h-5 accent-orange-300"
+                    onclick="redirectToYesPage()"
+                  />
 
                   <label
-                    for="inline-radio"
+                    for="yes-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Yes</label
+                  >
+                </div>
+
+                <div class="flex items-center me-4 gap-1">
+                  <input
+                    id="no-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-5 h-5 accent-orange-300"
+                    onclick="redirectToNoPage()"
+                  />
+
+                  <label
+                    for="no-checkbox"
                     class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >No</label
                   >
@@ -252,7 +249,40 @@
               </div>
             </div>
             <!-- vehicle registered section end  -->
+
+            <!-- Mileage section start  -->
+            <div class="w-full md:w-1/2 px-3 mb-6 mt-5 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-first-name"
+              >
+                Test Drive Hours
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name"
+                type="text"
+                placeholder="e.g  Accra "
+              />
+            </div>
+            <!-- Mileage section end  -->
           </div>
+          <!-- start  -->
+          <div class="flex items-center text-center me-4 gap-1">
+            <input
+              id="link-radio"
+              type="checkbox"
+              value=""
+              class="w-5 h-5 accent-orange-300"
+            />
+
+            <label
+              for="inline-radio"
+              class="ms-2 text-lg font-medium text-gray-900 dark:text-gray-300"
+              >Maintain this time for subsequent test drives</label
+            >
+          </div>
+          <!-- end  -->
           <!-- button start  -->
           <div class="fixed lg:right-20 right-5 lg:top-[88%] top-[90%]">
             <a href="./Form2.html">
@@ -282,22 +312,15 @@
     <!-- main section end  -->
 
     <script>
-      // Progress Bar start
+      function redirectToYesPage() {
+        // Redirect to the "Yes" page
+        window.location.href = "./AddlistYes.html";
+      }
 
-      let progress = 0;
-      let invervalSpeed = 10;
-      let incrementSpeed = 1;
-      document.addEventListener("DOMContentLoaded", function () {
-        let bar = document.getElementById("bar");
-        progressInterval = setInterval(function () {
-          progress += incrementSpeed;
-          bar.style.width = progress + "%";
-          if (progress >= 79) {
-            clearInterval(progressInterval);
-          }
-        }, invervalSpeed);
-      });
-      // Progress Bar end
+      function redirectToNoPage() {
+        // Redirect to the "No" page
+        window.location.href = "./AddlistNo.html";
+      }
     </script>
   </body>
 </html>
