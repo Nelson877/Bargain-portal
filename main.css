@@ -1,4 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat+Subrayada&family=Montserrat:ital,wght@0,100;1,100&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  transition: width 0.1s ease-in-out;
+}
+.search-input.active {
+  width: 300px;
+  padding: 0 1.5rem;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  color: #ec970f;
+}
+.nav-link.active {
+  opacity: 1;
+  color: #ec970f;
+  /* border-bottom: 10px solid #ec970f; */
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #ec970f;
+}
+
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+  width: 20%;
+}
+
+.nav-link-fade-up::before {
+  width: 100%;
+  bottom: 5px;
+  opacity: 0;
+}
+
+.nav-link-fade-up:hover::before {
+  bottom: 10px;
+  opacity: 1;
+}
+
+.nav-link-grow-up::before {
+  height: 0%;
+  width: 50%;
+  bottom: 0px;
+}
+.nav-link-grow-up .active {
+  height: 0%;
+  width: 50%;
+  bottom: 50%;
+}
+
+.nav-link-grow-up:hover::before {
+  height: 5px;
+}
+
+/* upload  */
+.avatar-upload {
+  position: relative;
+  max-width: 600px;
+  margin: 50px;
+}
+.avatar-upload .avatar-edit {
+  position: absolute;
+  right: 5px;
+  z-index: 1;
+  top: 5px;
+}
+.avatar-upload .avatar-edit input {
+  display: none;
+}
+.avatar-upload .avatar-edit input + .label {
+  display: inline-block;
+  width: 340px;
+  height: 292px;
+  margin-bottom: 0;
+  border-radius: 5%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  text-align: center;
+
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+.avatar-upload .avatar-edit input + .label:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: #d6d6d6;
+  color: white;
+  > p {
+    display: block;
+  }
+}
+
+p {
+  display: none;
+  margin-top: 40%;
+}
+
+.avatar-upload .avatar-preview {
+  width: 340px;
+  height: 292px;
+  position: relative;
+  border-radius: 5%;
+  border: 6px solid #f8f8f8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.avatar-upload .avatar-preview > img {
+  width: 340px;
+  height: 292px;
+  border-radius: 5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-overlay {
+  position: relative;
+  width: 340px;
+}
+
+.img-overlay-image {
+  display: block;
+  width: 340px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+}
+
+.img-overlay:hover .overlay {
+  opacity: 5;
+}

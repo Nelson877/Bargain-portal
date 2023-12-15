@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://raw.githubusercontent.com/desandro/classie/master/classie.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../main.css" />
+
+    <title>Form</title>
+  </head>
+  <body class="text-gray-700">
+    <!-- start sidebar -->
+    <!-- id="menu" -->
+    <div
+      id="menu"
+      class="hidden md:hidden lg:inline lg:fixed left-0 top-0 w-64 h-full bg-[#230B11] p-4 dropdown_menu overflow-x-hidden overlow-y-scroll"
+    >
+      <div class="text-right text-yellow-400">
+        <button
+          class="lg:hidden sm:inline text-2xl absolute"
+          onclick="functionMenu_Close()"
+        >
+          &times;
+        </button>
+      </div>
+      <!-- logo section  -->
+      <a href="#" class="flex items-center">
+        <img
+          src="../images/bargain-auto-logo 1.png"
+          alt=""
+          class="w-[88.73px] h-[80.49px]"
+        />
+
+        <!-- pb-2 border-b border-b-slate-200 -->
+      </a>
+      <div class="pt-3">
+        <img src="../images/Vector 6.png" alt="" />
+      </div>
+      <!-- logo section end -->
+      <div
+        class="items-center py-6 px-4 mt-[10px] bg-yellow-400 w-[218px] h-[93px] rounded-lg"
+      >
+        <p class="text-xs text-white">Wallet</p>
+        <span class="font-bold text-[19px] text-white">GHS 0.00</span>
+      </div>
+      <ul class="mt-2">
+        <li class="mb-1 group mt-2">
+          <a
+            data-active="Overview"
+            href="../Dashboard/Overview.html"
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-house-chimney mr-4"></i>
+            <span class="text-sm">Overview</span>
+          </a>
+        </li>
+        <li class="mt-2 group active">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
+          >
+            <i class="fa-solid fa-magnifying-glass mr-4"></i>
+            <span class="text-sm">Garage</span>
+          </a>
+        </li>
+        <li class="group mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-regular fa-calendar mr-4"></i>
+            <span class="text-sm">Test Drives</span>
+          </a>
+        </li>
+        <li class="group mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-handshake mr-4"></i>
+            <span class="text-sm">Deals</span>
+          </a>
+        </li>
+        <li class="group mb-2 mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-shop mr-4"></i>
+            <span class="text-sm">Marketplace</span>
+          </a>
+        </li>
+        <span class="text-xs font-bold text-[#F3B757]">ACCOUNT</span>
+        <li class="group mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-gears mr-4"></i>
+            <span class="text-sm">Store settings</span>
+          </a>
+        </li>
+        <li class="group mt-2">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-user mr-4"></i>
+            <span class="text-sm">Account settings</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-circle-question mr-4"></i>
+            <span class="text-sm">Help</span>
+          </a>
+        </li>
+        <li class="group">
+          <a
+            data-active="listing"
+            href=""
+            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+          >
+            <i class="fa-solid fa-right-from-bracket mr-4"></i>
+            <span class="text-sm">LogOut</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- end sidebar  -->
+
+    <!-- main section start  -->
+    <main
+      class="w-full lg:w-[calc(100%-256px)] lg:ml-64 bg-white lg:min-h-screen"
+    >
+      <div class="py-2 px-6 items-center">
+        <div class="mt-10 lg:ml-10">
+          <a href="#" class="flex items-center lg:gap-5 gap-2">
+            <i class="fa-solid fa-arrow-left"></i>
+            <h3>Back to Dashboard</h3>
+          </a>
+          <a href="">
+            <button
+              class="absolute top-10 right-10 border-[1px] leading-8 border-[#AAAAAA] rounded-xl w-[145px] h-[50px]"
+            >
+              Save & Exit
+            </button>
+          </a>
+        </div>
+        <!-- Progress Bar start  -->
+        <div class="w-full mt-20 bg-gray-200 h-2.5 dark:bg-gray-700">
+          <div class="bg-[#F3B757] h-2.5" style="width: 30%"></div>
+        </div>
+        <!-- Progress Bar end  -->
+        <!-- Form section start  -->
+        <form class="w-full max-w-lg lg:ml-20">
+          <h3 class="text-[36px] mt-5 font-bold">
+            Additional details of your car
+          </h3>
+          <div class="flex flex-wrap -mx-3 mb-6 mt-10">
+            <!-- Mileage section start  -->
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-first-name"
+              >
+                Vehicle Mileage
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name"
+                type="text"
+                placeholder="e.g  Toyota "
+              />
+            </div>
+            <!-- Mileage section end  -->
+            <!-- Transmission section start -->
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-model"
+              >
+                Vehicle Transmission Type
+              </label>
+              <div class="relative">
+                <select
+                  class="block text-[12px] appearance-none lg:w-full w-[200px] bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state"
+                >
+                  <option>Select your car model1</option>
+                  <option>Select your car model2</option>
+                  <option>Select your car model</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 lg:right-0 lg:top-2 right-[42%] top-2 items-center px-2 text-gray-700"
+                >
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Transmission section end -->
+            <!-- Engine section start  -->
+            <div class="w-full mt-5 md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-first-name"
+              >
+                Vehicle Engine
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name"
+                type="text"
+                placeholder="e.g  Toyota "
+              />
+            </div>
+            <!-- Engine section end  -->
+            <!-- Fuel  section start  -->
+            <div class="w-full mt-5 md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-model"
+              >
+                Fuel Type
+              </label>
+              <div class="relative">
+                <select
+                  class="block text-[12px] appearance-none lg:w-full w-[200px] bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state"
+                >
+                  <option>Select your car model1</option>
+                  <option>Select your car model2</option>
+                  <option>Select your car model</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 lg:right-0 lg:top-2 right-[42%] top-2 items-center px-2 text-gray-700"
+                >
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Fuel  section end  -->
+
+            <!-- Tank Size section start  -->
+            <div class="w-full mt-5 md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-model"
+              >
+                Fuel Tank Size
+              </label>
+              <div class="relative">
+                <select
+                  class="block text-[12px] appearance-none lg:w-full w-[200px] bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state"
+                >
+                  <option>Select your car model1</option>
+                  <option>Select your car model2</option>
+                  <option>Select your car model</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 lg:right-0 lg:top-2 right-[42%] top-2 items-center px-2 text-gray-700"
+                >
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Tank Size section end  -->
+          </div>
+          <!-- button start  -->
+          <div class="lg:fixed lg:right-20 mb-5 ml-28">
+            <a href="./Form.html">
+              <button
+                class="shadow mr-5 border-[#AAAAAA] border text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
+                type="button"
+              >
+                Back
+              </button>
+            </a>
+            <a href="./Form3.html">
+              <button
+                class="shadow bg-[#F3B757] hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded"
+                type="button"
+              >
+                Next
+              </button>
+            </a>
+          </div>
+          <!-- button end  -->
+        </form>
+
+        <!-- Form section end  -->
+      </div>
+    </main>
+
+    <!-- main section end  -->
+  </body>
+</html>

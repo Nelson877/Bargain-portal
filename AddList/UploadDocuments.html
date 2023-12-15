@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://raw.githubusercontent.com/desandro/classie/master/classie.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="../main.css" /> -->
+
+    <title>Form</title>
+  </head>
+  <body class="text-gray-700">
+    <!-- start sidebar -->
+    <!-- id="menu" -->
+
+    <!-- main section start  -->
+    <main class="w-full bg-white lg:min-h-screen">
+      <div class="py-2 px-6 items-center">
+        <!-- Progress Bar start  -->
+        <div class="w-full mt-20 bg-gray-200 h-2.5 dark:bg-gray-700">
+          <div class="bg-[#F3B757] h-2.5" style="width: 87%"></div>
+        </div>
+        <!-- Progress Bar end  -->
+
+        <!-- Uplaod doc start  -->
+        <div class="flex items-center justify-center">
+          <div class="lg:w-[700px] w-[420px] text-center">
+            <h3 class="mt-10 text-[24px] font-bold">
+              Upload your car documents
+            </h3>
+          </div>
+        </div>
+        <!-- Upload start  -->
+
+        <div class="mt-6 flex gap-5 justify-center items-center">
+          <!-- start Set 1 -->
+          <div
+            class="bg-[#FFF8EB] w-[206px] h-[156px] flex flex-col items-center"
+          >
+            <div class="mt-8 text-3xl text-[#F3B757]">
+              <i id="icon1" class="fa-solid fa-file hidden"></i>
+            </div>
+            <span id="demo" class="text-center text-sm"
+              >Vehicle <br />
+              Registration</span
+            >
+            <div>
+              <input
+                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                aria-describedby="file_input_help"
+                id="upload"
+                type="file"
+                onchange="handleFileDoc()"
+                hidden
+              />
+              <p
+                id="Visible1"
+                class="mt-4 cursor-pointer shadow bg-[#F3B757] px-5 py-2 hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none text-[10px] font-bold rounded"
+                onclick="show()"
+              >
+                Click to Upload
+              </p>
+              <div
+                id="Delete1"
+                class="text-[10px] text-center hidden mt-2 cursor-pointer"
+              >
+                <i class="fa-regular fa-pen-to-square"></i> Edit
+              </div>
+            </div>
+          </div>
+          <!-- end Set 1 -->
+          <!-- start Set 1 -->
+          <div
+            class="bg-[#FFF8EB] w-[206px] h-[156px] flex flex-col items-center"
+          >
+            <div class="mt-8 text-3xl text-[#F3B757]">
+              <i id="icon2" class="fa-solid fa-file hidden"></i>
+            </div>
+            <span id="demo" class="text-center text-sm"
+              >Proof of Ownership <br />
+              (Optional for dealers)</span
+            >
+            <div>
+              <input
+                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                aria-describedby="file_input_help"
+                id="uploadDoc"
+                type="file"
+                onchange="handleClickUpload()"
+                hidden
+              />
+              <p
+                id="Visible2"
+                class="mt-4 cursor-pointer shadow bg-[#F3B757] px-5 py-2 hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none text-[10px] font-bold rounded"
+                onclick="showUpload()"
+              >
+                Click to Upload
+              </p>
+              <div
+                id="Delete2"
+                class="text-[10px] text-center hidden mt-2 cursor-pointer"
+              >
+                <i class="fa-regular fa-pen-to-square"></i> Edit
+              </div>
+            </div>
+          </div>
+          <!-- end Set 2 -->
+        </div>
+
+        <!-- Upload end  -->
+      </div>
+    </main>
+
+    <!-- main section end  -->
+    <script>
+      function handleFileDoc() {
+        var input = document.getElementById("upload");
+        var icon = document.getElementById("icon1");
+        var uploadDoc = document.getElementById("Visible1");
+        var deleteBtn = document.getElementById("Delete1");
+
+        if (input.files.length > 0) {
+          icon.classList.remove("hidden");
+          uploadDoc.style.display = "none";
+          deleteBtn.style.display = "block";
+        } else {
+          icon.classList.add("hidden");
+          uploadDoc.style.display = "block";
+          deleteBtn.style.display = "none";
+        }
+      }
+
+      function show() {
+        document.getElementById("upload").click();
+        // document.getElementById("demo").style.display = "none";
+      }
+
+      function handleClickUpload() {
+        var input = document.getElementById("uploadDoc");
+        var icon = document.getElementById("icon2");
+        var uploadDoc = document.getElementById("Visible2");
+        var deleteBtn = document.getElementById("Delete2");
+
+        if (input.files.length > 0) {
+          icon.classList.remove("hidden");
+          uploadDoc.style.display = "none";
+          deleteBtn.style.display = "block";
+        } else {
+          icon.classList.add("hidden");
+          uploadDoc.style.display = "block";
+          deleteBtn.style.display = "none";
+        }
+      }
+
+      function showUpload() {
+        document.getElementById("uploadDoc").click();
+        // document.getElementById("demo").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
