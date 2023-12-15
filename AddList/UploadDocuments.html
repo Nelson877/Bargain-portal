@@ -48,74 +48,131 @@
             </h3>
           </div>
         </div>
+        <!-- Upload start  -->
+
         <div class="mt-6 flex gap-5 justify-center items-center">
-          <!-- start  -->
+          <!-- start Set 1 -->
           <div
             class="bg-[#FFF8EB] w-[206px] h-[156px] flex flex-col items-center"
           >
             <div class="mt-8 text-3xl text-[#F3B757]">
-              <i id="fileIcon" class="fa-solid fa-file hidden"></i>
+              <i id="icon1" class="fa-solid fa-file hidden"></i>
             </div>
-            <span class="text-center text-sm"
+            <span id="demo" class="text-center text-sm"
               >Vehicle <br />
               Registration</span
             >
             <div>
               <input
-                class="absolute inset-0 w-full h-ful opacity-0 cursor-pointer"
+                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                 aria-describedby="file_input_help"
-                id="uploadButton"
+                id="upload"
                 type="file"
-                onchange="handleFileUpload()"
+                onchange="handleFileDoc()"
+                hidden
               />
-              <button
-                id="uploadButtonVisible"
-                class="mt-4 shadow bg-[#F3B757] px-5 py-2 hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none text-[10px] font-bold rounded"
-                onclick="showIcon()"
+              <p
+                id="Visible1"
+                class="mt-4 cursor-pointer shadow bg-[#F3B757] px-5 py-2 hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none text-[10px] font-bold rounded"
+                onclick="show()"
               >
                 Click to Upload
-              </button>
+              </p>
               <div
-                id="EditDelete"
+                id="Delete1"
                 class="text-[10px] text-center hidden mt-2 cursor-pointer"
               >
-                <span class="">
-                  <i class="fa-regular fa-pen-to-square"></i>
-                  Edit
-                </span>
+                <i class="fa-regular fa-pen-to-square"></i> Edit
               </div>
             </div>
           </div>
-          <!-- end  -->
+          <!-- end Set 1 -->
+          <!-- start Set 1 -->
+          <div
+            class="bg-[#FFF8EB] w-[206px] h-[156px] flex flex-col items-center"
+          >
+            <div class="mt-8 text-3xl text-[#F3B757]">
+              <i id="icon2" class="fa-solid fa-file hidden"></i>
+            </div>
+            <span id="demo" class="text-center text-sm"
+              >Proof of Ownership <br />
+              (Optional for dealers)</span
+            >
+            <div>
+              <input
+                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                aria-describedby="file_input_help"
+                id="uploadDoc"
+                type="file"
+                onchange="handleClickUpload()"
+                hidden
+              />
+              <p
+                id="Visible2"
+                class="mt-4 cursor-pointer shadow bg-[#F3B757] px-5 py-2 hover:bg-[#F3B702] text-[#5C2E14] focus:shadow-outline focus:outline-none text-[10px] font-bold rounded"
+                onclick="showUpload()"
+              >
+                Click to Upload
+              </p>
+              <div
+                id="Delete2"
+                class="text-[10px] text-center hidden mt-2 cursor-pointer"
+              >
+                <i class="fa-regular fa-pen-to-square"></i> Edit
+              </div>
+            </div>
+          </div>
+          <!-- end Set 2 -->
         </div>
-        <!-- Uplaod doc end  -->
+
+        <!-- Upload end  -->
       </div>
     </main>
 
     <!-- main section end  -->
-
     <script>
-      function handleFileUpload() {
-        var fileInput = document.getElementById("uploadButton");
-        var fileIcon = document.getElementById("fileIcon");
-        var uploadButton = document.getElementById("uploadButtonVisible");
-        var EditDelete = document.getElementById("EditDelete");
+      function handleFileDoc() {
+        var input = document.getElementById("upload");
+        var icon = document.getElementById("icon1");
+        var uploadDoc = document.getElementById("Visible1");
+        var deleteBtn = document.getElementById("Delete1");
 
-        if (fileInput.files.length > 0) {
-          fileIcon.classList.remove("hidden");
-
-          uploadButton.style.display = "none";
-          EditDelete.style.display = "block";
+        if (input.files.length > 0) {
+          icon.classList.remove("hidden");
+          uploadDoc.style.display = "none";
+          deleteBtn.style.display = "block";
         } else {
-          fileIcon.classList.add("hidden");
-
-          uploadButton.style.display = "block";
-          EditDelete.style.display = "none";
+          icon.classList.add("hidden");
+          uploadDoc.style.display = "block";
+          deleteBtn.style.display = "none";
         }
       }
 
-      function showIcon() {
-        document.getElementById("uploadButton").click();
+      function show() {
+        document.getElementById("upload").click();
+        // document.getElementById("demo").style.display = "none";
+      }
+
+      function handleClickUpload() {
+        var input = document.getElementById("uploadDoc");
+        var icon = document.getElementById("icon2");
+        var uploadDoc = document.getElementById("Visible2");
+        var deleteBtn = document.getElementById("Delete2");
+
+        if (input.files.length > 0) {
+          icon.classList.remove("hidden");
+          uploadDoc.style.display = "none";
+          deleteBtn.style.display = "block";
+        } else {
+          icon.classList.add("hidden");
+          uploadDoc.style.display = "block";
+          deleteBtn.style.display = "none";
+        }
+      }
+
+      function showUpload() {
+        document.getElementById("uploadDoc").click();
+        // document.getElementById("demo").style.display = "none";
       }
     </script>
   </body>
