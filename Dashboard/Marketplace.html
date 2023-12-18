@@ -188,7 +188,7 @@
           class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
           >Search</label
         >
-        <div class="relative lg:ml-9">
+        <div class="relative lg:ml-9 ml-3">
           <div
             class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
           >
@@ -197,40 +197,41 @@
           <input
             type="search"
             id="default-search"
-            class="block p-4 lg:w-[444px] w-[280px] lg:ps-10 ps-7 text-sm text-gray-900 border border-gray-300 rounded-lg"
+            class="block p-4 lg:w-[444px] w-[280px] lg:ps-10 ps-7 lg:text-sm text-[10px] text-gray-900 border border-gray-300 rounded-lg"
             placeholder="Search by brand, model, colour, etc"
             required
           />
           <button
             type="submit"
-            class="text-[#5C2E14] font-bold absolute top-2 right-[61%] bg-[#F3B757] rounded-lg text-sm px-6 py-2"
+            class="text-[#5C2E14] font-bold absolute lg:top-2 md:top-1 top-2 lg:right-[61%] md:right-[10%] right-[30%] bg-[#F3B757] rounded-lg lg:text-sm lg:px-6 px-2 py-1 lg:py-2"
           >
             Search
           </button>
         </div>
       </form>
       <!-- Search bar end  -->
-      <div class="flex">
-        <div class="mt-5 ml-10">
+      <div class="">
+        <div class="mt-5 lg:ml-10 ml-3">
           <span class="text-[#EC970F] underline cursor-pointer">
             <a data-modal-target="crud-modal" data-modal-toggle="crud-modal">
-              <i class="fa-solid fa-location-dot mr-2"></i>
+              <i class="fa-solid fa-location-dot lg:mr-2"></i>
               Current location
             </a>
           </span>
+
           <button
-            class="border-[#D9D9D9] border-[1px] rounded-full lg:w-[138px] py-2 ml-10"
+            class="border-[#D9D9D9] border-[1px] rounded-full w-[138px] lg:py-2 py-1 ml-4"
           >
             Make & Model
           </button>
           <button
-            class="border-[#D9D9D9] border-[1px] rounded-full ml-10 lg:w-[188px] py-2"
+            class="border-[#D9D9D9] lg:mt-0 mt-3 border-[1px] rounded-full w-[188px] py-2 lg:ml-4"
           >
             Sort by: Lowest Price
           </button>
 
           <button
-            class="ml-10 gap-2 border-[#D9D9D9] border-[1px] lg:w-[98px] py-2 rounded-full"
+            class="border-[#D9D9D9] border-[1px] w-[98px] py-2 rounded-full lg:ml-4"
           >
             <i class="fa-solid fa-sliders"></i>
             Filters
