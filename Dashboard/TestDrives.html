@@ -24,7 +24,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="../main.css" />
+    <!-- <link rel="stylesheet" href="../main.css" /> -->
 
     <title>dashboard</title>
   </head>
@@ -294,15 +294,12 @@
               <!-- Modal section start  -->
               <div
                 id="modal"
-                class="hidden items-center justify-center h-screen w-screen fixed top-0 left-0 bg-black bg-opacity-80"
+                class="hidden fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-80 items-center justify-center"
               >
-                <!--Modal Dialog -->
-
-                <div
-                  class="bg-white w-full max-w-7xl text-center justify-center"
-                >
+                <!-- Modal Dialog -->
+                <div class="bg-white w-full max-w-7xl text-center">
                   <!-- Close Modal start -->
-                  <div class="absolute lg:right-20 lg:top-2 right-2 top-[25%]">
+                  <div class="absolute right-2 top-[25%] lg:right-20 lg:top-2">
                     <span
                       class="modal-close cursor-pointer lg:text-3xl text-lg"
                     >
@@ -310,155 +307,55 @@
                     </span>
                   </div>
                   <!-- Close Modal end -->
-                  <!--Modal Content -->
 
+                  <!-- Modal Content -->
                   <div
-                    class="flex lg:mt-5 py-6 flex-col items-center justify-between"
+                    class="flex flex-col items-center justify-between py-6 lg:mt-5 relative"
                   >
-                    <h3 class="font-bold lg:text-[20px] lg:w-[400px] w-[300px]">
+                    <h3 class="font-bold lg:w-[400px] w-[300px] lg:text-[20px]">
                       Select the times you will be available to offer test
                       drives to clients
                     </h3>
-                    <div>
-                      <!-- start -->
-                      <div
-                        class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
-                      >
-                        <label
-                          class="relative inline-flex items-center cursor-pointer"
-                        >
-                          <input
-                            type="checkbox"
-                            value=""
-                            class="sr-only peer"
-                          />
-                          <div
-                            class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
-                          ></div>
-                          <p class="ms-5 font-[900]">Mondays</p>
 
-                          <span class="ms-3">8:00 am to 5:00 pm</span>
-                          <i
-                            class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
-                          ></i>
-                        </label>
-                      </div>
-                      <!-- end  -->
-                      <!-- start -->
-                      <div
-                        class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
+                    <div
+                      class="relative mt-2 ml-5 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 border-[1px] border-gray-700 rounded-full"
+                    >
+                      <label
+                        class="relative inline-flex items-center cursor-pointer"
                       >
-                        <label
-                          class="relative inline-flex items-center cursor-pointer"
+                        <input type="checkbox" value="" class="sr-only peer" />
+
+                        <div
+                          class="flex items-center justify-center w-10 h-3 bg-gray-200 text-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
+                        ></div>
+
+                        <p class="ms-5 font-[900]">Mondays</p>
+                        <span class="ms-3">8:00 am to 5:00 pm</span>
+                        <i
+                          id="dropdownIcon"
+                          class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2 cursor-pointer"
+                        ></i>
+
+                        <!-- Dropdown Content -->
+                        <div
+                          id="dropdownContent"
+                          class="hidden absolute top-full left-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-10"
                         >
-                          <input
-                            type="checkbox"
-                            value=""
-                            class="sr-only peer"
-                          />
-                          <div
-                            class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
-                          ></div>
-                          <p class="ms-5 font-[900]">Tuesdays</p>
-                          <span class="ms-3">8:00 am to 5:00 pm</span>
-                          <i
-                            class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
-                          ></i>
-                        </label>
-                      </div>
-                      <!-- end  -->
-                      <!-- start -->
-                      <div
-                        class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
-                      >
-                        <label
-                          class="relative inline-flex items-center cursor-pointer"
-                        >
-                          <input
-                            type="checkbox"
-                            value=""
-                            class="sr-only peer"
-                          />
-                          <div
-                            class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
-                          ></div>
-                          <p class="ms-5 font-[900]">Mondays</p>
-                          <span class="ms-3">8:00 am to 5:00 pm</span>
-                          <i
-                            class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
-                          ></i>
-                        </label>
-                      </div>
-                      <!-- end  -->
-                      <!-- start -->
-                      <div
-                        class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
-                      >
-                        <label
-                          class="relative inline-flex items-center cursor-pointer"
-                        >
-                          <input
-                            type="checkbox"
-                            value=""
-                            class="sr-only peer"
-                          />
-                          <div
-                            class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
-                          ></div>
-                          <p class="ms-5 font-[900]">Mondays</p>
-                          <span class="ms-3">8:00 am to 5:00 pm</span>
-                          <i
-                            class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
-                          ></i>
-                        </label>
-                      </div>
-                      <!-- end  -->
-                      <!-- start -->
-                      <div
-                        class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
-                      >
-                        <label
-                          class="relative inline-flex items-center cursor-pointer"
-                        >
-                          <input
-                            type="checkbox"
-                            value=""
-                            class="sr-only peer"
-                          />
-                          <div
-                            class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
-                          ></div>
-                          <p class="ms-5 font-[900]">Mondays</p>
-                          <span class="ms-3">8:00 am to 5:00 pm</span>
-                          <i
-                            class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
-                          ></i>
-                        </label>
-                      </div>
-                      <!-- end  -->
-                      <!-- start -->
-                      <div
-                        class="lg:ml-0 ml-5 mt-2 border-[1px] border-gray-700 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 rounded-full"
-                      >
-                        <label
-                          class="relative inline-flex items-center cursor-pointer"
-                        >
-                          <input
-                            type="checkbox"
-                            value=""
-                            class="sr-only peer"
-                          />
-                          <div
-                            class="flex w-10 h-3 bg-gray-200 items-center text-center justify-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
-                          ></div>
-                          <p class="ms-5 font-[900]">Mondays</p>
-                          <span class="ms-3">8:00 am to 5:00 pm</span>
-                          <i
-                            class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2"
-                          ></i>
-                        </label>
-                      </div>
-                      <!-- end  -->
+                          <!-- Dropdown Items go here -->
+                          <div class="py-1">
+                            <a
+                              href="#"
+                              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              >Option 1</a
+                            >
+                            <a
+                              href="#"
+                              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              >Option 2</a
+                            >
+                          </div>
+                        </div>
+                      </label>
                     </div>
 
                     <button
@@ -469,57 +366,19 @@
                   </div>
                 </div>
               </div>
+
+              <script>
+                document
+                  .getElementById("dropdownIcon")
+                  .addEventListener("click", function () {
+                    var dropdownContent =
+                      document.getElementById("dropdownContent");
+                    dropdownContent.classList.toggle("hidden");
+                  });
+              </script>
+
               <!-- Modal section end  -->
             </div>
-
-            <!-- Modal Confirm section start  -->
-            <!-- hidden -->
-            <div
-              id="modal"
-              class="items-center justify-center h-screen w-screen fixed top-0 left-0 bg-black bg-opacity-80"
-            >
-              <!--Modal Dialog -->
-
-              <div
-                class="bg-white lg:ml-[24%] lg:mt-20 w-full max-w-3xl text-center justify-center"
-              >
-                <!-- Close Modal start -->
-                <div
-                  class="absolute lg:right-[21%] lg:top-[13%] right-2 top-[25%]"
-                >
-                  <span class="modal-close cursor-pointer lg:text-3xl text-lg">
-                    <i class="fa-solid fa-xmark"></i>
-                  </span>
-                </div>
-                <!-- Close Modal end -->
-                <!--Modal Content -->
-
-                <div
-                  class="flex mt-10 lg:mt-5 py-6 flex-col items-center justify-between"
-                >
-                  <h3 class="font-[900] lg:text-[20px] lg:w-[400px] w-[300px]">
-                    Confirm your available times for test drives
-                  </h3>
-
-                  <ul class="mt-5">
-                    <li class="text-[19px] mb-6">Mondays: 8am to 5pm</li>
-                    <li class="text-[19px] mb-6">Tuesdays: 8am to 5pm</li>
-                    <li class="text-[19px] mb-6">Wednesdays: 8am to 5pm</li>
-                    <li class="text-[19px] mb-6">Thursdays: 8am to 5pm</li>
-                    <li class="text-[19px] mb-6">Fridays: 8am to 5pm</li>
-                    <li class="text-[19px] mb-6">Saturdays: 8am to 5pm</li>
-                  </ul>
-
-                  <button
-                    class="bg-[#F3B757] mt-3 text-center rounded-[10px] lg:px-5 px-2 lg:py-3 py-1 text-[16px] text-[#5C2E14] font-[900] hover:bg-yellow-600"
-                  >
-                    Apply Changes
-                  </button>
-                  <a href=""> Edit </a>
-                </div>
-              </div>
-            </div>
-            <!-- Modal Confirm section end  -->
           </div>
         </div>
 

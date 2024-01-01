@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://raw.githubusercontent.com/desandro/classie/master/classie.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
+    /> -->
+    <!-- <link rel="stylesheet" href="../main.css" /> -->
+
+    <title>dashboard</title>
+  </head>
+  <body class="text-gray-700 overflow-x-hidden lg:ml-20 ml-10">
+    <!-- main section start  -->
+    <main class="mt-10">
+      <!-- back start  -->
+      <div>
+        <a href="../Dashboard/Marketplace.html" class="flex items-center gap-4">
+          <i class="fa-solid fa-chevron-left"></i>
+          <span>Back</span>
+        </a>
+      </div>
+      <!-- back end  -->
+      <!-- Image card main start  -->
+      <div class="flex flex-wrap gap-4 lg:mt-10 mt-4">
+        <div>
+          <img
+            src="../images/carDel.png"
+            class="lg:w-[550px] lg:h-[578px] w-[80%]"
+            alt=""
+          />
+        </div>
+
+        <!-- 3 cars start  -->
+        <div class="grid gap-2">
+          <div>
+            <img src="../images/carDel1.png" alt="" class="w-[900%]" />
+          </div>
+          <div>
+            <img src="../images/carDel2.png" alt="" class="w-[900%]" />
+          </div>
+          <div>
+            <img src="../images/carDel3.png" alt="" class="w-[900%]" />
+          </div>
+        </div>
+
+        <!-- 3 cars end  -->
+        <div
+          class="bg-[#FFFFFF] lg:mb-0 mb-5 shadow-2xl lg:h-[333px] lg:px-10 lg:py-10 px-10 py-5 lg:w-[289px] rounded lg:mt-[100px] mt-3"
+        >
+          <div>
+            <button
+              class="text-[#EC970F] lg:mb-5 bg-[#FFF8EB] px-4 py-1 rounded-full"
+            >
+              Fixed Price
+            </button>
+          </div>
+          <span class="text-[19px]">2021 Honda HR-V</span>
+          <p class="mt-5">Westland, Accra</p>
+          <h6 class="text-[#191919] text-2xl font-bold">GHS 255,500</h6>
+          <div class="lg:mt-12 mt-5">
+            <button class="bg-[#F3B757] text-[#5C2E14] px-5 py-2 rounded-xl">
+              Schedule Test Drive
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Image card main end  -->
+    </main>
+    <!-- Tab and pill section start  -->
+    <div class="lg:max-w-5xl lg:mx-auto mt-5">
+      <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
+        <ul
+          class="flex flex-wrap -mb-px justify-center"
+          id="myTab"
+          data-tabs-toggle="#myTabContent"
+          role="tablist"
+        >
+          <li class="mr-2 active" role="presentation">
+            <button
+              class="inline-block text-[#eab308] hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308] border-[#eab308] focus:ring-yellow-400"
+              id="details-tab"
+              data-tabs-target="#details"
+              type="button"
+              role="tab"
+              aria-controls="details"
+              aria-selected="true"
+            >
+              Details
+            </button>
+          </li>
+          <li class="mr-2" role="presentation">
+            <button
+              class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+              id="description-tab"
+              data-tabs-target="#description"
+              type="button"
+              role="tab"
+              aria-controls="description"
+              aria-selected="false"
+            >
+              Description
+            </button>
+          </li>
+          <li class="mr-2" role="presentation">
+            <button
+              class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+              id="history-tab"
+              data-tabs-target="#history"
+              type="button"
+              role="tab"
+              aria-controls="history"
+              aria-selected="false"
+            >
+              History
+            </button>
+          </li>
+          <li class="mr-2" role="presentation">
+            <button
+              class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+              id="seller-tab"
+              data-tabs-target="#seller"
+              type="button"
+              role="tab"
+              aria-controls="seller"
+              aria-selected="false"
+            >
+              Seller
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div id="myTabContent">
+        <div
+          class="mt-10"
+          id="details"
+          role="tabpanel"
+          aria-labelledby="details-tab"
+        >
+          <div class="text-center">
+            <h3 class="font-bold text-[20px]">Vehicle Details</h3>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:gap-6 mt-5"
+            >
+              <!-- start  -->
+              <div class="lg:flex gap-2 lg:items-center">
+                <img src="../images/icons/car.png" alt="" />
+                <!-- <i class="fa-solid fa-car text-[#6D6D6D]"></i> -->
+                <div class="text-left">
+                  <p class="font-bold text-[#6D6D6D]">Honda</p>
+                  <span class="text-sm">Brand</span>
+                </div>
+              </div>
+              <!-- end  -->
+              <!-- start  -->
+              <div class="flex gap-2 items-center">
+                <img src="../images/icons/Automatic.png" alt="" />
+                <div class="text-left">
+                  <p class="font-bold text-[#6D6D6D]">Automatic</p>
+                  <span class="text-sm">Transmission</span>
+                </div>
+              </div>
+              <!-- end  -->
+              <!-- start  -->
+              <div class="flex gap-2 items-center">
+                <img src="../images/icons/Mileage.png" alt="" />
+                <div class="text-left">
+                  <p class="font-bold text-[#6D6D6D]">20,978 miles</p>
+                  <span class="text-sm">Mileage</span>
+                </div>
+              </div>
+              <!-- end  -->
+              <!-- start  -->
+              <div class="flex gap-2 items-center">
+                <img src="../images/icons/calendar.png" alt="" />
+                <div class="text-left">
+                  <p class="font-bold text-[#6D6D6D]">2021</p>
+                  <span class="text-sm">Registration year</span>
+                </div>
+              </div>
+              <!-- end  -->
+              <!-- start  -->
+              <div class="flex gap-2 items-center">
+                <img src="../images/icons/Model.png" alt="" />
+                <div class="text-left">
+                  <p class="font-bold text-[#6D6D6D]">HR-V</p>
+                  <span class="text-sm">Model</span>
+                </div>
+              </div>
+              <!-- end  -->
+              <!-- start  -->
+              <div class="flex gap-2 items-center">
+                <img src="../images/icons/Fuel.png" alt="" />
+                <div class="text-left">
+                  <p class="font-bold text-[#6D6D6D]">Petrol</p>
+                  <span class="text-sm">Fuel</span>
+                </div>
+              </div>
+              <!-- end  -->
+              <!-- start  -->
+              <div class="flex gap-2 items-center">
+                <img src="../images/icons/engine.png" alt="" />
+                <div class="text-left">
+                  <p class="font-bold text-[#6D6D6D]">1.8 L</p>
+                  <span class="text-sm">Engine</span>
+                </div>
+              </div>
+              <!-- end  -->
+              <!-- start  -->
+              <div class="flex gap-2 items-center">
+                <img src="../images/icons/car.png" alt="" />
+                <div class="text-left">
+                  <p class="font-bold text-[#6D6D6D]">Black</p>
+                  <span class="text-sm">Colour</span>
+                </div>
+              </div>
+              <!-- end  -->
+            </div>
+
+            <!-- text start  -->
+            <div>
+              <div
+                class="mt-20 border-b border-gray-200 dark:border-gray-700 mb-4"
+              ></div>
+              <!-- Description start -->
+              <div class="flex items-center justify-center">
+                <div class="max-w-[700px]">
+                  <h5 class="font-bold text-[20px] text-center">Description</h5>
+                  <p class="text-left text-sm mt-5">
+                    This listing showcases clear, high-resolution photos of the
+                    2021 Honda HR-V, including the front, back, both sides, and
+                    interior. Discover the vehicle's unique features, such as
+                    its sunroof, moonroof, or panoramic roof. Detailed
+                    information about the car is also provided, covering the
+                    brand, model, year, chassis number, mileage, transmission
+                    type, registration year, engine capacity, fuel options, and
+                    color. Any enhancements or modifications to the vehicle are
+                    listed for your convenience.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Description end -->
+              <div
+                class="mt-10 border-b border-gray-200 dark:border-gray-700 mb-4"
+              ></div>
+              <h3 class="font-bold text-[20px]">Seller</h3>
+              <div class="mt-5">
+                <h3 class="font-bold underline text-xl ml-[10%]">
+                  APLUS Motors
+                </h3>
+                <div class="flex gap-6 items-center justify-center">
+                  <!-- Center horizontally -->
+                  <img src="../images/Alogo.png" alt="" />
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <i class="fa-solid fa-square-check"></i>
+                      <span>Verified Seller</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i class="fa-solid fa-star"></i>
+                      <span>5 Reviews</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i class="fa-solid fa-circle-check"></i>
+                      <span>Vehicle Inspected</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- text end   -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-10"
+            >
+              <!-- start  -->
+              <div class="bg-[#FEFAF0] py-10 px-10 mb-5 rounded-xl">
+                <div class="flex gap-2">
+                  <img src="../images/profile pic.png" alt="" />
+                  <span>Nana Ama Agyekumwaa</span>
+                </div>
+                <div
+                  class="flex items-center ml-10 text-sm gap-1 text-[#E0AD01]"
+                >
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p class="ml-2 text-[#6D6D6D]">1 hour ago</p>
+                </div>
+                <p
+                  class="text-left text-sm mt-5 ml-10 overflow-hidden line-clamp-3"
+                >
+                  The seller was responsive and provided all the information I
+                  needed. The car's condition matched the photos, and I
+                  appreciate the flexibility in pricing. Would recommend dealing
+                  with this seller.
+                </p>
+              </div>
+              <!-- end  -->
+              <!-- start  -->
+              <div class="bg-[#FEFAF0] py-10 px-10 mb-5 rounded-xl">
+                <div class="flex gap-2">
+                  <img src="../images/profilepic.png" alt="" />
+                  <span>Prince Boateng</span>
+                </div>
+                <div
+                  class="flex items-center ml-10 text-sm gap-1 text-[#E0AD01]"
+                >
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p class="ml-2 text-[#6D6D6D]">1 hour ago</p>
+                </div>
+                <p
+                  class="text-left text-sm mt-5 ml-10 overflow-hidden line-clamp-3"
+                >
+                  The seller was responsive and provided all the information I
+                  needed. The car's condition matched the photos, and I
+                  appreciate the flexibility in pricing. Would recommend dealing
+                  with this seller.
+                </p>
+              </div>
+              <!-- end  -->
+              <!-- start  -->
+              <div class="bg-[#F3FFF6] py-10 px-10 mb-5 rounded-xl">
+                <div class="flex gap-2">
+                  <img src="../images/profile pic.png" alt="" />
+                  <span>Nana Ama Agyekumwaa</span>
+                </div>
+                <div
+                  class="flex items-center ml-10 text-sm gap-1 text-[#E0AD01]"
+                >
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p class="ml-2 text-[#6D6D6D]">1 hour ago</p>
+                </div>
+                <p
+                  class="text-left text-sm mt-5 ml-10 overflow-hidden line-clamp-3"
+                >
+                  The seller was responsive and provided all the information I
+                  needed. The car's condition matched the photos, and I
+                  appreciate the flexibility in pricing. Would recommend dealing
+                  with this seller.
+                </p>
+              </div>
+              <!-- end  -->
+            </div>
+          </div>
+          <!-- cars start  -->
+          <div class="px-10 py-3 mt-20">
+            <div class="text-center font-bold text-[28px] mb-10">
+              <h6>Similar vehicles</h6>
+            </div>
+            <div
+              class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-x-4 gap-y-12 text-left"
+            >
+              <!-- card 1 section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="lg:w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div class="flex items-center justify-between">
+                        <p
+                          class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] rounded-xl p-2"
+                        >
+                          Fixed Price
+                        </p>
+                        <a href="../Dashboard/MarketplaceV1.html">
+                          <i
+                            class="fa-regular fa-heart mr-4 bg-white p-2 rounded-full"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <h5
+                          class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                        >
+                          2021 Honda HR-V
+                        </h5>
+                      </a>
+                      <div
+                        class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card 1 section end   -->
+              <!-- card 1 section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="lg:w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div class="flex items-center justify-between">
+                        <p
+                          class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] rounded-xl p-2"
+                        >
+                          Fixed Price
+                        </p>
+                        <a href="../Dashboard/MarketplaceV1.html">
+                          <i
+                            class="fa-regular fa-heart mr-4 bg-white p-2 rounded-full"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <h5
+                          class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                        >
+                          2021 Honda HR-V
+                        </h5>
+                      </a>
+                      <div
+                        class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card 1 section end   -->
+              <!-- card 1 section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="lg:w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div class="flex items-center justify-between">
+                        <p
+                          class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] rounded-xl p-2"
+                        >
+                          Fixed Price
+                        </p>
+                        <a href="../Dashboard/MarketplaceV1.html">
+                          <i
+                            class="fa-regular fa-heart mr-4 bg-white p-2 rounded-full"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <h5
+                          class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                        >
+                          2021 Honda HR-V
+                        </h5>
+                      </a>
+                      <div
+                        class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card 1 section end   -->
+            </div>
+          </div>
+
+          <!-- cars end  -->
+        </div>
+      </div>
+
+      <div
+        class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800"
+        id="description"
+        role="tabpanel"
+        aria-labelledby="description-tab"
+      >
+        <p class="text-gray-500 dark:text-gray-400 text-sm">Description</p>
+      </div>
+      <div
+        class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
+        id="history"
+        role="tabpanel"
+        aria-labelledby="history-tab"
+      >
+        <p class="text-gray-500 dark:text-gray-400 text-sm">History</p>
+      </div>
+      <div
+        class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
+        id="seller"
+        role="tabpanel"
+        aria-labelledby="seller-tab"
+      >
+        <p class="text-gray-500 dark:text-gray-400 text-sm">Seller</p>
+      </div>
+    </div>
+    <!-- Tab and pill section end  -->
+    <!-- main section end  -->
+
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+  </body>
+</html>
