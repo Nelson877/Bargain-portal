@@ -23,19 +23,14 @@
       integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
       crossorigin="anonymous"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
-    /> -->
-    <!-- <link rel="stylesheet" href="../main.css" /> -->
 
     <title>dashboard</title>
   </head>
-  <body class="text-gray-700 overflow-x-hidden lg:ml-20 ml-10">
+  <body class="text-gray-700 overflow-x-hidden">
     <!-- main section start  -->
-    <main class="mt-10">
+    <main class="mt-10 ml-20">
       <!-- back start  -->
-      <div>
+      <div class="">
         <a href="../Dashboard/Marketplace.html" class="flex items-center gap-4">
           <i class="fa-solid fa-chevron-left"></i>
           <span>Back</span>
@@ -89,67 +84,70 @@
       <!-- Image card main end  -->
     </main>
     <!-- Tab and pill section start  -->
-    <div class="lg:max-w-5xl lg:mx-auto mt-5">
-      <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
-        <ul
-          class="flex flex-wrap -mb-px justify-center"
-          id="myTab"
-          data-tabs-toggle="#myTabContent"
-          role="tablist"
-        >
-          <li class="mr-2 active" role="presentation">
-            <button
-              class="inline-block text-[#eab308] hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308] border-[#eab308] focus:ring-yellow-400"
-              id="details-tab"
-              data-tabs-target="#details"
-              type="button"
-              role="tab"
-              aria-controls="details"
-              aria-selected="true"
-            >
-              Details
-            </button>
-          </li>
-          <li class="mr-2" role="presentation">
-            <button
-              class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
-              id="description-tab"
-              data-tabs-target="#description"
-              type="button"
-              role="tab"
-              aria-controls="description"
-              aria-selected="false"
-            >
-              Description
-            </button>
-          </li>
-          <li class="mr-2" role="presentation">
-            <button
-              class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
-              id="history-tab"
-              data-tabs-target="#history"
-              type="button"
-              role="tab"
-              aria-controls="history"
-              aria-selected="false"
-            >
-              History
-            </button>
-          </li>
-          <li class="mr-2" role="presentation">
-            <button
-              class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
-              id="seller-tab"
-              data-tabs-target="#seller"
-              type="button"
-              role="tab"
-              aria-controls="seller"
-              aria-selected="false"
-            >
-              Seller
-            </button>
-          </li>
-        </ul>
+
+    <div>
+      <div class="lg:max-w-5xl lg:mx-auto mt-5">
+        <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
+          <ul
+            class="flex flex-wrap -mb-px justify-center"
+            id="myTab"
+            data-tabs-toggle="#myTabContent"
+            role="tablist"
+          >
+            <li class="mr-2 active" role="presentation">
+              <button
+                class="inline-block text-[#eab308] hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308] border-[#eab308] focus:ring-yellow-400"
+                id="details-tab"
+                data-tabs-target="#details"
+                type="button"
+                role="tab"
+                aria-controls="details"
+                aria-selected="true"
+              >
+                Details
+              </button>
+            </li>
+            <li class="mr-2" role="presentation">
+              <button
+                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+                id="description-tab"
+                data-tabs-target="#description"
+                type="button"
+                role="tab"
+                aria-controls="description"
+                aria-selected="false"
+              >
+                Description
+              </button>
+            </li>
+            <li class="mr-2" role="presentation">
+              <button
+                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+                id="history-tab"
+                data-tabs-target="#history"
+                type="button"
+                role="tab"
+                aria-controls="history"
+                aria-selected="false"
+              >
+                History
+              </button>
+            </li>
+            <li class="mr-2" role="presentation">
+              <button
+                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+                id="seller-tab"
+                data-tabs-target="#seller"
+                type="button"
+                role="tab"
+                aria-controls="seller"
+                aria-selected="false"
+              >
+                Seller
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
       <div id="myTabContent">
         <div
@@ -158,14 +156,18 @@
           role="tabpanel"
           aria-labelledby="details-tab"
         >
-          <div class="text-center">
+          <div class="text-center lg:ml-[8%]">
             <h3 class="font-bold text-[20px]">Vehicle Details</h3>
             <div
-              class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:gap-6 mt-5"
+              class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6 lg:mt-5 mt-10 lg:ml-0 ml-20"
             >
               <!-- start  -->
-              <div class="lg:flex gap-2 lg:items-center">
-                <img src="../images/icons/car.png" alt="" />
+              <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
+                <img
+                  src="../images/icons/car.png"
+                  alt=""
+                  class="lg:mb-0 mb-3"
+                />
                 <!-- <i class="fa-solid fa-car text-[#6D6D6D]"></i> -->
                 <div class="text-left">
                   <p class="font-bold text-[#6D6D6D]">Honda</p>
@@ -174,8 +176,12 @@
               </div>
               <!-- end  -->
               <!-- start  -->
-              <div class="flex gap-2 items-center">
-                <img src="../images/icons/Automatic.png" alt="" />
+              <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
+                <img
+                  src="../images/icons/Automatic.png"
+                  alt=""
+                  class="lg:mb-0 mb-3"
+                />
                 <div class="text-left">
                   <p class="font-bold text-[#6D6D6D]">Automatic</p>
                   <span class="text-sm">Transmission</span>
@@ -183,8 +189,12 @@
               </div>
               <!-- end  -->
               <!-- start  -->
-              <div class="flex gap-2 items-center">
-                <img src="../images/icons/Mileage.png" alt="" />
+              <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
+                <img
+                  src="../images/icons/Mileage.png"
+                  alt=""
+                  class="lg:mb-0 mb-3"
+                />
                 <div class="text-left">
                   <p class="font-bold text-[#6D6D6D]">20,978 miles</p>
                   <span class="text-sm">Mileage</span>
@@ -192,8 +202,12 @@
               </div>
               <!-- end  -->
               <!-- start  -->
-              <div class="flex gap-2 items-center">
-                <img src="../images/icons/calendar.png" alt="" />
+              <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
+                <img
+                  src="../images/icons/calendar.png"
+                  alt=""
+                  class="lg:mb-0 mb-3"
+                />
                 <div class="text-left">
                   <p class="font-bold text-[#6D6D6D]">2021</p>
                   <span class="text-sm">Registration year</span>
@@ -201,8 +215,12 @@
               </div>
               <!-- end  -->
               <!-- start  -->
-              <div class="flex gap-2 items-center">
-                <img src="../images/icons/Model.png" alt="" />
+              <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
+                <img
+                  src="../images/icons/Model.png"
+                  alt=""
+                  class="lg:mb-0 mb-3"
+                />
                 <div class="text-left">
                   <p class="font-bold text-[#6D6D6D]">HR-V</p>
                   <span class="text-sm">Model</span>
@@ -210,8 +228,12 @@
               </div>
               <!-- end  -->
               <!-- start  -->
-              <div class="flex gap-2 items-center">
-                <img src="../images/icons/Fuel.png" alt="" />
+              <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
+                <img
+                  src="../images/icons/Fuel.png"
+                  alt=""
+                  class="lg:mb-0 mb-3"
+                />
                 <div class="text-left">
                   <p class="font-bold text-[#6D6D6D]">Petrol</p>
                   <span class="text-sm">Fuel</span>
@@ -219,8 +241,12 @@
               </div>
               <!-- end  -->
               <!-- start  -->
-              <div class="flex gap-2 items-center">
-                <img src="../images/icons/engine.png" alt="" />
+              <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
+                <img
+                  src="../images/icons/engine.png"
+                  alt=""
+                  class="lg:mb-0 mb-3"
+                />
                 <div class="text-left">
                   <p class="font-bold text-[#6D6D6D]">1.8 L</p>
                   <span class="text-sm">Engine</span>
@@ -228,8 +254,12 @@
               </div>
               <!-- end  -->
               <!-- start  -->
-              <div class="flex gap-2 items-center">
-                <img src="../images/icons/car.png" alt="" />
+              <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
+                <img
+                  src="../images/icons/car.png"
+                  alt=""
+                  class="lg:mb-0 mb-3"
+                />
                 <div class="text-left">
                   <p class="font-bold text-[#6D6D6D]">Black</p>
                   <span class="text-sm">Colour</span>
@@ -240,12 +270,19 @@
 
             <!-- text start  -->
             <div>
-              <div
-                class="mt-20 border-b border-gray-200 dark:border-gray-700 mb-4"
-              ></div>
+              <hr
+                class="lg:max-w-5xl lg:mx-auto mt-5"
+                style="
+                  width: 600%;
+                  text-align: left;
+                  margin-left: 0;
+                  margin-top: 80px;
+                  margin-bottom: 30px;
+                "
+              />
               <!-- Description start -->
               <div class="flex items-center justify-center">
-                <div class="max-w-[700px]">
+                <div class="lg:max-w-[700px] max-w-[400px]">
                   <h5 class="font-bold text-[20px] text-center">Description</h5>
                   <p class="text-left text-sm mt-5">
                     This listing showcases clear, high-resolution photos of the
@@ -262,9 +299,19 @@
               </div>
 
               <!-- Description end -->
-              <div
-                class="mt-10 border-b border-gray-200 dark:border-gray-700 mb-4"
-              ></div>
+            </div>
+            <hr
+              class="lg:max-w-5xl lg:mx-auto mt-5"
+              style="
+                width: 600%;
+                text-align: left;
+                margin-left: 0;
+                margin-top: 80px;
+                margin-bottom: 30px;
+              "
+            />
+            <!-- seller  start -->
+            <div class="">
               <h3 class="font-bold text-[20px]">Seller</h3>
               <div class="mt-5">
                 <h3 class="font-bold underline text-xl ml-[10%]">
@@ -290,97 +337,112 @@
                 </div>
               </div>
             </div>
+            <!-- seller end  -->
             <!-- text end   -->
-            <div
-              class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-10"
-            >
-              <!-- start  -->
-              <div class="bg-[#FEFAF0] py-10 px-10 mb-5 rounded-xl">
-                <div class="flex gap-2">
-                  <img src="../images/profile pic.png" alt="" />
-                  <span>Nana Ama Agyekumwaa</span>
-                </div>
-                <div
-                  class="flex items-center ml-10 text-sm gap-1 text-[#E0AD01]"
-                >
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <p class="ml-2 text-[#6D6D6D]">1 hour ago</p>
-                </div>
-                <p
-                  class="text-left text-sm mt-5 ml-10 overflow-hidden line-clamp-3"
-                >
-                  The seller was responsive and provided all the information I
-                  needed. The car's condition matched the photos, and I
-                  appreciate the flexibility in pricing. Would recommend dealing
-                  with this seller.
-                </p>
-              </div>
-              <!-- end  -->
-              <!-- start  -->
-              <div class="bg-[#FEFAF0] py-10 px-10 mb-5 rounded-xl">
-                <div class="flex gap-2">
-                  <img src="../images/profilepic.png" alt="" />
-                  <span>Prince Boateng</span>
-                </div>
-                <div
-                  class="flex items-center ml-10 text-sm gap-1 text-[#E0AD01]"
-                >
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <p class="ml-2 text-[#6D6D6D]">1 hour ago</p>
-                </div>
-                <p
-                  class="text-left text-sm mt-5 ml-10 overflow-hidden line-clamp-3"
-                >
-                  The seller was responsive and provided all the information I
-                  needed. The car's condition matched the photos, and I
-                  appreciate the flexibility in pricing. Would recommend dealing
-                  with this seller.
-                </p>
-              </div>
-              <!-- end  -->
-              <!-- start  -->
-              <div class="bg-[#F3FFF6] py-10 px-10 mb-5 rounded-xl">
-                <div class="flex gap-2">
-                  <img src="../images/profile pic.png" alt="" />
-                  <span>Nana Ama Agyekumwaa</span>
-                </div>
-                <div
-                  class="flex items-center ml-10 text-sm gap-1 text-[#E0AD01]"
-                >
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <p class="ml-2 text-[#6D6D6D]">1 hour ago</p>
-                </div>
-                <p
-                  class="text-left text-sm mt-5 ml-10 overflow-hidden line-clamp-3"
-                >
-                  The seller was responsive and provided all the information I
-                  needed. The car's condition matched the photos, and I
-                  appreciate the flexibility in pricing. Would recommend dealing
-                  with this seller.
-                </p>
-              </div>
-              <!-- end  -->
-            </div>
           </div>
+          <!-- Name card start  -->
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 mt-10">
+            <!-- start  -->
+            <div
+              class="bg-[#FEFAF0] lg:py-10 lg:px-10 px-5 py-10 w-[80%] h-[90%] ml-10 mb-5 rounded-xl"
+            >
+              <div
+                class="flex flex-col items-center lg:flex-row lg:items-center lg:gap-2"
+              >
+                <img src="../images/profile pic.png" alt="" class="w-10 h-10" />
+                <span>Nana Ama Agyekumwaa</span>
+              </div>
+              <div
+                class="flex lg:items-center lg:ml-10 ml-[27%] mt-3 lg:mt-0 text-sm gap-1 text-[#E0AD01]"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p class="ml-2 text-[#6D6D6D]">1 hour ago</p>
+              </div>
+              <p
+                class="lg:text-left text-center text-sm mt-5 lg:ml-10 overflow-hidden line-clamp-3"
+              >
+                The seller was responsive and provided all the information I
+                needed. The car's condition matched the photos, and I appreciate
+                the flexibility in pricing. Would recommend dealing with this
+                seller.
+              </p>
+            </div>
+            <!-- end  -->
+            <!-- start  -->
+            <div
+              class="bg-[#FFF6F8] lg:py-10 lg:px-10 px-5 py-10 w-[80%] h-[90%] ml-10 mb-5 rounded-xl"
+            >
+              <div
+                class="flex flex-col items-center lg:flex-row lg:items-center lg:gap-2"
+              >
+                <img src="../images/profilepic.png" alt="" class="w-10 h-10" />
+                <span>Prince Boateng</span>
+              </div>
+              <div
+                class="flex lg:items-center lg:ml-10 ml-[27%] mt-3 lg:mt-0 text-sm gap-1 text-[#E0AD01]"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p class="ml-2 text-[#6D6D6D]">1 hour ago</p>
+              </div>
+              <p
+                class="lg:text-left text-center text-sm mt-5 lg:ml-10 overflow-hidden line-clamp-3"
+              >
+                The seller was responsive and provided all the information I
+                needed. The car's condition matched the photos, and I appreciate
+                the flexibility in pricing. Would recommend dealing with this
+                seller.
+              </p>
+            </div>
+            <!-- end  -->
+            <!-- start  -->
+            <div
+              class="bg-[#F3FFF6] lg:py-10 lg:px-10 px-5 py-10 w-[80%] h-[90%] ml-10 mb-5 rounded-xl"
+            >
+              <div
+                class="flex flex-col items-center lg:flex-row lg:items-center lg:gap-2"
+              >
+                <img src="../images/profile pic.png" alt="" class="w-10 h-10" />
+                <span>Nana Ama Agyekumwaa</span>
+              </div>
+              <div
+                class="flex lg:items-center lg:ml-10 ml-[27%] mt-3 lg:mt-0 text-sm gap-1 text-[#E0AD01]"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p class="ml-2 text-[#6D6D6D]">1 hour ago</p>
+              </div>
+              <p
+                class="lg:text-left text-center text-sm mt-5 lg:ml-10 overflow-hidden line-clamp-3"
+              >
+                The seller was responsive and provided all the information I
+                needed. The car's condition matched the photos, and I appreciate
+                the flexibility in pricing. Would recommend dealing with this
+                seller.
+              </p>
+            </div>
+            <!-- end  -->
+          </div>
+          <!-- Name card end  -->
           <!-- cars start  -->
-          <div class="px-10 py-3 mt-20">
-            <div class="text-center font-bold text-[28px] mb-10">
-              <h6>Similar vehicles</h6>
+          <div class="p-10 mt-20 bg-[#F7F9F8] w-[1440px]">
+            <div
+              class="lg:text-center lg:mt-0 mt-20 lg:ml-0 ml-20 font-bold text-[28px] mb-10"
+            >
+              <h6>Similar Vehicles</h6>
             </div>
             <div
-              class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-x-4 gap-y-12 text-left"
+              class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 text-left"
             >
               <!-- card 1 section start   -->
               <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
