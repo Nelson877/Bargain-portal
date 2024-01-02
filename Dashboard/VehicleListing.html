@@ -23,12 +23,6 @@
       integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
       crossorigin="anonymous"
     />
-    <!-- Tab and pill link  -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
-    /> -->
-    <link rel="stylesheet" href="../main.css" />
 
     <title>dashboard</title>
   </head>
@@ -325,26 +319,74 @@
                         background-position: 50% center;
                       "
                     >
-                      <div
-                        class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] md:w-4/12 w-5/12 rounded-xl p-2 truncate text-center"
-                      >
-                        Fixed Price
+                      <div>
+                        <div class="flex items-center justify-between mr-5">
+                          <button
+                            class="text-white font-bold md:text-base sm:text-base text-base bg-[#EC970F] p-2 rounded-2xl"
+                          >
+                            Fixed Price
+                          </button>
+
+                          <button
+                            id="dropdownDefaultButton"
+                            data-dropdown-toggle="dropdown"
+                          >
+                            <i
+                              class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
+                            ></i>
+                          </button>
+                        </div>
+
+                        <!-- Dropdown start  -->
+                        <div
+                          id="dropdown"
+                          class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
+                        >
+                          <ul
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-regular fa-trash-can"></i
+                                >Delete</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-solid fa-pencil"></i>Edit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Dropdown end  -->
                       </div>
                     </div>
                   </a>
                   <div
-                    class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 h-[130px] z-50"
                   >
                     <div class="p-5 bg-white">
                       <a href="#">
-                        <h5
-                          class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
-                        >
-                          2021 Honda HR-V
-                        </h5>
+                        <div class="flex items-center justify-between mr-5">
+                          <h5
+                            class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                          >
+                            2016 Toyota Corolla
+                          </h5>
+                          <p
+                            class="bg-[#EDFDF8] text-[#08875D] px-3 py-1 font-medium rounded-full"
+                          >
+                            On Sale
+                          </p>
+                        </div>
                       </a>
                       <div
-                        class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                        class="italic inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
                       >
                         Westland, Accra
                       </div>
@@ -360,14 +402,14 @@
                 </div>
               </div>
               <!-- card 1 section end   -->
-              <!-- card 2 section start   -->
+              <!-- card 1 section start   -->
               <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
                 <div class="w-full" style="height: 400px">
                   <a href="#">
                     <div
                       class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
                       style="
-                        background-image: url(../images/img2.png);
+                        background-image: url(../images/img.png);
                         border-top-right-radius: 15px;
                         border-top-left-radius: 15px;
                         background-repeat: no-repeat;
@@ -375,26 +417,74 @@
                         background-position: 50% center;
                       "
                     >
-                      <div
-                        class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] md:w-4/12 w-5/12 rounded-xl p-2 truncate text-center"
-                      >
-                        Fixed Price
+                      <div>
+                        <div class="flex items-center justify-between mr-5">
+                          <button
+                            class="text-white font-bold md:text-base sm:text-base text-base bg-[#EC970F] p-2 rounded-2xl"
+                          >
+                            Fixed Price
+                          </button>
+
+                          <button
+                            id="dropdownDefaultButton"
+                            data-dropdown-toggle="dropdown"
+                          >
+                            <i
+                              class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
+                            ></i>
+                          </button>
+                        </div>
+
+                        <!-- Dropdown start  -->
+                        <div
+                          id="dropdown"
+                          class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
+                        >
+                          <ul
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-regular fa-trash-can"></i
+                                >Delete</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-solid fa-pencil"></i>Edit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Dropdown end  -->
                       </div>
                     </div>
                   </a>
                   <div
-                    class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 h-[130px] z-50"
                   >
                     <div class="p-5 bg-white">
                       <a href="#">
-                        <h5
-                          class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
-                        >
-                          2021 Honda CR-V Black Edition
-                        </h5>
+                        <div class="flex items-center justify-between mr-5">
+                          <h5
+                            class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                          >
+                            2016 Toyota Corolla
+                          </h5>
+                          <p
+                            class="bg-[#EDFDF8] text-[#08875D] px-3 py-1 font-medium rounded-full"
+                          >
+                            On Sale
+                          </p>
+                        </div>
                       </a>
                       <div
-                        class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                        class="italic inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
                       >
                         Westland, Accra
                       </div>
@@ -409,15 +499,15 @@
                   </div>
                 </div>
               </div>
-              <!-- card 2 section end   -->
-              <!-- card 3 section start   -->
+              <!-- card 1 section end   -->
+              <!-- card 1 section start   -->
               <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
                 <div class="w-full" style="height: 400px">
                   <a href="#">
                     <div
                       class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
                       style="
-                        background-image: url(../images/img3.png);
+                        background-image: url(../images/img.png);
                         border-top-right-radius: 15px;
                         border-top-left-radius: 15px;
                         background-repeat: no-repeat;
@@ -425,26 +515,74 @@
                         background-position: 50% center;
                       "
                     >
-                      <div
-                        class="text-dark font-bold md:text-base sm:text-base text-base bg-[#EC970F] md:w-4/12 w-5/12 rounded-xl p-2 truncate text-center"
-                      >
-                        Fixed Price
+                      <div>
+                        <div class="flex items-center justify-between mr-5">
+                          <button
+                            class="text-white font-bold md:text-base sm:text-base text-base bg-[#EC970F] p-2 rounded-2xl"
+                          >
+                            Fixed Price
+                          </button>
+
+                          <button
+                            id="dropdownDefaultButton"
+                            data-dropdown-toggle="dropdown"
+                          >
+                            <i
+                              class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
+                            ></i>
+                          </button>
+                        </div>
+
+                        <!-- Dropdown start  -->
+                        <div
+                          id="dropdown"
+                          class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
+                        >
+                          <ul
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-regular fa-trash-can"></i
+                                >Delete</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-solid fa-pencil"></i>Edit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Dropdown end  -->
                       </div>
                     </div>
                   </a>
                   <div
-                    class="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50"
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 h-[130px] z-50"
                   >
                     <div class="p-5 bg-white">
                       <a href="#">
-                        <h5
-                          class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
-                        >
-                          2021 Honda HR-V
-                        </h5>
+                        <div class="flex items-center justify-between mr-5">
+                          <h5
+                            class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                          >
+                            2016 Toyota Corolla
+                          </h5>
+                          <p
+                            class="bg-[#FEF1F2] text-[#E02D3C] px-3 py-1 font-medium rounded-full"
+                          >
+                            On Sale
+                          </p>
+                        </div>
                       </a>
                       <div
-                        class="inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                        class="italic inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
                       >
                         Westland, Accra
                       </div>
@@ -459,7 +597,7 @@
                   </div>
                 </div>
               </div>
-              <!-- card 3 section end   -->
+              <!-- card 1 section end   -->
             </div>
           </div>
           <!-- card section end  -->
