@@ -28,7 +28,7 @@
   </head>
   <body class="text-gray-700 overflow-x-hidden">
     <!-- main section start  -->
-    <main class="mt-10 ml-20">
+    <main class="mt-10 lg:m-20 ml-5">
       <!-- back start  -->
       <div class="">
         <a href="../Dashboard/Marketplace.html" class="flex items-center gap-4">
@@ -41,7 +41,7 @@
       <div class="flex flex-wrap gap-4 lg:mt-10 mt-4">
         <div>
           <img
-            src="../images/carDel.png"
+            src="../../images/carDel.png"
             class="lg:w-[550px] lg:h-[578px] w-[80%]"
             alt=""
           />
@@ -50,13 +50,36 @@
         <!-- 3 cars start  -->
         <div class="grid gap-2">
           <div>
-            <img src="../images/carDel1.png" alt="" class="w-[900%]" />
+            <img src="../../images/carDel1.png" alt="" class="w-[900%]" />
           </div>
           <div>
-            <img src="../images/carDel2.png" alt="" class="w-[900%]" />
+            <img src="../../images/carDel2.png" alt="" class="w-[900%]" />
           </div>
           <div>
-            <img src="../images/carDel3.png" alt="" class="w-[900%]" />
+            <div
+              class="h-[190px] -z-40 pt-4 pl-4"
+              style="
+                background-image: url(../../images/Rectangle6.png);
+
+                background-size: cover;
+                background-position: 50% center;
+              "
+            >
+              <a href="../CarDetailsPage/CarDetailsPageImage.html">
+                <div class="flex items-center justify-end mt-[40%] mr-5">
+                  <button
+                    class="text-dark font-bold md:text-base sm:text-base text-base bg-[#D9D9D9] px-5 py-3 rounded-lg"
+                  >
+                    <i class="fa-solid text-center fa-ellipsis-vertical"></i>
+                    <i class="fa-solid text-center fa-ellipsis-vertical"></i>
+                    <i
+                      class="fa-solid text-center fa-ellipsis-vertical mr-2"
+                    ></i
+                    >Show all photos
+                  </button>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -85,78 +108,78 @@
     </main>
     <!-- Tab and pill section start  -->
 
-    <div>
-      <div class="lg:max-w-5xl lg:mx-auto mt-5">
-        <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
-          <ul
-            class="flex flex-wrap -mb-px justify-center"
-            id="myTab"
-            data-tabs-toggle="#myTabContent"
-            role="tablist"
-          >
-            <li class="mr-2 active" role="presentation">
-              <button
-                class="inline-block text-[#eab308] hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308] border-[#eab308] focus:ring-yellow-400"
-                id="details-tab"
-                data-tabs-target="#details"
-                type="button"
-                role="tab"
-                aria-controls="details"
-                aria-selected="true"
-              >
-                Details
-              </button>
-            </li>
-            <li class="mr-2" role="presentation">
-              <button
-                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
-                id="description-tab"
-                data-tabs-target="#description"
-                type="button"
-                role="tab"
-                aria-controls="description"
-                aria-selected="false"
-              >
-                Description
-              </button>
-            </li>
-            <li class="mr-2" role="presentation">
-              <button
-                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
-                id="history-tab"
-                data-tabs-target="#history"
-                type="button"
-                role="tab"
-                aria-controls="history"
-                aria-selected="false"
-              >
-                History
-              </button>
-            </li>
-            <li class="mr-2" role="presentation">
-              <button
-                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
-                id="seller-tab"
-                data-tabs-target="#seller"
-                type="button"
-                role="tab"
-                aria-controls="seller"
-                aria-selected="false"
-              >
-                Seller
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div id="myTabContent">
-        <div
-          class="mt-10"
-          id="details"
-          role="tabpanel"
-          aria-labelledby="details-tab"
+    <div class="lg:max-w-5xl lg:mx-auto mt-5">
+      <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
+        <ul
+          class="flex flex-wrap -mb-px justify-center"
+          id="myTab"
+          data-tabs-toggle="#myTabContent"
+          role="tablist"
         >
-          <div class="text-center lg:ml-[8%]">
+          <li class="mr-2 active" role="presentation">
+            <button
+              class="inline-block text-[#eab308] hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308] border-[#eab308] focus:ring-yellow-400"
+              id="details-tab"
+              data-tabs-target="#details"
+              type="button"
+              role="tab"
+              aria-controls="details"
+              aria-selected="true"
+            >
+              Details
+            </button>
+          </li>
+          <li class="mr-2" role="presentation">
+            <button
+              class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+              id="description-tab"
+              data-tabs-target="#description"
+              type="button"
+              role="tab"
+              aria-controls="description"
+              aria-selected="false"
+            >
+              Description
+            </button>
+          </li>
+          <li class="mr-2" role="presentation">
+            <button
+              class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+              id="history-tab"
+              data-tabs-target="#history"
+              type="button"
+              role="tab"
+              aria-controls="history"
+              aria-selected="false"
+            >
+              History
+            </button>
+          </li>
+          <li class="mr-2" role="presentation">
+            <button
+              class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+              id="seller-tab"
+              data-tabs-target="#seller"
+              type="button"
+              role="tab"
+              aria-controls="seller"
+              aria-selected="false"
+            >
+              Seller
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="myTabContent">
+      <div
+        class="mt-10"
+        id="details"
+        role="tabpanel"
+        aria-labelledby="details-tab"
+      >
+        <div class="text-center">
+          <div class="ml-[8%]">
             <h3 class="font-bold text-[20px]">Vehicle Details</h3>
             <div
               class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6 lg:mt-5 mt-10 lg:ml-0 ml-20"
@@ -164,7 +187,7 @@
               <!-- start  -->
               <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
                 <img
-                  src="../images/icons/car.png"
+                  src="../../images/icons/car.png"
                   alt=""
                   class="lg:mb-0 mb-3"
                 />
@@ -178,7 +201,7 @@
               <!-- start  -->
               <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
                 <img
-                  src="../images/icons/Automatic.png"
+                  src="../../images/icons/Automatic.png"
                   alt=""
                   class="lg:mb-0 mb-3"
                 />
@@ -191,7 +214,7 @@
               <!-- start  -->
               <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
                 <img
-                  src="../images/icons/Mileage.png"
+                  src="../../images/icons/Mileage.png"
                   alt=""
                   class="lg:mb-0 mb-3"
                 />
@@ -204,7 +227,7 @@
               <!-- start  -->
               <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
                 <img
-                  src="../images/icons/calendar.png"
+                  src="../../images/icons/calendar.png"
                   alt=""
                   class="lg:mb-0 mb-3"
                 />
@@ -217,7 +240,7 @@
               <!-- start  -->
               <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
                 <img
-                  src="../images/icons/Model.png"
+                  src="../../images/icons/Model.png"
                   alt=""
                   class="lg:mb-0 mb-3"
                 />
@@ -230,7 +253,7 @@
               <!-- start  -->
               <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
                 <img
-                  src="../images/icons/Fuel.png"
+                  src="../../images/icons/Fuel.png"
                   alt=""
                   class="lg:mb-0 mb-3"
                 />
@@ -243,7 +266,7 @@
               <!-- start  -->
               <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
                 <img
-                  src="../images/icons/engine.png"
+                  src="../../images/icons/engine.png"
                   alt=""
                   class="lg:mb-0 mb-3"
                 />
@@ -256,7 +279,7 @@
               <!-- start  -->
               <div class="lg:flex gap-2 lg:items-center lg:mb-0 mb-5">
                 <img
-                  src="../images/icons/car.png"
+                  src="../../images/icons/car.png"
                   alt=""
                   class="lg:mb-0 mb-3"
                 />
@@ -267,10 +290,11 @@
               </div>
               <!-- end  -->
             </div>
+          </div>
 
-            <!-- text start  -->
-            <div>
-              <hr
+          <!-- text start  -->
+          <div>
+            <!-- <hr
                 class="lg:max-w-5xl lg:mx-auto mt-5"
                 style="
                   width: 600%;
@@ -279,65 +303,8 @@
                   margin-top: 80px;
                   margin-bottom: 30px;
                 "
-              />
-              <!-- Description start -->
-              <div class="flex items-center justify-center">
-                <div class="lg:max-w-[700px] max-w-[400px]">
-                  <h5 class="font-bold text-[20px] text-center">Description</h5>
-                  <p class="text-left text-sm mt-5">
-                    This listing showcases clear, high-resolution photos of the
-                    2021 Honda HR-V, including the front, back, both sides, and
-                    interior. Discover the vehicle's unique features, such as
-                    its sunroof, moonroof, or panoramic roof. Detailed
-                    information about the car is also provided, covering the
-                    brand, model, year, chassis number, mileage, transmission
-                    type, registration year, engine capacity, fuel options, and
-                    color. Any enhancements or modifications to the vehicle are
-                    listed for your convenience.
-                  </p>
-                </div>
-              </div>
+              /> -->
 
-              <!-- Description end -->
-            </div>
-            <hr
-              class="lg:max-w-5xl lg:mx-auto mt-5"
-              style="
-                width: 600%;
-                text-align: left;
-                margin-left: 0;
-                margin-top: 80px;
-                margin-bottom: 30px;
-              "
-            />
-            <!-- seller  start -->
-            <div class="">
-              <h3 class="font-bold text-[20px]">Seller</h3>
-              <div class="mt-5">
-                <h3 class="font-bold underline text-xl ml-[10%]">
-                  APLUS Motors
-                </h3>
-                <div class="flex gap-6 items-center justify-center">
-                  <!-- Center horizontally -->
-                  <img src="../images/Alogo.png" alt="" />
-                  <div>
-                    <div class="flex items-center gap-2">
-                      <i class="fa-solid fa-square-check"></i>
-                      <span>Verified Seller</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <i class="fa-solid fa-star"></i>
-                      <span>5 Reviews</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <i class="fa-solid fa-circle-check"></i>
-                      <span>Vehicle Inspected</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- seller end  -->
             <!-- text end   -->
           </div>
           <!-- Name card start  -->
@@ -349,7 +316,11 @@
               <div
                 class="flex flex-col items-center lg:flex-row lg:items-center lg:gap-2"
               >
-                <img src="../images/profile pic.png" alt="" class="w-10 h-10" />
+                <img
+                  src="../../images/profile pic.png"
+                  alt=""
+                  class="w-10 h-10"
+                />
                 <span>Nana Ama Agyekumwaa</span>
               </div>
               <div
@@ -379,7 +350,11 @@
               <div
                 class="flex flex-col items-center lg:flex-row lg:items-center lg:gap-2"
               >
-                <img src="../images/profilepic.png" alt="" class="w-10 h-10" />
+                <img
+                  src="../../images/profilepic.png"
+                  alt=""
+                  class="w-10 h-10"
+                />
                 <span>Prince Boateng</span>
               </div>
               <div
@@ -409,7 +384,11 @@
               <div
                 class="flex flex-col items-center lg:flex-row lg:items-center lg:gap-2"
               >
-                <img src="../images/profile pic.png" alt="" class="w-10 h-10" />
+                <img
+                  src="../../images/profile pic.png"
+                  alt=""
+                  class="w-10 h-10"
+                />
                 <span>Nana Ama Agyekumwaa</span>
               </div>
               <div
@@ -437,7 +416,7 @@
           <!-- cars start  -->
           <div class="p-10 mt-20 bg-[#F7F9F8] w-[1440px]">
             <div
-              class="lg:text-center lg:mt-0 mt-20 lg:ml-0 ml-20 font-bold text-[28px] mb-10"
+              class="lg:text-center lg:mt-0 mt-20 font-bold text-[28px] mb-10"
             >
               <h6>Similar Vehicles</h6>
             </div>
@@ -451,7 +430,7 @@
                     <div
                       class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
                       style="
-                        background-image: url(../images/img.png);
+                        background-image: url(../../images/img.png);
                         border-top-right-radius: 15px;
                         border-top-left-radius: 15px;
                         background-repeat: no-repeat;
@@ -508,7 +487,7 @@
                     <div
                       class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
                       style="
-                        background-image: url(../images/img.png);
+                        background-image: url(../../images/img.png);
                         border-top-right-radius: 15px;
                         border-top-left-radius: 15px;
                         background-repeat: no-repeat;
@@ -565,7 +544,7 @@
                     <div
                       class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
                       style="
-                        background-image: url(../images/img.png);
+                        background-image: url(../../images/img.png);
                         border-top-right-radius: 15px;
                         border-top-left-radius: 15px;
                         background-repeat: no-repeat;
@@ -623,30 +602,75 @@
       </div>
 
       <div
-        class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800"
+        class="mb-20 hidden"
         id="description"
         role="tabpanel"
         aria-labelledby="description-tab"
       >
-        <p class="text-gray-500 dark:text-gray-400 text-sm">Description</p>
-      </div>
-      <div
-        class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
-        id="history"
-        role="tabpanel"
-        aria-labelledby="history-tab"
-      >
-        <p class="text-gray-500 dark:text-gray-400 text-sm">History</p>
-      </div>
-      <div
-        class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
-        id="seller"
-        role="tabpanel"
-        aria-labelledby="seller-tab"
-      >
-        <p class="text-gray-500 dark:text-gray-400 text-sm">Seller</p>
+        <!-- Description start -->
+        <div class="flex items-center justify-center mt-10">
+          <div class="lg:max-w-[700px] max-w-[400px]">
+            <h5 class="font-bold text-[20px] text-center">Description</h5>
+            <p class="text-left text-sm mt-5">
+              This listing showcases clear, high-resolution photos of the 2021
+              Honda HR-V, including the front, back, both sides, and interior.
+              Discover the vehicle's unique features, such as its sunroof,
+              moonroof, or panoramic roof. Detailed information about the car is
+              also provided, covering the brand, model, year, chassis number,
+              mileage, transmission type, registration year, engine capacity,
+              fuel options, and color. Any enhancements or modifications to the
+              vehicle are listed for your convenience.
+            </p>
+          </div>
+        </div>
+
+        <!-- Description end -->
       </div>
     </div>
+    <div
+      class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
+      id="history"
+      role="tabpanel"
+      aria-labelledby="history-tab"
+    >
+      <p class="text-gray-500 dark:text-gray-400 text-sm">History</p>
+    </div>
+    <div
+      class="hidden"
+      id="seller"
+      role="tabpanel"
+      aria-labelledby="seller-tab"
+    >
+      <!-- seller  start -->
+      <div class="mt-10 mb-20">
+        <h3 class="font-bold text-[20px] text-center">Seller</h3>
+        <div class="mt-5">
+          <h3 class="font-bold underline text-xl ml-[10%] text-center">
+            APLUS Motors
+          </h3>
+          <div class="flex gap-6 items-center justify-center">
+            <!-- Center horizontally -->
+            <img src="../../images/Alogo.png" alt="" />
+            <div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-square-check"></i>
+                <span>Verified Seller</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-star"></i>
+                <span>5 Reviews</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Vehicle Inspected</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- seller end  -->
+    </div>
+
     <!-- Tab and pill section end  -->
     <!-- main section end  -->
 
