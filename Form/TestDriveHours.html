@@ -252,111 +252,108 @@
                   id="time"
                 >
                   <div class="flex items-center">
-                    <form method="post" action="#" name="form">
-                      <div class="flex items-center">
-                        <button
-                          id="dropdownDefaultButton"
-                          data-dropdown-toggle="dropdownNew"
-                          class="brod-gray-900 border-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center"
-                          type="button"
+                    <div class="flex items-center">
+                      <button
+                        id="dropdownDefaultButton"
+                        data-dropdown-toggle="dropdownNew"
+                        class="brod-gray-900 border-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center"
+                        type="button"
+                        onclick="toggleDropdown('dropdownNew')"
+                      >
+                        8:00
+                        <i class="fas fa-angle-down"></i>
+                      </button>
+                      <!-- Dropdown menu date start  -->
+                      <div
+                        id="dropdownNew"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                      >
+                        <ul
+                          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                          aria-labelledby="dropdownDefaultButton"
                         >
-                          8:00
-                          <i class="fa-solid fa-angle-down"></i>
-                        </button>
-                        <!-- Dropdown menu date start  -->
-                        <div
-                          id="dropdownNew"
-                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                        >
-                          <ul
-                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="dropdownDefaultButton"
-                          >
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >8:00</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >9:00</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >10:00</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                        <!-- Dropdown menu date end  -->
-                        <h4 class="ml-5 mr-5">to</h4>
-                        <button
-                          id="dropdownDefaultButton"
-                          data-dropdown-toggle="dropdown"
-                          class="brod-gray-900 border-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center"
-                          type="button"
-                        >
-                          8:00
-                          <i class="fa-solid fa-angle-down"></i>
-                          <div>
-                            <button id="extend" class="ml-[50%]">
-                              <i
-                                class="fa-solid fa-circle-plus ml-2"
-                                id="extend"
-                              >
-                              </i>
-                            </button>
-                            <button id="extend-field">
-                              <i
-                                class="fa-regular fa-trash-can text-red-600 ml-10"
-                              >
-                              </i>
-                            </button>
-                          </div>
-                        </button>
-                        <!-- Dropdown menu date start  -->
-                        <div
-                          id="dropdownNew"
-                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                        >
-                          <ul
-                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="dropdownDefaultButton"
-                          >
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >8:00</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >9:00</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >10:00</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                        <!-- Dropdown menu date end  -->
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >8:00</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >9:00</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >10:00</a
+                            >
+                          </li>
+                        </ul>
                       </div>
-                      <!-- <button id="extend">8:00</button> -->
-                    </form>
+                      <!-- Dropdown menu date end  -->
+                      <h4 class="ml-5 mr-5">to</h4>
+                      <button
+                        id="dropdownDefaultButton"
+                        data-dropdown-toggle="dropdown"
+                        class="brod-gray-900 border-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center"
+                        type="button"
+                        onclick="toggleDropdownNew('dropdown')"
+                      >
+                        8:00
+                        <i class="fa-solid fa-angle-down"></i>
+                        <div>
+                          <button id="extend" class="ml-[50%]">
+                            <i class="fa-solid fa-circle-plus ml-2" id="extend">
+                            </i>
+                          </button>
+                          <button id="extend-field">
+                            <i
+                              class="fa-regular fa-trash-can text-red-600 ml-10"
+                            >
+                            </i>
+                          </button>
+                        </div>
+                      </button>
+                      <!-- Dropdown menu date start  -->
+                      <div
+                        id="dropdown"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                      >
+                        <ul
+                          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                          aria-labelledby="dropdownDefaultButton"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >8:00</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >9:00</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >10:00</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- Dropdown menu date end  -->
+                    </div>
+                    <!-- <button id="extend">8:00</button> -->
                   </div>
                 </div>
               </div>
@@ -402,6 +399,7 @@
         if ($(this).is(":checked")) {
           switchStatus = $(this).is(":checked");
           document.getElementById("time").style.display = "block";
+
           // alert(switchStatus); // To verify
         } else {
           switchStatus = $(this).is(":checked");
@@ -410,62 +408,14 @@
         }
       });
 
-      $(document).ready(function () {
-        $("#extend").click(function (e) {
-          e.preventDefault();
-          $("#extend-field").append(
-            `<div>
-              <a class="">
-                <div class="flex items-center add-text-field">
-                        <button
-                          id="dropdownDefaultButton"
-                          data-dropdown-toggle="dropdown"
-                          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                          type="button"
-                        >
-                          8:00
-                          <i class="fa-solid fa-angle-down"></i>
-                        </button>
-                        <h4 class="ml-5 mr-5">to</h4>
-                        <button
-                          id="dropdownDefaultButton"
-                          data-dropdown-toggle="dropdown"
-                          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                          type="button"
-                        >
-                          8:00
-                          <i class="fa-solid fa-angle-down"></i>
-                          <button id="extend">
-                            <i class="fa-solid fa-circle-plus ml-2" id="extend">
-                            </i>
-                          </button>
-                          
-                        </button>
-                      </div>
-                  </a>
-                  <a class="remove-extend-field">
-                    <button id="extend-field">
-                            <i
-                              class="fa-regular fa-trash-can text-red-600 ml-3"
-                            >
-                            </i>
-                          </button>
-                      </a>`
-          );
-        });
-
-        $("#extend-field").on("click", ".add-text-field", function (e) {
-          e.preventDefault();
-          $("#extend-field").append(
-            '<div><a class="add-text-field"><button><i class="fa-solid fa-circle-plus ml-2" id="extend"></i></button></a><a class="remove-extend-field"><button> <i class="fa-regular fa-trash-can text-red-600 ml-3"></i></button></a>'
-          );
-        });
-
-        $("#extend-field").on("click", ".remove-extend-field", function (e) {
-          e.preventDefault();
-          $(this).parent("div").remove();
-        });
-      });
+      function toggleDropdown(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        dropdown.classList.toggle("hidden");
+      }
+      function toggleDropdownNew(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        dropdown.classList.toggle("hidden");
+      }
     </script>
   </body>
 </html>
