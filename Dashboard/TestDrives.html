@@ -24,8 +24,6 @@
       crossorigin="anonymous"
     />
 
-    <!-- <link rel="stylesheet" href="../main.css" /> -->
-
     <title>dashboard</title>
   </head>
   <body class="text-gray-700">
@@ -300,63 +298,99 @@
                 <div class="bg-white w-full max-w-7xl text-center">
                   <!-- Close Modal start -->
                   <div class="absolute right-2 top-[25%] lg:right-20 lg:top-2">
-                    <span
-                      class="modal-close cursor-pointer lg:text-3xl text-lg"
+                    <button
+                      id="modal-close"
+                      data-modal-hide="default-modal"
+                      class="cursor-pointer lg:text-3xl text-lg"
                     >
-                      <i class="fa-solid fa-xmark"></i>
-                    </span>
+                      <i class="fa-solid fa-xmark text-white"></i>
+                    </button>
                   </div>
                   <!-- Close Modal end -->
 
                   <!-- Modal Content -->
-                  <div
-                    class="flex flex-col items-center justify-between py-6 lg:mt-5 relative"
-                  >
-                    <h3 class="font-bold lg:w-[400px] w-[300px] lg:text-[20px]">
+                  <div>
+                    <h3
+                      class="font-bold lg:w-[400px] w-[300px] lg:text-[20px] flex items-center"
+                    >
                       Select the times you will be available to offer test
                       drives to clients
                     </h3>
-
-                    <div
-                      class="relative mt-2 ml-5 lg:w-[510px] py-3 px-1 lg:py-5 lg:px-2 border-[1px] border-gray-700 rounded-full"
-                    >
-                      <label
-                        class="relative inline-flex items-center cursor-pointer"
+                    <!-- start  -->
+                    <div class="max-w-md mx-auto mt-8">
+                      <ul
+                        class="border border-gray-400 rounded-md divide-y divide-gray-400"
                       >
-                        <input type="checkbox" value="" class="sr-only peer" />
-
-                        <div
-                          class="flex items-center justify-center w-10 h-3 bg-gray-200 text-center peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-200 after:border-gray-300 after:rounded-full after:h-5 after:w-5 peer-checked:bg-[#F3B757]"
-                        ></div>
-
-                        <p class="ms-5 font-[900]">Mondays</p>
-                        <span class="ms-3">8:00 am to 5:00 pm</span>
-                        <i
-                          id="dropdownIcon"
-                          class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-2 cursor-pointer"
-                        ></i>
-
-                        <!-- Dropdown Content -->
-                        <div
-                          id="dropdownContent"
-                          class="hidden absolute top-full left-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-10"
-                        >
-                          <!-- Dropdown Items go here -->
-                          <div class="py-1">
-                            <a
-                              href="#"
-                              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                              >Option 1</a
+                        <li>
+                          <!-- toggle button  start -->
+                          <label
+                            class="relative inline-flex items-center me-5 cursor-pointer"
+                          >
+                            <input
+                              type="checkbox"
+                              value=""
+                              class="sr-only peer"
+                            />
+                            <div
+                              class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 dark:peer-focus:ring-yellow-800 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-yellow-400"
+                            ></div>
+                          </label>
+                          <!-- toggle button  end -->
+                          <button
+                            class="flex items-center justify-between w-full p-4 focus:outline-none"
+                            type="button"
+                            onclick="toggleAccordion(event)"
+                          >
+                            <h6
+                              class="ms-3 text-lg font-bold text-gray-900 dark:text-gray-300"
                             >
-                            <a
-                              href="#"
-                              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                              >Option 2</a
+                              Mondays
+                              <span class="text-lg font-medium"
+                                >8:00 am to 5:00 pm</span
+                              >
+                            </h6>
+
+                            <i
+                              class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-5 cursor-pointer"
+                            ></i>
+                          </button>
+                          <div class="accordion-content hidden p-4">
+                            <button
+                              id="dropdownDelayButton"
+                              data-dropdown-toggle="dropdownDate"
+                              data-dropdown-delay="500"
+                              data-dropdown-trigger="hover"
+                              class="rounded-lg text-sm px-2 py-1.5 border-2 border-gray-100 text-center inline-flex items-center"
+                              type="button"
                             >
+                              8:00
+                              <i
+                                class="fa-solid fa-angle-down lg:ms-20 ms-10 lg:mr-0 mr-5 cursor-pointer"
+                              ></i>
+                            </button>
+                            <!-- Dropdown menu date start  -->
+                            <div
+                              id="dropdownDate"
+                              class="bg-white hidden z-10 divide-y divide-gray-100 rounded-lg shadow lg:w-44"
+                            >
+                              <ul
+                                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDelayButton"
+                              >
+                                <li
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                  <a href="#">9:00</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- Dropdown menu date end  -->
                           </div>
-                        </div>
-                      </label>
+                        </li>
+                      </ul>
                     </div>
+
+                    <!-- end -->
 
                     <button
                       class="bg-[#F3B757] mt-3 text-center rounded-[10px] lg:px-5 px-2 lg:py-3 py-1 text-[16px] text-[#5C2E14] font-bold hover:bg-yellow-600"
@@ -383,7 +417,7 @@
         </div>
 
         <div
-          class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800"
+          class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
           id="awaiting"
           role="tabpanel"
           aria-labelledby="awaiting-tab"
@@ -407,7 +441,6 @@
 
     <script>
       function functionMenu_Open() {
-        // document.getElementById("menu").style.marginLeft = "20%";
         document.getElementById("menu").style.width = "100%";
         document.getElementById("menu").style.display = "block";
         document.getElementById("clickButton").style.display = "none";
@@ -441,43 +474,45 @@
       const x = document.getElementsByTagName("BODY")[0];
       const modal = document.getElementById("modal");
       const modalBtn = document.getElementById("modal-button");
-      const modalBtnNew = document.getElementById("modal-buttonNew");
       const modalBtnConfirm = document.getElementById("modal-buttonConfirm");
-      const modalClose = document.getElementsByClassName("modal-close");
+      const modalClose = document.getElementById("modal-close");
 
-      // Open modal
       // Open modal
       modalBtn.onclick = function () {
         modal.style.display = "flex"; // Show modal
         x.style.overflow = "hidden"; //Disable scroll on body
       };
 
-      modalBtnNew.onclick = function () {
-        modal.style.display = "flex";
-        x.style.overflow = "hidden";
-      };
       modalBtnConfirm.onclick = function () {
         modal.style.display = "flex";
         x.style.overflow = "hidden";
       };
 
-      // Select and trigger all close buttons
-      for (var i = 0; i < modalClose.length; i++) {
-        modalClose[i].addEventListener("click", function () {
-          modal.style.display = "none"; // Hide modal
-          x.style.overflow = "auto"; // Active scroll on body
-        });
-      }
+      // Select and trigger all close buttons  (var)
+      modalClose.addEventListener("click", function () {
+        modal.style.display = "none"; // Hide modal
+        x.style.overflow = "auto"; // Active scroll on body
+      });
 
-      // Close modal when click away from modal
+      // Close modal when close button is clicked
+
       window.onclick = function (event) {
         if (event.target == modal) {
           modal.style.display = "none"; // Hide modal
           x.style.overflow = "auto"; // Active scroll on body
         }
       };
-
       // Modal  scetion end
+
+      // Date section start
+      function toggleAccordion(event) {
+        const button = event.target;
+        const content = button.nextElementSibling;
+        button.classList.toggle("active");
+        content.classList.toggle("hidden");
+        content.classList.toggle("flex");
+      }
+      // Date section end
     </script>
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
   </body>
