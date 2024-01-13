@@ -169,67 +169,74 @@
         >
           &#9776;
         </button>
-        <span class="text-lg ml-4 flex justify-between">
-          <span class="mr-2 mb-4">
-            <h1 class="text-[36px] font-bold mt-4">Vehicle Listing</h1>
+        <span class="lg:flex lg:justify-between">
+          <span class="lg:mr-2 lg:mb-4">
+            <h1 class="lg:text-[36px] text-3xl font-bold lg:mt-4 mt-5">
+              Garage
+            </h1>
+            <p class="">Start smart car deals with Bargain Moto!</p>
           </span>
 
-          <div>
-            <div
-              class="items-center w-full max-w-md mb-3 seva-fields formkit-fields"
+          <div class="items-center w-full max-w-md mb-3 seva-fields">
+            <span
+              class="hidden lg:inline-block container justify-center items-center gap-10"
             >
-              <span class="container justify-center items-center">
-                <!-- search bar starts  -->
-                <div
-                  class="hidden lg:inline-block relative items-center justify-center"
-                >
-                  <div class="absolute top-4 left-3">
-                    <i
-                      class="fa fa-search text-gray-400 z-20 hover:text-gray-500 z-10"
-                    ></i>
-                  </div>
-                  <input
-                    type="text"
-                    class="h-[52px] w-[209px] bg-[#F5F5F5] pr-5 pl-10 rounded z-0 focus:shadow focus:outline-none"
-                    placeholder="Search listing..."
-                  />
+              <!-- search bar starts -->
+              <div
+                class="lg:inline-block relative items-center justify-center py-1"
+              >
+                <input
+                  type="text"
+                  class="px-20 py-3 bg-[#F5F5F5] pl-10 rounded z-0 focus:shadow focus:outline-none"
+                  placeholder="Search listing..."
+                />
+                <div class="absolute top-4 left-[87%]">
+                  <i
+                    class="fa fa-search text-gray-400 z-20 hover:text-gray-500 z-10"
+                  ></i>
                 </div>
-                <!-- search bar ends  -->
-                <span>
-                  <a href="#" class="hidden lg:inline-block">
-                    <button
-                      href=""
-                      class="mt-4 bg-[#F3B757] w-[233px] h-[52px] text-center rounded-[10px] text-[19px] font-[600] hover:bg-yellow-600 hover:text-white"
-                    >
-                      Add New Vehicle
-                    </button>
-                  </a>
-                </span>
+              </div>
+              <!-- search bar ends -->
+              <span class="mt-4 lg:mt-0">
+                <!-- Adjust the top margin as needed -->
+                <a href="#" class="lg:inline-block mt-4">
+                  <button
+                    href=""
+                    class="border-2 border-gray-300 lg:px-5 lg:py-3 text-center rounded-[10px] font-[600] hover:bg-gray-100"
+                  >
+                    Add a vehicle
+                  </button>
+                </a>
               </span>
+            </span>
 
-              <!-- new section  -->
+            <!-- new section -->
+            <div class="lg:hidden inline-block mt-5">
+              <div class="relative items-center justify-center py-3">
+                <input
+                  type="text"
+                  class="bg-[#F5F5F5] px-5 py-1 rounded z-0 focus:shadow focus:outline-none"
+                  placeholder="Search listing..."
+                />
+                <div class="absolute top-4 left-[87%]">
+                  <i
+                    class="fa fa-search text-gray-400 z-20 hover:text-gray-500 z-10"
+                  ></i>
+                </div>
+              </div>
+              <a href="#">
+                <button
+                  class="border-2 py-1 px-3 border-gray-300 text-center rounded-[10px] font-[600] hover:bg-gray-100"
+                >
+                  Add a vehicle
+                </button>
+              </a>
             </div>
           </div>
         </span>
       </div>
       <!-- new search section  -->
-      <div
-        class="lg:hidden sm:inline-block flex fixed sm:justify-center sm:items-center rounded-lg relative"
-      >
-        <div class="search-icon px-2 py-2 ml-10 rounded z-10 shadow-md">
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        </div>
-        <input
-          type="search"
-          autocomplete="off"
-          spellcheck="false"
-          aria-live="polite"
-          size="{20}"
-          class="search-input rounded-lg text-[12px] text-[#6D6D6D] outline-none focus:outline:focus"
-          placeholder="Search listing.."
-        />
-        <!-- <i class="fa-solid fa-plus close-Bicon"></i> -->
-      </div>
+
       <!-- nav select section starts  -->
       <div class="max-w-5xl mx-auto">
         <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
@@ -249,7 +256,7 @@
                 aria-controls="all"
                 aria-selected="true"
               >
-                All
+                All(3)
               </button>
             </li>
             <li class="mr-2" role="presentation">
@@ -262,7 +269,7 @@
                 aria-controls="listed"
                 aria-selected="false"
               >
-                Listed
+                Listed(2)
               </button>
             </li>
             <li class="mr-2" role="presentation">
@@ -275,7 +282,20 @@
                 aria-controls="unlisted"
                 aria-selected="false"
               >
-                Unlisted
+                Unlisted(2)
+              </button>
+            </li>
+            <li class="mr-2" role="presentation">
+              <button
+                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm font-bold text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+                id="draft-tab"
+                data-tabs-target="#draft"
+                type="button"
+                role="tab"
+                aria-controls="draft"
+                aria-selected="false"
+              >
+                Draft(2)
               </button>
             </li>
             <li role="presentation">
@@ -288,19 +308,14 @@
                 aria-controls="sold"
                 aria-selected="false"
               >
-                Sold
+                Sold(2)
               </button>
             </li>
           </ul>
         </div>
         <div id="myTabContent">
           <!-- !-- card section start  -->
-          <div
-            id="all"
-            role="tabpanel"
-            aria-labelledby="all-tab"
-            class="container mx-auto text-center lg:py-24 md:py-24 sm:py-12 py-12 md:px-4 px-11"
-          >
+          <div id="all" role="tabpanel" aria-labelledby="all-tab" class="">
             <div
               class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-x-4 gap-y-12 text-left"
             >
@@ -379,9 +394,9 @@
                             2016 Toyota Corolla
                           </h5>
                           <p
-                            class="bg-[#EDFDF8] text-[#08875D] px-3 py-1 font-medium rounded-full"
+                            class="bg-[#D9D9D9] text-[#000000] px-3 py-1 font-medium rounded-full"
                           >
-                            On Sale
+                            In-review
                           </p>
                         </div>
                       </a>
@@ -402,7 +417,7 @@
                 </div>
               </div>
               <!-- card 1 section end   -->
-              <!-- card 1 section start   -->
+              <!-- card 2 section start   -->
               <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
                 <div class="w-full" style="height: 400px">
                   <a href="#">
@@ -426,8 +441,8 @@
                           </button>
 
                           <button
-                            id="dropdownDefaultButton"
-                            data-dropdown-toggle="dropdown"
+                            id="dropdownDefaultButtonTwo"
+                            data-dropdown-toggle="dropdownTwo"
                           >
                             <i
                               class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
@@ -437,12 +452,12 @@
 
                         <!-- Dropdown start  -->
                         <div
-                          id="dropdown"
+                          id="dropdownTwo"
                           class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
                         >
                           <ul
                             class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="dropdownDefaultButton"
+                            aria-labelledby="dropdownDefaultButtonTwo"
                           >
                             <li>
                               <a
@@ -479,7 +494,7 @@
                           <p
                             class="bg-[#EDFDF8] text-[#08875D] px-3 py-1 font-medium rounded-full"
                           >
-                            On Sale
+                            Listed
                           </p>
                         </div>
                       </a>
@@ -499,8 +514,8 @@
                   </div>
                 </div>
               </div>
-              <!-- card 1 section end   -->
-              <!-- card 1 section start   -->
+              <!-- card 2 section end   -->
+              <!-- card 3 section start   -->
               <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
                 <div class="w-full" style="height: 400px">
                   <a href="#">
@@ -524,8 +539,8 @@
                           </button>
 
                           <button
-                            id="dropdownDefaultButton"
-                            data-dropdown-toggle="dropdown"
+                            id="dropdownDefaultButtonThree"
+                            data-dropdown-toggle="dropdownThree"
                           >
                             <i
                               class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
@@ -535,12 +550,12 @@
 
                         <!-- Dropdown start  -->
                         <div
-                          id="dropdown"
+                          id="dropdownThree"
                           class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
                         >
                           <ul
                             class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="dropdownDefaultButton"
+                            aria-labelledby="dropdownDefaultButtonThree"
                           >
                             <li>
                               <a
@@ -575,9 +590,9 @@
                             2016 Toyota Corolla
                           </h5>
                           <p
-                            class="bg-[#FEF1F2] text-[#E02D3C] px-3 py-1 font-medium rounded-full"
+                            class="bg-[#FFF8EB] text-[#B25E09] px-3 py-1 font-medium rounded-full"
                           >
-                            On Sale
+                            Sold
                           </p>
                         </div>
                       </a>
@@ -597,34 +612,839 @@
                   </div>
                 </div>
               </div>
-              <!-- card 1 section end   -->
+              <!-- card 3 section end   -->
             </div>
           </div>
           <!-- card section end  -->
-
+          <!-- Listed sectio start  -->
           <div
             class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
             id="listed"
             role="tabpanel"
             aria-labelledby="listed-tab"
           >
-            <p class="text-gray-500 dark:text-gray-400 text-sm">listed</p>
+            <div
+              class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-x-4 gap-y-12 text-left"
+            >
+              <!-- card 1 section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div>
+                        <div class="flex items-center justify-between mr-5">
+                          <button
+                            class="text-white font-bold md:text-base sm:text-base text-base bg-[#EC970F] p-2 rounded-2xl"
+                          >
+                            Fixed Price
+                          </button>
+
+                          <button
+                            id="dropdownDefaultButtonListed"
+                            data-dropdown-toggle="dropdownListed"
+                          >
+                            <i
+                              class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
+                            ></i>
+                          </button>
+                        </div>
+
+                        <!-- Dropdown start  -->
+                        <div
+                          id="dropdownListed"
+                          class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
+                        >
+                          <ul
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButtonListed"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-regular fa-trash-can"></i
+                                >Delete</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-solid fa-pencil"></i>Edit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Dropdown end  -->
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 h-[130px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <div class="flex items-center justify-between mr-5">
+                          <h5
+                            class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                          >
+                            2016 Toyota Corolla
+                          </h5>
+                          <p
+                            class="bg-[#EDFDF8] text-[#08875D] px-3 py-1 font-medium rounded-full"
+                          >
+                            Listed
+                          </p>
+                        </div>
+                      </a>
+                      <div
+                        class="italic inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card 1 section end   -->
+              <!-- card Listed 2 section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div>
+                        <div class="flex items-center justify-between mr-5">
+                          <button
+                            class="text-white font-bold md:text-base sm:text-base text-base bg-[#EC970F] p-2 rounded-2xl"
+                          >
+                            Fixed Price
+                          </button>
+
+                          <button
+                            id="dropdownDefaultButtonListedTwo"
+                            data-dropdown-toggle="dropdownListedTwo"
+                          >
+                            <i
+                              class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
+                            ></i>
+                          </button>
+                        </div>
+
+                        <!-- Dropdown start  -->
+                        <div
+                          id="dropdownListedTwo"
+                          class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
+                        >
+                          <ul
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButtonListedTwo"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-regular fa-trash-can"></i
+                                >Delete</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-solid fa-pencil"></i>Edit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Dropdown end  -->
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 h-[130px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <div class="flex items-center justify-between mr-5">
+                          <h5
+                            class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                          >
+                            2016 Toyota Corolla
+                          </h5>
+                          <p
+                            class="bg-[#EDFDF8] text-[#08875D] px-3 py-1 font-medium rounded-full"
+                          >
+                            Listed
+                          </p>
+                        </div>
+                      </a>
+                      <div
+                        class="italic inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card Listed 2 section end   -->
+            </div>
           </div>
+          <!-- Listed section end  -->
           <div
-            class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
+            class="hidden"
             id="unlisted"
             role="tabpanel"
             aria-labelledby="unlisted-tab"
           >
-            <p class="text-gray-500 dark:text-gray-400 text-sm">Unlisted</p>
+            <div
+              class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-x-4 gap-y-12 text-left"
+            >
+              <!-- card Unlisted  section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div>
+                        <div class="flex items-center justify-between mr-5">
+                          <button
+                            class="text-white font-bold md:text-base sm:text-base text-base bg-[#EC970F] p-2 rounded-2xl"
+                          >
+                            Fixed Price
+                          </button>
+
+                          <button
+                            id="dropdownDefaultButtonUnlisted"
+                            data-dropdown-toggle="dropdownUnlisted"
+                          >
+                            <i
+                              class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
+                            ></i>
+                          </button>
+                        </div>
+
+                        <!-- Dropdown start  -->
+                        <div
+                          id="dropdownUnlisted"
+                          class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
+                        >
+                          <ul
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButtonUnlisted"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-regular fa-trash-can"></i
+                                >Delete</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-solid fa-pencil"></i>Edit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Dropdown end  -->
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 h-[130px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <div class="flex items-center justify-between mr-5">
+                          <h5
+                            class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                          >
+                            2016 Toyota Corolla
+                          </h5>
+                          <p
+                            class="bg-[#D9D9D9] text-[#000000] px-3 py-1 font-medium rounded-full"
+                          >
+                            In-review
+                          </p>
+                        </div>
+                      </a>
+                      <div
+                        class="italic inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card Unlisted  section end   -->
+              <!-- card Unlisted 2  section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div>
+                        <div class="flex items-center justify-between mr-5">
+                          <button
+                            class="text-white font-bold md:text-base sm:text-base text-base bg-[#EC970F] p-2 rounded-2xl"
+                          >
+                            Fixed Price
+                          </button>
+
+                          <button
+                            id="dropdownDefaultButtonUnlistedTwo"
+                            data-dropdown-toggle="dropdownUnlistedTwo"
+                          >
+                            <i
+                              class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
+                            ></i>
+                          </button>
+                        </div>
+
+                        <!-- Dropdown start  -->
+                        <div
+                          id="dropdownUnlistedTwo"
+                          class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
+                        >
+                          <ul
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButtonUnlistedTwo"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-regular fa-trash-can"></i
+                                >Delete</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-solid fa-pencil"></i>Edit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Dropdown end  -->
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 h-[130px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <div class="flex items-center justify-between mr-5">
+                          <h5
+                            class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                          >
+                            2016 Toyota Corolla
+                          </h5>
+                          <p
+                            class="bg-[#D9D9D9] text-[#000000] px-3 py-1 font-medium rounded-full"
+                          >
+                            Unlisted
+                          </p>
+                        </div>
+                      </a>
+                      <div
+                        class="italic inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card Unlisted  2 section end   -->
+            </div>
           </div>
           <div
-            class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
+            class="hidden"
+            id="draft"
+            role="tabpanel"
+            aria-labelledby="draft-tab"
+          >
+            <div
+              class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-x-4 gap-y-12 text-left"
+            >
+              <!-- card Draft section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div>
+                        <div class="flex items-center justify-between mr-5">
+                          <button
+                            class="text-white font-bold md:text-base sm:text-base text-base bg-[#EC970F] p-2 rounded-2xl"
+                          >
+                            Fixed Price
+                          </button>
+
+                          <button
+                            id="dropdownDefaultButtonDraft"
+                            data-dropdown-toggle="dropdownDraft"
+                          >
+                            <i
+                              class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
+                            ></i>
+                          </button>
+                        </div>
+
+                        <!-- Dropdown start  -->
+                        <div
+                          id="dropdownDraft"
+                          class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
+                        >
+                          <ul
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButtonDraft"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-regular fa-trash-can"></i
+                                >Delete</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-solid fa-pencil"></i>Edit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Dropdown end  -->
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 h-[130px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <div class="flex items-center justify-between mr-5">
+                          <h5
+                            class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                          >
+                            2016 Toyota Corolla
+                          </h5>
+                          <p
+                            class="bg-[#D9D9D9] text-[#0A0D14] px-3 py-1 font-medium rounded-full"
+                          >
+                            Draft
+                          </p>
+                        </div>
+                      </a>
+                      <div
+                        class="italic inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card Draft section end   -->
+              <!-- card Draft 2 section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div>
+                        <div class="flex items-center justify-between mr-5">
+                          <button
+                            class="text-white font-bold md:text-base sm:text-base text-base bg-[#EC970F] p-2 rounded-2xl"
+                          >
+                            Fixed Price
+                          </button>
+
+                          <button
+                            id="dropdownDefaultButtonDraftTwo"
+                            data-dropdown-toggle="dropdownDraftTwo"
+                          >
+                            <i
+                              class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
+                            ></i>
+                          </button>
+                        </div>
+
+                        <!-- Dropdown start  -->
+                        <div
+                          id="dropdownDraftTwo"
+                          class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
+                        >
+                          <ul
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButtonDraftTwo"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-regular fa-trash-can"></i
+                                >Delete</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-solid fa-pencil"></i>Edit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Dropdown end  -->
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 h-[130px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <div class="flex items-center justify-between mr-5">
+                          <h5
+                            class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                          >
+                            2016 Toyota Corolla
+                          </h5>
+                          <p
+                            class="bg-[#D9D9D9] text-[#0A0D14] px-3 py-1 font-medium rounded-full"
+                          >
+                            Draft
+                          </p>
+                        </div>
+                      </a>
+                      <div
+                        class="italic inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card Draft 2 section end   -->
+            </div>
+          </div>
+          <div
+            class="hidden"
             id="sold"
             role="tabpanel"
             aria-labelledby="sold-tab"
           >
-            <p class="text-gray-500 dark:text-gray-400 text-sm">Sold</p>
+            <div
+              class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-x-4 gap-y-12 text-left"
+            >
+              <!-- card Sold 1 section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div>
+                        <div class="flex items-center justify-between mr-5">
+                          <button
+                            class="text-white font-bold md:text-base sm:text-base text-base bg-[#EC970F] p-2 rounded-2xl"
+                          >
+                            Fixed Price
+                          </button>
+
+                          <button
+                            id="dropdownDefaultButtonSold"
+                            data-dropdown-toggle="dropdownSold"
+                          >
+                            <i
+                              class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
+                            ></i>
+                          </button>
+                        </div>
+
+                        <!-- Dropdown start  -->
+                        <div
+                          id="dropdownSold"
+                          class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
+                        >
+                          <ul
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButtonSold"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-regular fa-trash-can"></i
+                                >Delete</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-solid fa-pencil"></i>Edit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Dropdown end  -->
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 h-[130px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <div class="flex items-center justify-between mr-5">
+                          <h5
+                            class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                          >
+                            2016 Toyota Corolla
+                          </h5>
+                          <p
+                            class="bg-[#FFF8EB] text-[#B25E09] px-3 py-1 font-medium rounded-full"
+                          >
+                            Sold
+                          </p>
+                        </div>
+                      </a>
+                      <div
+                        class="italic inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card Sold 1 section end   -->
+              <!-- card Sold 2 section start   -->
+              <div class="max-w-sm lg:mt-0 md:mt-0 sm:mt-3 mt-8">
+                <div class="w-full" style="height: 400px">
+                  <a href="#">
+                    <div
+                      class="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
+                      style="
+                        background-image: url(../images/img.png);
+                        border-top-right-radius: 15px;
+                        border-top-left-radius: 15px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50% center;
+                      "
+                    >
+                      <div>
+                        <div class="flex items-center justify-between mr-5">
+                          <button
+                            class="text-white font-bold md:text-base sm:text-base text-base bg-[#EC970F] p-2 rounded-2xl"
+                          >
+                            Fixed Price
+                          </button>
+
+                          <button
+                            id="dropdownDefaultButtonSoldTwo"
+                            data-dropdown-toggle="dropdownSoldTwo"
+                          >
+                            <i
+                              class="fa-solid text-center fa-ellipsis-vertical bg-white p-2 rounded-full w-8 h-8 cursor-pointer"
+                            ></i>
+                          </button>
+                        </div>
+
+                        <!-- Dropdown start  -->
+                        <div
+                          id="dropdownSoldTwo"
+                          class="z-10 hidden bg-white rounded-lg shadow w-20 dark:bg-gray-700"
+                        >
+                          <ul
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButtonSoldTwo"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-regular fa-trash-can"></i
+                                >Delete</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                class="flex gap-1 items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                ><i class="fa-solid fa-pencil"></i>Edit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Dropdown end  -->
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="bg-white pb-4 shadow-lg shadow-slate-200 h-[130px] z-50"
+                  >
+                    <div class="p-5 bg-white">
+                      <a href="#">
+                        <div class="flex items-center justify-between mr-5">
+                          <h5
+                            class="mb-1 text-xl font-Regular tracking-tighter text-gray-700 truncate hover:no-underline"
+                          >
+                            2016 Toyota Corolla
+                          </h5>
+                          <p
+                            class="bg-[#FFF8EB] text-[#B25E09] px-3 py-1 font-medium rounded-full"
+                          >
+                            Sold
+                          </p>
+                        </div>
+                      </a>
+                      <div
+                        class="italic inline-flex mb-3 text-sm text-gray-700 font-Regular truncate"
+                      >
+                        Westland, Accra
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          class="inline-flex font-bold tracking-tighter items-center text-center py-1 text-xl hover:no-underline text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
+                          >GHS 255,500</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card Sold 2 section end   -->
+            </div>
           </div>
         </div>
       </div>

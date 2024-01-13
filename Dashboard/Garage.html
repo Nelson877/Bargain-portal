@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/style.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link
       rel="stylesheet"
       href="path/to/font-awesome/css/font-awesome.min.css"
@@ -23,8 +24,7 @@
       integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
       crossorigin="anonymous"
     />
-
-    <title>dashboard</title>
+    <title>Garage</title>
   </head>
   <body class="text-gray-700">
     <!-- start sidebar -->
@@ -55,7 +55,15 @@
       </div>
       <!-- logo section end -->
       <div
-        class="items-center py-6 px-4 mt-[10px] bg-yellow-400 w-[218px] h-[93px] rounded-lg"
+        class="items-center py-6 px-4 mt-[10px] bg-yellow-400 w-[218px] h-[93px] rounded-2xl"
+        style="
+          background-image: url(../images/Background.png);
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 50% center;
+        "
       >
         <p class="text-xs text-white">Wallet</p>
         <span class="font-bold text-[19px] text-white">GHS 0.00</span>
@@ -75,9 +83,10 @@
           <a
             data-active="listing"
             href=""
-            class="flex items-center py-2 px-4 text-white text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
+            class="flex gap-2 items-center py-2 px-4 text-white text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
           >
-            <i class="fa-solid fa-magnifying-glass mr-4"></i>
+            <img src="../images/car-garage-regular .png" class="w-7" alt="" />
+            <!-- <i class="fa-solid fa-magnifying-glass mr-4"></i> -->
             <span class="text-sm">Garage</span>
           </a>
         </li>
@@ -168,68 +177,78 @@
         >
           &#9776;
         </button>
-        <span class="flex justify-between">
+        <span class="lg:flex lg:justify-between">
           <span class="lg:mr-2 lg:mb-4">
-            <h1 class="lg:text-[36px] font-bold mt-4">Vehicle Listing</h1>
+            <h1 class="lg:text-[36px] text-3xl font-bold lg:mt-4 mt-5">
+              Garage
+            </h1>
+            <p class="">Start smart car deals with Bargain Moto!</p>
           </span>
 
           <div class="items-center w-full max-w-md mb-3 seva-fields">
-            <span class="container justify-center items-center gap-10">
+            <span
+              class="hidden lg:inline-block container justify-center items-center gap-10"
+            >
               <!-- search bar starts -->
               <div
-                class="hidden lg:inline-block relative items-center justify-center py-1"
+                class="lg:inline-block relative items-center justify-center py-1"
               >
-                <div class="absolute top-4 left-3">
+                <input
+                  type="text"
+                  class="px-20 py-3 bg-[#F5F5F5] pl-10 rounded z-0 focus:shadow focus:outline-none"
+                  placeholder="Search listing..."
+                />
+                <div class="absolute top-4 left-[87%]">
                   <i
                     class="fa fa-search text-gray-400 z-20 hover:text-gray-500 z-10"
                   ></i>
                 </div>
-                <input
-                  type="text"
-                  class="h-[52px] w-[209px] bg-[#F5F5F5] pr-5 pl-10 rounded z-0 focus:shadow focus:outline-none"
-                  placeholder="Search listing..."
-                />
               </div>
               <!-- search bar ends -->
               <span class="mt-4 lg:mt-0">
                 <!-- Adjust the top margin as needed -->
-                <a href="#" class="hidden lg:inline-block mt-4">
+                <a href="#" class="lg:inline-block mt-4">
                   <button
                     href=""
-                    class="bg-[#F3B757] w-[233px] h-[52px] text-center rounded-[10px] text-[19px] font-[600] hover:bg-yellow-600 hover:text-white"
+                    class="border-2 border-gray-300 lg:px-5 lg:py-3 text-center rounded-[10px] font-[600] hover:bg-gray-100"
                   >
-                    Add New Vehicle
+                    Add a vehicle
                   </button>
                 </a>
               </span>
             </span>
 
             <!-- new section -->
+            <div class="lg:hidden inline-block mt-5">
+              <div class="relative items-center justify-center py-3">
+                <input
+                  type="text"
+                  class="bg-[#F5F5F5] px-5 py-1 rounded z-0 focus:shadow focus:outline-none"
+                  placeholder="Search listing..."
+                />
+                <div class="absolute top-4 left-[87%]">
+                  <i
+                    class="fa fa-search text-gray-400 z-20 hover:text-gray-500 z-10"
+                  ></i>
+                </div>
+              </div>
+              <a href="#">
+                <button
+                  class="border-2 py-1 px-3 border-gray-300 text-center rounded-[10px] font-[600] hover:bg-gray-100"
+                >
+                  Add a vehicle
+                </button>
+              </a>
+            </div>
           </div>
         </span>
       </div>
       <!-- new search section  -->
-      <div
-        class="lg:hidden sm:inline-block flex fixed sm:justify-center sm:items-center rounded-lg relative"
-      >
-        <div class="search-icon px-2 py-2 ml-10 rounded z-10 shadow-md">
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        </div>
-        <input
-          type="search"
-          autocomplete="off"
-          spellcheck="false"
-          aria-live="polite"
-          size="{20}"
-          class="search-input rounded-lg text-[12px] text-[#6D6D6D] outline-none focus:outline:focus"
-          placeholder="Search listing.."
-        />
-        <!-- <i class="fa-solid fa-plus close-Bicon"></i> -->
-      </div>
+
       <!-- nav select section starts  -->
 
       <!-- Tab and pill section start  -->
-      <div class="max-w-5xl mx-auto">
+      <div class="lg:max-w-5xl lg:mx-auto">
         <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
           <ul
             class="flex flex-wrap -mb-px"
@@ -247,7 +266,7 @@
                 aria-controls="all"
                 aria-selected="true"
               >
-                All
+                All(0)
               </button>
             </li>
             <li class="mr-2" role="presentation">
@@ -260,7 +279,7 @@
                 aria-controls="listed"
                 aria-selected="false"
               >
-                Listed
+                Listed(0)
               </button>
             </li>
             <li class="mr-2" role="presentation">
@@ -273,7 +292,21 @@
                 aria-controls="unlisted"
                 aria-selected="false"
               >
-                Unlisted
+                Unlisted(0)
+              </button>
+            </li>
+
+            <li class="mr-2" role="presentation">
+              <button
+                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm font-bold text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+                id="draft-tab"
+                data-tabs-target="#draft"
+                type="button"
+                role="tab"
+                aria-controls="draft"
+                aria-selected="false"
+              >
+                Draft(0)
               </button>
             </li>
             <li role="presentation">
@@ -286,7 +319,7 @@
                 aria-controls="sold"
                 aria-selected="false"
               >
-                Sold
+                Sold(0)
               </button>
             </li>
           </ul>
@@ -301,8 +334,8 @@
               >
                 <div class="flex justify-center items-center">
                   <img
-                    src="../images/cars-duotone 1.png"
-                    class="w-[60px] h-[48px]"
+                    src="../images/car-garage-regular .png"
+                    class="w-[60px] h-[48px] mb-3"
                     alt=""
                   />
                 </div>
@@ -310,26 +343,27 @@
                   <span class="text-[30px] font-[700]"
                     >No vehicle added yet !</span
                   >
-                  <p class="text-[15px] font-[400] text-center">
+                  <p class="text-[15px] font-[400] w-[330px]">
                     You haven’t added any new vehicle to our listing. We are
-                    happy
-                    <br />
-                    to start seeing you make a sale.
+                    happy to start seeing you make a sale.
                   </p>
 
                   <button
-                    id="modal-button"
+                    data-modal-toggle="default-modal"
+                    type="button"
                     class="mt-4 bg-[#F3B757] px-4 w-40 h-10 text-center rounded-[10px] text-[13px] font-[600] hover:bg-yellow-600 hover:text-white"
                   >
-                    Add New Vehicle
+                    Add a vehicle
                   </button>
                 </div>
               </span>
 
               <!-- Modal section start  -->
               <div
-                id="modal"
-                class="hidden items-center justify-center h-screen w-screen fixed top-0 left-0 bg-black bg-opacity-80"
+                id="default-modal"
+                tabindex="-1"
+                aria-hidden="true"
+                class="items-center hidden justify-center h-screen w-screen fixed top-0 left-0 bg-black bg-opacity-80"
               >
                 <!--Modal Dialog -->
 
@@ -338,9 +372,13 @@
                 >
                   <!-- Close Modal start -->
                   <div class="ml-[90%]">
-                    <span class="modal-close cursor-pointer">
-                      <i class="fa-solid fa-xmark"></i>
-                    </span>
+                    <button
+                      data-modal-hide="default-modal"
+                      type="button"
+                      class="modal-close cursor-pointer"
+                    >
+                      <i aria-hidden="true" class="fa-solid fa-xmark"></i>
+                    </button>
                   </div>
                   <!-- Close Modal end -->
                   <!--Modal Content -->
@@ -404,7 +442,7 @@
         </div>
 
         <div
-          class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800"
+          class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
           id="listed"
           role="tabpanel"
           aria-labelledby="listed-tab"
@@ -418,6 +456,14 @@
           aria-labelledby="unlisted-tab"
         >
           <p class="text-gray-500 dark:text-gray-400 text-sm">Unlisted</p>
+        </div>
+        <div
+          class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
+          id="draft"
+          role="tabpanel"
+          aria-labelledby="draft-tab"
+        >
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Draft</p>
         </div>
         <div
           class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
@@ -469,28 +515,26 @@
       // Modal section start
       const x = document.getElementsByTagName("BODY")[0]; // Select body tag because of disable scroll when modal is active
       const modal = document.getElementById("modal"); // modal
-      const modalBtn = document.getElementById("modal-button"); // launch modal button
+      const modalBtn = document.getElementById("modal-but");
       const modalClose = document.getElementsByClassName("modal-close"); // close modal button
 
       // Open modal
       modalBtn.onclick = function () {
         modal.style.display = "flex"; // Show modal
-        x.style.overflow = "hidden"; //Disable scroll on body
+        x.style.overflow = "hidden"; // Disable scroll on body
       };
 
-      // Select and trigger all close buttons
       for (var i = 0; i < modalClose.length; i++) {
         modalClose[i].addEventListener("click", function () {
           modal.style.display = "none"; // Hide modal
-          x.style.overflow = "auto"; // Active scroll on body
+          x.style.overflow = "auto"; // Enable scroll on body
         });
       }
 
-      // Close modal when click away from modal
       window.onclick = function (event) {
         if (event.target == modal) {
           modal.style.display = "none"; // Hide modal
-          x.style.overflow = "auto"; // Active scroll on body
+          x.style.overflow = "auto"; // Enable scroll on body
         }
       };
 
