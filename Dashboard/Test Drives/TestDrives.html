@@ -43,7 +43,7 @@
       <!-- logo section  -->
       <a href="#" class="flex items-center">
         <img
-          src="../images/bargain-auto-logo 1.png"
+          src="../../images/bargain-auto-logo 1.png"
           alt=""
           class="w-[88.73px] h-[80.49px]"
         />
@@ -55,7 +55,15 @@
       </div>
       <!-- logo section end -->
       <div
-        class="items-center py-6 px-4 mt-[10px] bg-yellow-400 w-[218px] h-[93px] rounded-lg"
+        class="items-center py-6 px-4 mt-[10px] bg-yellow-400 w-[218px] h-[93px] rounded-2xl"
+        style="
+          background-image: url(../../images/Background.png);
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 50% center;
+        "
       >
         <p class="text-xs text-white">Wallet</p>
         <span class="font-bold text-[19px] text-white">GHS 0.00</span>
@@ -75,9 +83,14 @@
           <a
             data-active="listing"
             href=""
-            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+            class="flex gap-2 items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
           >
-            <i class="fa-solid fa-magnifying-glass mr-4"></i>
+            <img
+              src="../../images/icons/car-garage-regular white.png"
+              class="w-7"
+              alt=""
+            />
+            <!-- <i class="fa-solid fa-magnifying-glass mr-4"></i> -->
             <span class="text-sm">Garage</span>
           </a>
         </li>
@@ -168,12 +181,15 @@
         >
           &#9776;
         </button>
-        <span class="flex justify-between">
+        <span class="lg:flex lg:justify-between">
           <span class="lg:mr-2 lg:mb-4">
-            <h1 class="lg:text-[36px] font-bold mt-4">Test Drives</h1>
+            <h1 class="lg:text-[36px] text-3xl font-bold lg:mt-4 mt-5">
+              Test Drives
+            </h1>
+            <p class="">Start smart car deals with Bargain Moto!</p>
           </span>
 
-          <div class="items-center lg:mt-10">
+          <div class="items-center lg:mt-10 mt-5">
             <a class="gap-10 cursor-pointer">
               <i class="fa-regular fa-calendar-plus mr-2"></i>
               <span>My Availability</span>
@@ -182,38 +198,21 @@
           </div>
         </span>
       </div>
-      <!-- new search section  -->
-      <div
-        class="lg:hidden sm:inline-block flex fixed sm:justify-center sm:items-center rounded-lg relative"
-      >
-        <div class="search-icon px-2 py-2 ml-10 rounded z-10 shadow-md">
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        </div>
-        <input
-          type="search"
-          autocomplete="off"
-          spellcheck="false"
-          aria-live="polite"
-          size="{20}"
-          class="search-input rounded-lg text-[12px] text-[#6D6D6D] outline-none focus:outline:focus"
-          placeholder="Search listing.."
-        />
-        <!-- <i class="fa-solid fa-plus close-Bicon"></i> -->
-      </div>
+
       <!-- nav select section starts  -->
 
       <!-- Tab and pill section start  -->
       <div class="max-w-5xl mx-auto">
         <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
           <ul
-            class="flex flex-wrap -mb-px font-bold"
+            class="flex flex-wrap -mb-px"
             id="myTab"
             data-tabs-toggle="#myTabContent"
             role="tablist"
           >
             <li class="mr-2 active" role="presentation">
               <button
-                class="inline-block text-[#eab308] hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-lg font-bold text-center border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308] border-[#eab308] focus:ring-yellow-400"
+                class="inline-block text-[#eab308] hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308] border-[#eab308] focus:ring-yellow-400"
                 id="scheduled-tab"
                 data-tabs-target="#scheduled"
                 type="button"
@@ -221,12 +220,12 @@
                 aria-controls="scheduled"
                 aria-selected="true"
               >
-                Scheduled
+                Schedules(0)
               </button>
             </li>
             <li class="mr-2" role="presentation">
               <button
-                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-lg font-bold text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm font-bold text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
                 id="awaiting-tab"
                 data-tabs-target="#awaiting"
                 type="button"
@@ -234,12 +233,12 @@
                 aria-controls="awaiting"
                 aria-selected="false"
               >
-                Awaiting Approval
+                Requests(0)
               </button>
             </li>
             <li class="mr-2" role="presentation">
               <button
-                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-lg font-bold text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
+                class="inline-block text-gray-500 hover:text-[#eab308] hover:border-[#eab308] rounded-t-lg py-4 px-4 text-sm font-bold text-center hover:border-b-2 dark:text-[#eab308] dark:hover:text-[#eab308]"
                 id="past-tab"
                 data-tabs-target="#past"
                 type="button"
@@ -247,7 +246,7 @@
                 aria-controls="past"
                 aria-selected="false"
               >
-                Past
+                Past(0)
               </button>
             </li>
           </ul>
@@ -267,8 +266,8 @@
               >
                 <div class="flex justify-center items-center">
                   <img
-                    src="../images/cars-duotone 1.png"
-                    class="w-[60px] h-[48px]"
+                    src="../../images/cars-duotone 1.png"
+                    class="w-[60px] h-[48px] mb-5"
                     alt=""
                   />
                 </div>
@@ -422,7 +421,7 @@
           role="tabpanel"
           aria-labelledby="awaiting-tab"
         >
-          <p class="text-gray-500 dark:text-gray-400 text-sm">Awaiting</p>
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Requests</p>
         </div>
         <div
           class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
