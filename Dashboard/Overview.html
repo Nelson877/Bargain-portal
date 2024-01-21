@@ -31,9 +31,9 @@
     <!-- id="menu" -->
     <div
       id="menu"
-      class="hidden lg:inline lg:fixed left-0 top-0 w-64 h-full bg-[#8C394C] p-4 dropdown_menu overflow-x-hidden overlow-y-scroll"
+      class="hidden lg:inline lg:fixed left-0 top-0 w-64 h-full bg-[#230B11] p-4 dropdown_menu overflow-x-hidden overlow-y-scroll"
     >
-      <div class="text-right">
+      <div class="text-right text-yellow-400">
         <button
           class="lg:hidden sm:inline text-2xl absolute"
           onclick="functionMenu_Close()"
@@ -44,7 +44,7 @@
       <!-- logo section  -->
       <a href="#" class="flex items-center">
         <img
-          src="../images/bargain-auto-logo 1.png"
+          src="../../images/bargain-auto-logo 1.png"
           alt=""
           class="w-[88.73px] h-[80.49px]"
         />
@@ -52,21 +52,29 @@
         <!-- pb-2 border-b border-b-slate-200 -->
       </a>
       <div class="pt-3">
-        <img src="../images/Vector 6.png" alt="" />
+        <img src="../../images/Vector 6.png" alt="" />
       </div>
       <!-- logo section end -->
       <div
-        class="items-center py-6 px-4 mt-[10px] bg-yellow-400 w-[218px] h-[93px] rounded-lg"
+        class="items-center py-6 px-4 mt-[10px] bg-yellow-400 w-[218px] h-[93px] rounded-2xl"
+        style="
+          background-image: url(../../images/Background.png);
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 50% center;
+        "
       >
         <p class="text-xs text-white">Wallet</p>
         <span class="font-bold text-[19px] text-white">GHS 0.00</span>
       </div>
       <ul class="mt-2">
-        <li class="mb-1 group active">
+        <li class="mb-1 group mt-2 active">
           <a
             data-active="Overview"
-            href=""
-            class="flex items-center py-2 px-4 text-gray-700 hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
+            href="../Dashboard/Overview.html"
+            class="flex gap-2 items-center py-2 px-4 text-white text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[50px] group-[.active]:bg-yellow-100 active:bg-yellow-700 focus:outline-none ring-[1px] ring-yellow-400 text-yellow-400"
           >
             <i class="fa-solid fa-house-chimney mr-4"></i>
             <span class="text-sm">Overview</span>
@@ -76,23 +84,28 @@
           <a
             data-active="listing"
             href=""
-            class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
+            class="flex items-center gap-2 py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
           >
-            <i class="fa-solid fa-clipboard-list mr-4"></i>
-            <span class="text-sm">Listing</span>
+            <img
+              src="../../images//icons/car-garage-regular white.png"
+              class="w-7"
+              alt=""
+            />
+            <!-- <i class="fa-solid fa-magnifying-glass mr-4"></i> -->
+            <span class="text-sm">Garage</span>
           </a>
         </li>
-        <li class="group">
+        <li class="group mt-2">
           <a
             data-active="listing"
-            href=""
+            href="../Dashboard/TestDrives.html"
             class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
           >
             <i class="fa-regular fa-calendar mr-4"></i>
             <span class="text-sm">Test Drives</span>
           </a>
         </li>
-        <li class="group">
+        <li class="group mt-2">
           <a
             data-active="listing"
             href=""
@@ -102,7 +115,7 @@
             <span class="text-sm">Deals</span>
           </a>
         </li>
-        <li class="group">
+        <li class="group mb-2 mt-2">
           <a
             data-active="listing"
             href=""
@@ -113,24 +126,24 @@
           </a>
         </li>
         <span class="text-xs font-bold text-[#F3B757]">ACCOUNT</span>
-        <li class="group">
+        <li class="group mt-2">
           <a
             data-active="listing"
             href=""
             class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
           >
             <i class="fa-solid fa-gears mr-4"></i>
-            <span class="text-sm">Shop settings</span>
+            <span class="text-sm">Store settings</span>
           </a>
         </li>
-        <li class="group">
+        <li class="group mt-2">
           <a
             data-active="listing"
             href=""
             class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
           >
             <i class="fa-solid fa-user mr-4"></i>
-            <span class="text-sm">Account</span>
+            <span class="text-sm">Account settings</span>
           </a>
         </li>
         <li class="group">
@@ -150,7 +163,7 @@
             class="flex items-center py-2 px-4 text-white hover:text-[#F3B757] hover:bg-yellow-100 rounded-md w-[219.5px] h-[54px] group-[.active]:bg-yellow-100 focus:outline-none focus:ring-[1px] focus:ring-yellow-400 active:text-yellow-400"
           >
             <i class="fa-solid fa-right-from-bracket mr-4"></i>
-            <span class="text-sm">Log Out</span>
+            <span class="text-sm">LogOut</span>
           </a>
         </li>
       </ul>
